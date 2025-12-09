@@ -17,7 +17,7 @@ const ScrollFloat = ({
   scrollEnd = 'bottom bottom-=40%',
   stagger = 0.03
 }) => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLHeadingElement | null>(null);
 
   const splitText = useMemo(() => {
     const text = typeof children === 'string' ? children : '';
@@ -34,35 +34,42 @@ const ScrollFloat = ({
 
     const scroller = scrollContainerRef && scrollContainerRef.current ? scrollContainerRef.current : window;
 
-    const charElements = el.querySelectorAll('.char');
+    const ctx = gsap.context(() => {
+      const charElements = el.querySelectorAll<HTMLElement>('.char');
+      if (!charElements.length) return;
 
-    gsap.fromTo(
-      charElements,
-      {
-        willChange: 'opacity, transform',
-        opacity: 0,
-        yPercent: 120,
-        scaleY: 2.3,
-        scaleX: 0.7,
-        transformOrigin: '50% 0%'
-      },
-      {
-        duration: animationDuration,
-        ease: ease,
-        opacity: 1,
-        yPercent: 0,
-        scaleY: 1,
-        scaleX: 1,
-        stagger: stagger,
-        scrollTrigger: {
-          trigger: el,
-          scroller,
-          start: scrollStart,
-          end: scrollEnd,
-          scrub: true
+      gsap.fromTo(
+        charElements,
+        {
+          willChange: 'opacity, transform',
+          opacity: 0,
+          yPercent: 120,
+          scaleY: 2.3,
+          scaleX: 0.7,
+          transformOrigin: '50% 0%'
+        },
+        {
+          duration: animationDuration,
+          ease: ease,
+          opacity: 1,
+          yPercent: 0,
+          scaleY: 1,
+          scaleX: 1,
+          stagger: stagger,
+          scrollTrigger: {
+            trigger: el,
+            scroller,
+            start: scrollStart,
+            end: scrollEnd,
+            scrub: true
+          }
         }
-      }
-    );
+      );
+    }, el);
+
+    return () => {
+      ctx.revert();
+    };
   }, [scrollContainerRef, animationDuration, ease, scrollStart, scrollEnd, stagger]);
 
   return (
