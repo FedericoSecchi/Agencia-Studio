@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import AnimatedDecryptText from "./AnimatedDecryptText";
+import ScrollFloatText from "./ScrollFloatText";
 
 const mainLine =
   "We craft brands and digital experiences built to spark emotion, sharpen identity, and make people feel “this is it.”";
