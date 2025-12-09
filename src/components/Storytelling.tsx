@@ -26,16 +26,20 @@ const Storytelling = () => {
             text={mainLine}
             animateOn="load"
             parentClassName="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em] flex flex-wrap justify-center gap-2"
-            renderContent={() =>
-              words.map(({ word, isHighlight }, idx) => (
-                <span
-                  key={`${word}-${idx}`}
-                  className={`word ${isHighlight ? "highlight-brush" : ""}`}
-                >
-                  {word}
-                </span>
-              ))
-            }
+            renderContent={(displayText) => {
+              const parts = displayText.split(" ");
+              return parts.map((word, idx) => {
+                const isHighlight = words[idx]?.isHighlight ?? false;
+                return (
+                  <span
+                    key={`${word}-${idx}`}
+                    className={`word ${isHighlight ? "highlight-brush" : ""}`}
+                  >
+                    {word}
+                  </span>
+                );
+              });
+            }}
           />
         </div>
       </div>

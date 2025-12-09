@@ -185,23 +185,23 @@
     display: block;
   }
 
-  .word {
+  .about-section .word {
     display: inline-block;
     transition: font-weight 200ms ease, letter-spacing 200ms ease, transform 200ms ease;
   }
 
-  .word:hover {
+  .about-section .word:hover {
     font-weight: 900;
     letter-spacing: -0.5px;
     transform: translateY(-2px);
   }
 
-  .highlight-brush {
+  .about-section .highlight-brush {
     position: relative;
     display: inline-block;
   }
 
-  .highlight-brush::after {
+  .about-section .highlight-brush::after {
     content: "";
     position: absolute;
     inset: 60% -4px auto -4px;
@@ -210,6 +210,10 @@
     transform: scale(1);
     opacity: 0.95;
     pointer-events: none;
+  }
+
+  .about-section .encrypted {
+    all: unset;
   }
 
   .centered-text {
