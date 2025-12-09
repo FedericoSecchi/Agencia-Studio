@@ -13,6 +13,7 @@
   line-height: 1;
 }
 
-.char {
+.sf-word {
   display: inline-block;
+  white-space: nowrap;
 }
