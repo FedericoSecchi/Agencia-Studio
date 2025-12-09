@@ -40,7 +40,7 @@ const Storytelling = () => {
       <div className="about-main-wrapper">
         <div
           ref={mainLinesRef}
-        className="about-main centered-text w-[80%] max-w-[900px] mx-auto space-y-4"
+          className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4"
         >
           {mainLines.map((line) => (
             <span
