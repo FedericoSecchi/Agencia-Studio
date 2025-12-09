@@ -11,9 +11,15 @@ import Clients from "@/components/Clients";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
+import { initAboutAnimations } from "@/animations/aboutAnimations";
 
 const Index = () => {
   useScrollAnimations();
+
+  useEffect(() => {
+    const cleanup = initAboutAnimations();
+    return () => cleanup?.();
+  }, []);
 
   useEffect(() => {
     // Update page title
