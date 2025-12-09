@@ -143,6 +143,15 @@
   .about-section {
     --note-offset-bottom: 50px;
     --note-offset-right: 60px;
+    position: relative;
+  }
+
+  .about-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
   }
 
   .about-main {
@@ -150,7 +159,6 @@
     line-height: 0.95;
     font-weight: 800;
     letter-spacing: -0.02em;
-    transform: translateY(-3vh);
   }
 
   .about-note {

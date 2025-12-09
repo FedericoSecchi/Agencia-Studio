@@ -36,19 +36,21 @@ const Storytelling = () => {
   }, []);
 
   return (
-    <section className="about-section min-h-[90vh] flex items-center justify-center relative bg-background px-[6vw]">
-      <div
-        ref={mainLinesRef}
-        className="about-main w-[80%] max-w-[900px] mx-auto text-left space-y-4"
-      >
-        {mainLines.map((line) => (
-          <span
-            key={line}
-            className="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
-          >
-            {line}
-          </span>
-        ))}
+    <section className="about-section min-h-[90vh] relative bg-background px-[6vw]">
+      <div className="about-main-wrapper">
+        <div
+          ref={mainLinesRef}
+          className="about-main w-[80%] max-w-[900px] mx-auto text-left space-y-4"
+        >
+          {mainLines.map((line) => (
+            <span
+              key={line}
+              className="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
+            >
+              {line}
+            </span>
+          ))}
+        </div>
       </div>
 
       <div
