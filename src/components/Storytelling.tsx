@@ -10,10 +10,10 @@ const Storytelling = () => {
     <section className="about-section min-h-[90vh] relative bg-background px-[6vw]">
       <div className="about-main-wrapper">
         <div className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4">
-          <ScrollFloat
-            textClassName="font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
-          >
-            {mainLine}
+          <ScrollFloat>
+            <span className="font-display font-extrabold leading-[0.95] tracking-[-0.02em]">
+              {mainLine}
+            </span>
           </ScrollFloat>
         </div>
       </div>
