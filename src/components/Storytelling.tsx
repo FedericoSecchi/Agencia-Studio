@@ -24,7 +24,7 @@ const Storytelling = () => {
         <div className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4">
           <AnimatedDecryptText
             text={mainLine}
-            animateOn="hover"
+            animateOn="load"
             parentClassName="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em] flex flex-wrap justify-center gap-2"
             renderContent={() =>
               words.map(({ word, isHighlight }, idx) => (
