@@ -1,20 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import StaggeredMenu from "@/components/StaggeredMenu";
+import MobileMenu from "@/components/MobileMenu";
 import { scrollToSection, scrollToTop } from "@/utils/scroll";
-import { useIsMobile } from "@/hooks/useIsMobile";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile(768);
-
-  // Force close mobile menu when switching from mobile to desktop
-  useEffect(() => {
-    if (!isMobile && isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
-    }
-  }, [isMobile, isMobileMenuOpen]);
 
   const handleStartProject = () => {
     scrollToSection("#contact");
@@ -31,56 +22,46 @@ const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation - only visible on desktop/tablet */}
-          {!isMobile && (
-            <>
-              <nav className="flex items-center gap-8">
-                {["Work", "Capabilities", "About", "Contact"].map((item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="link-animated font-body text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
-                  >
-                    {item}
-                  </a>
-                ))}
-              </nav>
-
-              {/* CTA */}
-              <Button
-                variant="neon"
-                size="sm"
-                className="inline-flex"
-                onClick={handleStartProject}
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            {["Work", "Capabilities", "About", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="link-animated font-body text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
               >
-                Start a project
-              </Button>
-            </>
-          )}
+                {item}
+              </a>
+            ))}
+          </nav>
 
-          {/* Mobile menu button - only visible on mobile */}
-          {isMobile && (
-            <button
-              className="flex flex-col gap-1.5 p-2"
-              onClick={() => setIsMobileMenuOpen(true)}
-              aria-label="Open menu"
-            >
-              <span className="w-6 h-0.5 bg-secondary-foreground"></span>
-              <span className="w-6 h-0.5 bg-secondary-foreground"></span>
-              <span className="w-4 h-0.5 bg-secondary-foreground"></span>
-            </button>
-          )}
+          {/* CTA */}
+          <Button
+            variant="neon"
+            size="sm"
+            className="hidden md:inline-flex"
+            onClick={handleStartProject}
+          >
+            Start a project
+          </Button>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden flex flex-col gap-1.5 p-2"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <span className="w-6 h-0.5 bg-secondary-foreground"></span>
+            <span className="w-6 h-0.5 bg-secondary-foreground"></span>
+            <span className="w-4 h-0.5 bg-secondary-foreground"></span>
+          </button>
         </div>
       </header>
 
-      {/* Staggered Menu - only mounted on mobile */}
-      {isMobile && (
-        <StaggeredMenu
-          isOpen={isMobileMenuOpen}
-          onClose={() => setIsMobileMenuOpen(false)}
-          navigationItems={["Work", "Capabilities", "About", "Contact"]}
-        />
-      )}
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
     </>
   );
 };
