@@ -126,8 +126,8 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Sticker */}
-            <div className="absolute -bottom-10 right-0 lg:right-20 sticker w-24 h-24 text-sm">
+            {/* Sticker - Only visible on XL screens to prevent overlap with CTA buttons */}
+            <div className="hidden xl:block absolute -bottom-10 right-0 lg:right-20 sticker w-24 h-24 text-sm">
               ✦ New
             </div>
           </div>
