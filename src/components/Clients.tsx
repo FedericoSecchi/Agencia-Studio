@@ -18,7 +18,7 @@ const Clients = () => {
 
         {/* Brands Marquee */}
         <div className="overflow-hidden">
-          <div className="flex gap-16 animate-marquee whitespace-nowrap">
+          <div className="flex gap-16 marquee-track whitespace-nowrap">
             {marqueeBrands.map((brand, index) => (
               <div
                 key={`${brand.name}-${index}`}
