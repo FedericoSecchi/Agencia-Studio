@@ -1,16 +1,24 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MobileMenu from "@/components/MobileMenu";
-import { scrollToSection, scrollToTop } from "@/utils/scroll";
+import { scrollToSection, scrollToTop, createNavigateToSection } from "@/utils/scroll";
 import { useI18n } from "@/i18n/context";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage } = useI18n();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const navigateToSection = createNavigateToSection(navigate, location.pathname);
 
   const handleStartProject = () => {
-    scrollToSection("#contact");
+    navigateToSection("#contact");
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    navigateToSection(sectionId);
   };
 
   const toggleLanguage = () => {
@@ -30,15 +38,19 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {["Work", "Capabilities", "About", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="link-animated font-body text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
-              >
-                {item}
-              </a>
-            ))}
+            {["Work", "Capabilities", "About", "Contact"].map((item) => {
+              const sectionId = `#${item.toLowerCase()}`;
+              return (
+                <a
+                  key={item}
+                  href={sectionId}
+                  onClick={(e) => handleNavClick(e, sectionId)}
+                  className="link-animated font-body text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                >
+                  {item}
+                </a>
+              );
+            })}
           </nav>
 
           {/* Language Toggle & CTA */}

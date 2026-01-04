@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { scrollToSection } from "@/utils/scroll";
+import { createNavigateToSection } from "@/utils/scroll";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -9,15 +9,18 @@ interface MobileMenuProps {
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   const navItems = ["Work", "Capabilities", "About", "Contact"];
+  const navigate = useNavigate();
+  const location = useLocation();
+  const navigateToSection = createNavigateToSection(navigate, location.pathname);
 
   const handleNavClick = (item: string) => {
     const sectionId = `#${item.toLowerCase()}`;
-    scrollToSection(sectionId);
+    navigateToSection(sectionId);
     onClose();
   };
 
   const handleStartProject = () => {
-    scrollToSection("#contact");
+    navigateToSection("#contact");
     onClose();
   };
 
