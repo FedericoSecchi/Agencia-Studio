@@ -29,18 +29,32 @@ interface I18nProviderProps {
 
 export const I18nProvider = ({ children, defaultLanguage = 'en' }: I18nProviderProps) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Try to get from localStorage, fallback to default
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('language') as Language;
-      if (saved === 'en' || saved === 'es') {
-        return saved;
-      }
+    // Only run on client side
+    if (typeof window === 'undefined') {
+      return defaultLanguage;
     }
-    return defaultLanguage;
+
+    // First, check if user has manually selected a language
+    const saved = localStorage.getItem('language') as Language;
+    if (saved === 'en' || saved === 'es') {
+      return saved;
+    }
+
+    // If no saved preference, auto-detect from browser locale
+    const browserLang = navigator.language || navigator.languages?.[0] || '';
+    
+    // Check if browser language starts with 'es' (covers es, es-AR, es-MX, etc.)
+    if (browserLang.toLowerCase().startsWith('es')) {
+      return 'es';
+    }
+
+    // Default to English for all other cases
+    return 'en';
   });
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
+    // Persist manual selection to localStorage
     if (typeof window !== 'undefined') {
       localStorage.setItem('language', lang);
     }
