@@ -12,7 +12,10 @@ const Storytelling = () => {
       aria-labelledby="about-intro-heading"
     >
       <div className="about-main-wrapper">
-        <div className="about-main centered-text w-full max-w-none mx-auto space-y-4">
+        <div
+          className="about-main centered-text w-full max-w-none mx-auto"
+          style={{ marginBottom: "clamp(1.75rem, 3vw, 4.5rem)" }}
+        >
           <span className="label-text text-primary mb-4 block text-center">ABOUT</span>
           <h2
             id="about-intro-heading"
