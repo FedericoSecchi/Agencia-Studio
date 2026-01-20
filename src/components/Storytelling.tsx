@@ -19,7 +19,7 @@ const Storytelling = () => {
             className="font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
             style={{
               fontSize: "clamp(3.5rem, 10vw, 12rem)",
-              lineHeight: "0.95",
+              lineHeight: "clamp(1.02, 0.92 + 0.3vw, 1.14)",
               width: "100vw",
               maxWidth: "none",
               margin: "0",
@@ -27,6 +27,9 @@ const Storytelling = () => {
               marginLeft: "calc(50% - 50vw)",
               marginRight: "calc(50% - 50vw)",
               textAlign: "center",
+              textWrap: "balance",
+              hyphens: "auto",
+              overflowWrap: "break-word",
               boxSizing: "border-box",
             }}
           >
