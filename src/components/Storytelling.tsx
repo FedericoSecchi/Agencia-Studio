@@ -35,7 +35,7 @@ const Storytelling = () => {
         </div>
       </div>
 
-      <div className="about-note text-muted-foreground">
+      <div className="about-note text-muted-foreground w-full mx-auto max-w-xl text-center">
         {sideCopy}
       </div>
     </section>
