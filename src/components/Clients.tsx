@@ -8,6 +8,7 @@ const Clients = () => {
     <section className="py-32 bg-background overflow-hidden">
       <div className="section-container">
         <div className="text-center mb-20" data-animate="fade-up">
+          <span className="label-text text-primary mb-4 block">CLIENTS</span>
           <h2 className="headline-medium mb-4">
             Brands We Work With
           </h2>

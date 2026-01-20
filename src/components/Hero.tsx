@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import heroImage1 from "@/assets/hero-collage-1.jpg";
@@ -6,58 +6,16 @@ import heroImage2 from "@/assets/hero-collage-2.jpg";
 import heroImage3 from "@/assets/hero-collage-3.jpg";
 import { scrollToSection } from "@/utils/scroll";
 
-const changingWords = ["brands", "websites", "experiences"];
-
 const Hero = () => {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const headlineRef = useRef<HTMLHeadingElement>(null);
   const collageRef = useRef<HTMLDivElement>(null);
-  const wordRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    // Word change animation
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % changingWords.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (wordRef.current) {
-      gsap.fromTo(
-        wordRef.current,
-        { opacity: 0, y: 20, rotateX: -30 },
-        { opacity: 1, y: 0, rotateX: 0, duration: 0.6, ease: "power3.out" }
-      );
-    }
-  }, [currentWordIndex]);
-
-  useEffect(() => {
-    // Headline wave animation
-    if (headlineRef.current) {
-      const words = headlineRef.current.querySelectorAll(".word");
-      gsap.fromTo(
-        words,
-        { opacity: 0, y: 60, rotateX: -20 },
-        {
-          opacity: 1,
-          y: 0,
-          rotateX: 0,
-          duration: 1,
-          stagger: 0.08,
-          ease: "power3.out",
-          delay: 0.3,
-        }
-      );
-    }
-
-    // Collage explosion animation
+    // Collage entrance animation (keep visible from first paint)
     if (collageRef.current) {
       const images = collageRef.current.querySelectorAll(".collage-image");
       gsap.fromTo(
         images,
-        { opacity: 0, scale: 0.8, y: 40 },
+        { opacity: 1, scale: 0.96, y: 16 },
         {
           opacity: 1,
           scale: 1,
@@ -71,7 +29,8 @@ const Hero = () => {
     }
   }, []);
 
-  const headlineText = "We design";
+  const headlineText =
+    "We design brands, websites, and digital experiences that feel intentional.";
 
   return (
     <section className="relative min-h-screen bg-background overflow-hidden flex items-center">
@@ -79,28 +38,11 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Text content */}
           <div className="relative z-10">
+            <span className="label-text text-primary mb-3 block">STUDIO</span>
             <h1
-              ref={headlineRef}
               className="headline-large mb-8"
-              style={{ perspective: "1000px" }}
             >
-              {headlineText.split(" ").map((word, i) => (
-                <span key={i} className="word inline-block mr-4">
-                  {word}
-                </span>
-              ))}
-              <br />
-              <span
-                ref={wordRef}
-                key={currentWordIndex}
-                className="inline-block text-primary"
-              >
-                {changingWords[currentWordIndex]}
-              </span>
-              <br />
-              <span className="word inline-block">that feel</span>
-              <br />
-              <span className="word inline-block">intentional.</span>
+              {headlineText}
             </h1>
 
             <p className="body-large text-muted-foreground max-w-lg mb-10">
