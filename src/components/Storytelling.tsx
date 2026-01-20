@@ -7,6 +7,7 @@ const sideCopy =
 const Storytelling = () => {
   return (
     <section
+      id="about"
       className="about-section min-h-[90vh] relative bg-background px-[6vw]"
       aria-labelledby="about-intro-heading"
     >

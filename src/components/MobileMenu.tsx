@@ -8,7 +8,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
-  const navItems = ["Work", "Capabilities", "About", "Contact"];
+  const navItems = ["Work", "Capabilities", "About", "Process", "Contact"];
   const navigate = useNavigate();
   const location = useLocation();
   const navigateToSection = createNavigateToSection(navigate, location.pathname);

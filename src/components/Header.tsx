@@ -38,7 +38,7 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {["Work", "Capabilities", "About", "Contact"].map((item) => {
+            {["Work", "Capabilities", "About", "Process", "Contact"].map((item) => {
               const sectionId = `#${item.toLowerCase()}`;
               return (
                 <a

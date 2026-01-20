@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Storytelling from "@/components/Storytelling";
+import Process from "@/components/Process";
 import Marquee from "@/components/Marquee";
 import CollageShowcase from "@/components/CollageShowcase";
 import Portfolio from "@/components/Portfolio";
 import Capabilities from "@/components/Capabilities";
-import Ethos from "@/components/Ethos";
 import Clients from "@/components/Clients";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
@@ -26,11 +26,11 @@ const Index = () => {
       <main>
         <Hero />
         <Storytelling />
+        <Process />
         <Marquee />
         <CollageShowcase />
         <Portfolio />
         <Capabilities />
-        <Ethos />
         <Clients />
         <ContactCTA />
       </main>
