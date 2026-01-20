@@ -43,7 +43,10 @@ const Storytelling = () => {
           </div>
         </div>
 
-        <div className="about-note text-muted-foreground w-full mx-auto max-w-xl text-center">
+        <div
+          className="about-note text-muted-foreground w-full text-center"
+          style={{ paddingInline: "clamp(1.25rem, 6vw, 6rem)" }}
+        >
           {sideCopy}
         </div>
       </div>
