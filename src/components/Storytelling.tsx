@@ -13,7 +13,7 @@ const Storytelling = () => {
     >
       <div
         className="about-main-wrapper grid"
-        style={{ rowGap: "clamp(2.5rem, 6vw, 6rem)" }}
+        style={{ rowGap: "0" }}
       >
         <div className="about-main w-full">
           <span
@@ -43,6 +43,11 @@ const Storytelling = () => {
             </h2>
           </div>
         </div>
+
+        <div
+          aria-hidden="true"
+          style={{ height: "clamp(2.5rem, 6vw, 6rem)" }}
+        />
 
         <div
           className="about-note text-muted-foreground w-full text-center"
