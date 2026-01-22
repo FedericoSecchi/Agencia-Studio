@@ -199,52 +199,52 @@ export const es = {
       type: "Identidad · Sitio web",
       tag: "Hospitalidad",
       miniDescription:
-        "Una identidad completa y rediseño web para un hotel boutique de montaña.",
+        "Hotel boutique de montaña que necesitaba identidad completa y sitio renovado.",
       task:
-        "Crear una identidad de marca que refleje la experiencia alpina y atraiga a viajeros modernos que buscan escapadas auténticas en la montaña.",
+        "Hotel Alpino necesitaba una marca cohesionada que transmitiera la experiencia alpina y atrajera a viajeros modernos.",
       idea:
-        "Combinar elegancia rústica con diseño contemporáneo, usando texturas naturales, tipografías refinadas y una paleta inspirada en paisajes alpinos.",
+        "Combinamos rasgos rústicos con tipografía refinada y una paleta contenida inspirada en la montaña.",
       solution:
-        "Desarrollamos un sistema visual integral para digital e impreso, con sitio web, guidelines y piezas de marketing que capturan la esencia de la hospitalidad de montaña.",
+        "Entregamos un sistema de identidad completo, sitio web y guías que unifican cada punto de contacto.",
     },
     "bakery-studio": {
       title: "Bakery Studio",
       type: "Refresh de marca · Sistema visual",
       tag: "Food & Beverage",
       miniDescription:
-        "Refresh de marca para una panadería artesanal con foco en storytelling visual.",
+        "Refresh para panadería artesanal con foco en calidez y relato visual.",
       task:
-        "Modernizar la marca manteniendo su carácter artesanal y auténtico, y volverla más atractiva para un público más joven.",
+        "La panadería quería modernizarse sin perder su carácter artesanal.",
       idea:
-        "Crear un sistema visual cálido y cercano que celebre la artesanía y los ingredientes de calidad, con elementos dibujados a mano y fotografía con carácter.",
+        "Construimos un sistema visual cálido con trazos manuales y fotografía con carácter.",
       solution:
-        "Rediseñamos la identidad con nueva paleta, tipografías personalizadas y un lenguaje visual que cuenta la historia de la panificación tradicional con un enfoque moderno.",
+        "Lanzamos una identidad renovada, tipografía propia y un sistema flexible, actual y cercano.",
     },
     "outdoor-gear": {
       title: "Outdoor Gear",
       type: "Landing de lanzamiento · Kit de contenido",
       tag: "Retail",
       miniDescription:
-        "Campaña de lanzamiento y landing page para una nueva marca de outdoor.",
+        "Campaña y landing de lanzamiento para una nueva marca outdoor.",
       task:
-        "Generar entusiasmo y confianza para una marca nueva en un mercado competitivo, estableciendo credibilidad desde el día uno.",
+        "Una marca nueva necesitaba credibilidad y tracción en un mercado competitivo.",
       idea:
-        "Desarrollar un lenguaje visual audaz y aventurero con fotografía potente, mensajes claros y autenticidad para conectar con amantes del aire libre.",
+        "Definimos un lenguaje audaz y aventurero con mensajes claros e imágenes potentes.",
       solution:
-        "Creamos un paquete de lanzamiento completo con landing de alta conversión, assets para redes y guidelines que posicionaron la marca como un jugador serio en el segmento.",
+        "Creamos una landing de alta conversión y un kit de lanzamiento que posicionó la marca desde el día uno.",
     },
     "wellness-space": {
       title: "Wellness Space",
       type: "Sitio Webflow · Kit social",
       tag: "Studios",
       miniDescription:
-        "Presencia digital completa para un estudio de bienestar, con sitio web y assets para redes.",
+        "Presencia digital serena y profesional para un estudio de bienestar.",
       task:
-        "Crear una marca calmada y profesional que se destaque en la industria wellness y transmita confianza y expertise.",
+        "El estudio debía destacarse en wellness y transmitir confianza y expertise.",
       idea:
-        "Diseñar un sistema visual sereno con colores suaves, tipografía limpia e imágenes conscientes que reflejen el enfoque del estudio hacia el bienestar.",
+        "Diseñamos un sistema sereno con color suave, tipografía limpia e imágenes conscientes.",
       solution:
-        "Construimos un sitio Webflow con reservas integradas, un kit social cohesivo y guidelines que ayudan a mantener consistencia en todos los puntos de contacto.",
+        "Construimos un sitio en Webflow con reservas, kit social y guías de marca cohesionadas.",
     },
   },
 };

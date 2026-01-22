@@ -199,52 +199,52 @@ export const en = {
       type: "Identity · Website",
       tag: "Hospitality",
       miniDescription:
-        "A complete brand identity and website redesign for a boutique mountain hotel.",
+        "A boutique alpine hotel needing a full identity and website refresh.",
       task:
-        "Create a brand identity that reflects the alpine experience while appealing to modern travelers seeking authentic mountain escapes.",
+        "Hotel Alpino needed a cohesive brand that captured the alpine experience and appealed to modern travelers.",
       idea:
-        "Combine rustic elegance with contemporary design, using natural textures, refined typography, and a color palette inspired by alpine landscapes.",
+        "We blended rustic cues with refined typography and a restrained palette inspired by the mountains.",
       solution:
-        "We developed a comprehensive visual system that works across digital and print, including a custom website, brand guidelines, and marketing materials that capture the essence of mountain hospitality.",
+        "Delivered a full identity system, website, and guidelines that unify every touchpoint and elevate the hospitality feel.",
     },
     "bakery-studio": {
       title: "Bakery Studio",
       type: "Brand refresh · Visual system",
       tag: "Food & Beverage",
       miniDescription:
-        "A comprehensive brand refresh for an artisanal bakery with a focus on visual storytelling.",
+        "An artisanal bakery refresh built around warmth and visual storytelling.",
       task:
-        "Modernize the brand while maintaining its artisanal and authentic feel, making it more appealing to a younger audience.",
+        "The bakery wanted to modernize without losing its handcrafted, authentic feel.",
       idea:
-        "Create a warm, inviting visual system that celebrates craftsmanship and quality ingredients, using hand-drawn elements and rich photography.",
+        "We built a warm visual system with hand-drawn accents and rich photography.",
       solution:
-        "We redesigned the brand identity with a fresh color palette, custom typography, and a visual language that tells the story of traditional baking methods meeting modern tastes.",
+        "Launched a refreshed identity, custom typography, and a flexible system that feels traditional and current.",
     },
     "outdoor-gear": {
       title: "Outdoor Gear",
       type: "Launch landing · Content kit",
       tag: "Retail",
       miniDescription:
-        "Launch campaign and landing page for a new outdoor gear brand.",
+        "Launch campaign and landing page for a new outdoor brand.",
       task:
-        "Create excitement and trust for a new brand entering a competitive market, establishing credibility from day one.",
+        "A new entrant needed credibility and excitement in a crowded market.",
       idea:
-        "Develop a bold, adventure-focused visual language with strong photography, clear messaging, and a sense of authenticity that resonates with outdoor enthusiasts.",
+        "We shaped a bold, adventure-first language with clear messaging and strong imagery.",
       solution:
-        "We created a complete launch package including a high-converting landing page, social media assets, and brand guidelines that positioned the brand as a serious player in the outdoor gear space.",
+        "Produced a high-converting landing page and launch kit that positioned the brand as serious from day one.",
     },
     "wellness-space": {
       title: "Wellness Space",
       type: "Webflow site · Social kit",
       tag: "Studios",
       miniDescription:
-        "A complete digital presence for a wellness studio, including website and social media assets.",
+        "A calm, professional digital presence for a wellness studio.",
       task:
-        "Create a calming, professional brand that stands out in the wellness industry while conveying trust and expertise.",
+        "The studio needed to stand out in wellness while projecting trust and expertise.",
       idea:
-        "Design a serene visual system with soft colors, clean typography, and mindful imagery that reflects the studio's approach to wellness and self-care.",
+        "We designed a serene system with soft color, clean type, and mindful imagery.",
       solution:
-        "We built a beautiful Webflow website with integrated booking, a cohesive social media kit, and brand guidelines that help the studio maintain consistency across all touchpoints.",
+        "Built a Webflow site with booking plus a cohesive social kit and brand guidelines.",
     },
   },
 };
