@@ -45,11 +45,36 @@ export const I18nProvider = ({ children, defaultLanguage = 'en' }: I18nProviderP
       ? navigator.languages
       : [navigator.language].filter(Boolean);
 
-    // Check if browser language starts with 'es' (covers es, es-AR, es-MX, etc.)
-    const hasSpanish = preferredLanguages.some((lang) =>
-      lang.toLowerCase().startsWith('es')
-    );
-    if (hasSpanish) {
+    const latamSpanishLocales = new Set([
+      'es-ar',
+      'es-bo',
+      'es-cl',
+      'es-co',
+      'es-cr',
+      'es-cu',
+      'es-do',
+      'es-ec',
+      'es-gt',
+      'es-hn',
+      'es-mx',
+      'es-ni',
+      'es-pa',
+      'es-pe',
+      'es-pr',
+      'es-py',
+      'es-sv',
+      'es-uy',
+      'es-ve',
+    ]);
+
+    const hasLatamSpanish = preferredLanguages.some((lang) => {
+      const normalized = lang.toLowerCase();
+      return Array.from(latamSpanishLocales).some((locale) =>
+        normalized.startsWith(locale)
+      );
+    });
+
+    if (hasLatamSpanish) {
       return 'es';
     }
 
