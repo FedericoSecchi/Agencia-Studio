@@ -11,14 +11,16 @@ import Clients from "@/components/Clients";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
+import { useI18n } from "@/i18n/context";
 
 const Index = () => {
+  const { t, language } = useI18n();
   useScrollAnimations();
 
   useEffect(() => {
     // Update page title
-    document.title = "Creative Studio — Branding, Websites & Experiences";
-  }, []);
+    document.title = t("meta.homeTitle");
+  }, [language, t]);
 
   return (
     <div className="relative">

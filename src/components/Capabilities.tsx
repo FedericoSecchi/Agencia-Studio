@@ -1,40 +1,21 @@
 import { useState } from "react";
-
-const capabilities = [
-  {
-    title: "Branding",
-    text: "Visual identities, logo refinements, typography and color systems, and brand guidelines built for real-world use.",
-    icon: "✦",
-  },
-  {
-    title: "Websites",
-    text: "Modern, responsive sites with clear structure, smooth interactions and fast performance.",
-    icon: "◈",
-  },
-  {
-    title: "Content & Motion",
-    text: "Layouts for social, short motion pieces, product visuals and campaign assets.",
-    icon: "◎",
-  },
-  {
-    title: "Systems & Automations",
-    text: "Small automations for forms, email flows and simple workflows that save time every week.",
-    icon: "⬡",
-  },
-];
+import { useI18n } from "@/i18n/context";
 
 const Capabilities = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useI18n();
+  const capabilities = t<{ title: string; text: string }[]>("capabilities.items");
+  const icons = ["✦", "◈", "◎", "⬡"];
 
   return (
     <section id="capabilities" className="py-32 bg-background">
       <div className="section-container">
         <div className="mb-20" data-animate="fade-up">
-          <span className="label-text text-primary mb-4 block">CAPABILITIES</span>
+          <span className="label-text text-primary mb-4 block">{t("capabilities.label")}</span>
           <h2 className="headline-medium">
-            What we're
+            {t("capabilities.title")}
             <br />
-            <span className="text-primary">really good at.</span>
+            <span className="text-primary">{t("capabilities.titleHighlight")}</span>
           </h2>
         </div>
 
@@ -59,7 +40,7 @@ const Capabilities = () => {
                           : "text-muted-foreground"
                       }`}
                     >
-                      {cap.icon}
+                    {icons[index]}
                     </span>
                     <h3
                       className={`font-display text-2xl md:text-3xl font-bold transition-colors duration-300 ${
@@ -68,7 +49,7 @@ const Capabilities = () => {
                           : "text-muted-foreground"
                       }`}
                     >
-                      {cap.title}
+                    {cap.title}
                     </h3>
                   </div>
                   <span
@@ -109,7 +90,7 @@ const Capabilities = () => {
                     className="text-[180px] text-primary opacity-20 transition-all duration-500"
                     key={activeIndex}
                   >
-                    {capabilities[activeIndex].icon}
+                    {icons[activeIndex]}
                   </span>
                 </div>
 

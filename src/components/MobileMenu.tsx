@@ -1,6 +1,7 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { createNavigateToSection } from "@/utils/scroll";
+import { useI18n } from "@/i18n/context";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -8,13 +9,20 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
-  const navItems = ["Work", "Capabilities", "About", "Process", "Contact"];
+  const { t } = useI18n();
+  const navItems = [
+    { key: "nav.work", section: "work" },
+    { key: "nav.capabilities", section: "capabilities" },
+    { key: "nav.about", section: "about" },
+    { key: "nav.process", section: "process" },
+    { key: "nav.contact", section: "contact" },
+  ];
   const navigate = useNavigate();
   const location = useLocation();
   const navigateToSection = createNavigateToSection(navigate, location.pathname);
 
-  const handleNavClick = (item: string) => {
-    const sectionId = `#${item.toLowerCase()}`;
+  const handleNavClick = (section: string) => {
+    const sectionId = `#${section}`;
     navigateToSection(sectionId);
     onClose();
   };
@@ -41,7 +49,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <button
             onClick={onClose}
             className="self-end mb-8 p-2 hover:opacity-70 transition-opacity"
-            aria-label="Close menu"
+            aria-label={t("aria.closeMenu")}
           >
             <svg
               className="w-6 h-6"
@@ -62,11 +70,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <nav className="flex-1 space-y-6">
             {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => handleNavClick(item)}
+                key={item.section}
+                onClick={() => handleNavClick(item.section)}
                 className="block w-full text-left font-display text-2xl font-bold hover:text-primary transition-colors"
               >
-                {item}
+                {t(item.key)}
               </button>
             ))}
           </nav>
@@ -79,7 +87,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               className="w-full"
               onClick={handleStartProject}
             >
-              Start a project
+              {t("hero.ctaStart")}
             </Button>
           </div>
         </div>

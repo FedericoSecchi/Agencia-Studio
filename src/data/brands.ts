@@ -1,48 +1,39 @@
 export interface Brand {
-  name: string;
+  id: string;
   logo?: string; // Path to logo image (SVG/PNG)
-  category: string;
 }
 
 export const brandsData: Brand[] = [
   {
-    name: "Hotel Alpino",
-    category: "Hospitality",
+    id: "hotel-alpino",
     // logo: "/logos/hotel-alpino.svg", // Placeholder path
   },
   {
-    name: "Bakery Studio",
-    category: "Food & Beverage",
+    id: "bakery-studio",
     // logo: "/logos/bakery-studio.svg",
   },
   {
-    name: "Outdoor Gear",
-    category: "Retail",
+    id: "outdoor-gear",
     // logo: "/logos/outdoor-gear.svg",
   },
   {
-    name: "Wellness Space",
-    category: "Studios",
+    id: "wellness-space",
     // logo: "/logos/wellness-space.svg",
   },
   {
-    name: "Shawarmaz",
-    category: "Food & Beverage",
+    id: "shawarmaz",
     // logo: "/logos/shawarmaz.svg",
   },
   {
-    name: "Swap Coffee",
-    category: "Food & Beverage",
+    id: "swap-coffee",
     // logo: "/logos/swap-coffee.svg",
   },
   {
-    name: "FMAG",
-    category: "Creative",
+    id: "fmag",
     // logo: "/logos/fmag.svg",
   },
   {
-    name: "Baba Sturite",
-    category: "Retail",
+    id: "baba-sturite",
     // logo: "/logos/baba-sturite.svg",
   },
 ];

@@ -5,21 +5,24 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projectsData, getProjectById } from "@/data/projects";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
+import { useI18n } from "@/i18n/context";
 
 const ProjectCase = () => {
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
   const project = projectId ? getProjectById(projectId) : undefined;
+  const { t, language } = useI18n();
 
   useScrollAnimations();
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.title} — Creative Studio`;
+      const title = t<string>(`projects.${project.id}.title`);
+      document.title = `${title} — ${t("meta.projectTitleSuffix")}`;
     } else {
-      document.title = "Project Not Found — Creative Studio";
+      document.title = t("meta.projectNotFoundTitle");
     }
-  }, [project]);
+  }, [project, language, t]);
 
   if (!project) {
     return (
@@ -27,16 +30,16 @@ const ProjectCase = () => {
         <Header />
         <div className="flex min-h-[80vh] items-center justify-center bg-muted">
           <div className="text-center max-w-md">
-            <h1 className="headline-medium mb-4">Project not found</h1>
+            <h1 className="headline-medium mb-4">{t("caseStudy.notFoundTitle")}</h1>
             <p className="body-large text-muted-foreground mb-8">
-              The project you're looking for doesn't exist or has been moved.
+              {t("caseStudy.notFoundDescription")}
             </p>
             <div className="flex gap-4 justify-center">
               <Button onClick={() => navigate("/")} variant="default">
-                Return to Home
+                {t("caseStudy.notFoundCtaHome")}
               </Button>
               <Button onClick={() => navigate("/#work")} variant="outline">
-                View Portfolio
+                {t("caseStudy.notFoundCtaPortfolio")}
               </Button>
             </div>
           </div>
@@ -74,23 +77,25 @@ const ProjectCase = () => {
                   d="M15 19l-7-7 7-7"
                 />
               </svg>
-              Back to Portfolio
+              {t("caseStudy.backToPortfolio")}
             </Link>
           </div>
 
           <div className="mb-12">
-            <span className="label-text text-primary mb-4 block">{project.tag}</span>
-            <h1 className="headline-large mb-4">{project.title}</h1>
-            {project.miniDescription && (
-              <p className="body-large text-muted-foreground max-w-2xl">{project.miniDescription}</p>
-            )}
+            <span className="label-text text-primary mb-4 block">
+              {t(`projects.${project.id}.tag`)}
+            </span>
+            <h1 className="headline-large mb-4">{t(`projects.${project.id}.title`)}</h1>
+            <p className="body-large text-muted-foreground max-w-2xl">
+              {t(`projects.${project.id}.miniDescription`)}
+            </p>
           </div>
 
           {/* Cover Image */}
           <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
             <img
               src={project.image}
-              alt={project.title}
+              alt={t(`projects.${project.id}.title`)}
               className="w-full h-full object-cover"
             />
           </div>
@@ -98,13 +103,13 @@ const ProjectCase = () => {
       </section>
 
       {/* Task Block */}
-      {project.task && (
+      {t(`projects.${project.id}.task`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
-              <h2 className="headline-medium mb-6">Task</h2>
+              <h2 className="headline-medium mb-6">{t("caseStudy.task")}</h2>
               <p className="body-large text-muted-foreground">
-                {project.task}
+                {t(`projects.${project.id}.task`)}
               </p>
             </div>
           </div>
@@ -115,13 +120,13 @@ const ProjectCase = () => {
       )}
 
       {/* Idea Block */}
-      {project.idea && (
+      {t(`projects.${project.id}.idea`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
-              <h2 className="headline-medium mb-6">Idea</h2>
+              <h2 className="headline-medium mb-6">{t("caseStudy.idea")}</h2>
               <p className="body-large text-muted-foreground">
-                {project.idea}
+                {t(`projects.${project.id}.idea`)}
               </p>
             </div>
           </div>
@@ -132,13 +137,13 @@ const ProjectCase = () => {
       )}
 
       {/* Solution Block */}
-      {project.solution && (
+      {t(`projects.${project.id}.solution`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
-              <h2 className="headline-medium mb-6">Solution</h2>
+              <h2 className="headline-medium mb-6">{t("caseStudy.solution")}</h2>
               <p className="body-large text-muted-foreground">
-                {project.solution}
+                {t(`projects.${project.id}.solution`)}
               </p>
             </div>
           </div>
@@ -156,7 +161,7 @@ const ProjectCase = () => {
             <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
-                alt={`${project.title} - Detail 1`}
+                alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 1`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -167,14 +172,14 @@ const ProjectCase = () => {
             <div className="relative h-[400px] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
-                alt={`${project.title} - Detail 2`}
+                alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 2`}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
-                alt={`${project.title} - Detail 3`}
+                alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 3`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -185,7 +190,7 @@ const ProjectCase = () => {
             <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
-                alt={`${project.title} - Detail 4`}
+                alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 4`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -197,15 +202,15 @@ const ProjectCase = () => {
       <section className="py-20 bg-background border-t">
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="body-regular text-muted-foreground mb-6">Next Project</p>
+            <p className="body-regular text-muted-foreground mb-6">{t("caseStudy.nextProject")}</p>
             <Link to={`/project/${nextProject.id}`}>
               <h3 className="headline-medium mb-4 hover:text-primary transition-colors">
-                {nextProject.title}
+                {t(`projects.${nextProject.id}.title`)}
               </h3>
             </Link>
             <Link to="/#work">
               <Button variant="outline" className="mt-8">
-                View All Projects
+                {t("caseStudy.viewAll")}
               </Button>
             </Link>
           </div>

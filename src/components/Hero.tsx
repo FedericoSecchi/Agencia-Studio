@@ -5,9 +5,11 @@ import heroImage1 from "@/assets/hero-collage-1.jpg";
 import heroImage2 from "@/assets/hero-collage-2.jpg";
 import heroImage3 from "@/assets/hero-collage-3.jpg";
 import { scrollToSection } from "@/utils/scroll";
+import { useI18n } from "@/i18n/context";
 
 const Hero = () => {
   const collageRef = useRef<HTMLDivElement>(null);
+  const { t } = useI18n();
 
   useEffect(() => {
     // Collage entrance animation (keep visible from first paint)
@@ -29,26 +31,21 @@ const Hero = () => {
     }
   }, []);
 
-  const headlineText =
-    "We design brands, websites, and digital experiences that feel intentional.";
-
   return (
     <section className="relative min-h-screen bg-background overflow-hidden flex items-center">
       <div className="section-container w-full pt-20 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Text content */}
           <div className="relative z-10">
-            <span className="label-text text-primary mb-3 block">STUDIO</span>
+            <span className="label-text text-primary mb-3 block">{t("hero.label")}</span>
             <h1
               className="headline-large mb-8"
             >
-              {headlineText}
+              {t("hero.headline")}
             </h1>
 
             <p className="body-large text-muted-foreground max-w-lg mb-10">
-              A creative studio focused on visual identity, modern websites, and
-              digital content for teams that care about how they look, not just
-              what they sell.
+              {t("hero.description")}
             </p>
 
             {/* CTA Buttons Container - Clean layout with proper spacing */}
@@ -59,21 +56,21 @@ const Hero = () => {
                   size="xl"
                   onClick={() => scrollToSection("#contact")}
                 >
-                  Start a project
+                  {t("hero.ctaStart")}
                 </Button>
                 <Button
                   variant="heroOutline"
                   size="xl"
                   onClick={() => scrollToSection("#work")}
                 >
-                  See our work
+                  {t("hero.ctaWork")}
                 </Button>
               </div>
               
               {/* Badge positioned outside button flow - only on large screens */}
               <div className="hidden xl:flex absolute -right-8 top-1/2 -translate-y-1/2 items-center justify-center">
                 <div className="sticker w-20 h-20 text-xs">
-                  ✦ New
+                  ✦ {t("hero.badgeNew")}
                 </div>
               </div>
             </div>
@@ -88,7 +85,7 @@ const Hero = () => {
             >
               <img
                 src={heroImage1}
-                alt="Creative studio workspace"
+                alt={t("hero.collageAlt1")}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -100,7 +97,7 @@ const Hero = () => {
             >
               <img
                 src={heroImage2}
-                alt="Designer sketching"
+                alt={t("hero.collageAlt2")}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -112,7 +109,7 @@ const Hero = () => {
             >
               <img
                 src={heroImage3}
-                alt="Website design"
+                alt={t("hero.collageAlt3")}
                 className="w-full h-full object-cover"
               />
             </div>

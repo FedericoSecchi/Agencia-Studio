@@ -3,6 +3,7 @@ import heroImage1 from "@/assets/hero-collage-1.jpg";
 import heroImage2 from "@/assets/hero-collage-2.jpg";
 import heroImage3 from "@/assets/hero-collage-3.jpg";
 import portfolioHotel from "@/assets/portfolio-hotel.jpg";
+import { useI18n } from "@/i18n/context";
 
 // Mapping collage images to project IDs
 const collageProjectMap = {
@@ -13,18 +14,19 @@ const collageProjectMap = {
 };
 
 const CollageShowcase = () => {
+  const { t } = useI18n();
   return (
     <section className="py-32 bg-background overflow-hidden">
       <div className="section-container">
         <div className="text-center mb-20" data-animate="fade-up">
-          <span className="label-text text-primary mb-4 block">WORK</span>
+          <span className="label-text text-primary mb-4 block">{t("work.label")}</span>
           <h2 className="headline-medium mb-4">
-            Selected moments
+            {t("work.collageTitle")}
             <br />
-            from our work.
+            {t("work.collageSubtitle")}
           </h2>
           <p className="body-large text-muted-foreground max-w-xl mx-auto">
-            A snapshot of identities, websites and visual worlds.
+            {t("work.collageDescription")}
           </p>
         </div>
 
@@ -39,14 +41,14 @@ const CollageShowcase = () => {
           >
             <img
               src={heroImage1}
-              alt="Project showcase"
+              alt={t("work.collageAltProjectShowcase")}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
               <div className="absolute bottom-6 left-6">
-                <span className="label-text text-background">Identity</span>
+                <span className="label-text text-background">{t("work.collageOverlayLabel")}</span>
                 <h3 className="font-display text-xl font-bold text-background">
-                  Brand Vision
+                  {t("work.collageOverlayTitle")}
                 </h3>
               </div>
             </div>
@@ -61,7 +63,7 @@ const CollageShowcase = () => {
           >
             <img
               src={heroImage2}
-              alt="Design process"
+              alt={t("work.collageAltDesignProcess")}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
           </Link>
@@ -75,7 +77,7 @@ const CollageShowcase = () => {
           >
             <img
               src={heroImage3}
-              alt="Website design"
+              alt={t("work.collageAltWebsiteDesign")}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
             {/* Sticker overlay */}
@@ -93,7 +95,7 @@ const CollageShowcase = () => {
           >
             <img
               src={portfolioHotel}
-              alt="Hotel branding"
+              alt={t("work.collageAltHotelBranding")}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
           </Link>

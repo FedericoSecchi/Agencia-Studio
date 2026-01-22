@@ -1,10 +1,7 @@
-const mainLine =
-  "We design brand identities and websites that clarify positioning and help teams sell with confidence.";
-
-const sideCopy =
-  "A small studio focused on clear strategy, strong identity, and practical delivery.";
+import { useI18n } from "@/i18n/context";
 
 const Storytelling = () => {
+  const { t } = useI18n();
   return (
     <section
       id="about"
@@ -23,7 +20,7 @@ const Storytelling = () => {
             className="label-text text-primary mb-4 block text-center"
             style={{ paddingInline: "clamp(1.25rem, 6vw, 6rem)" }}
           >
-            ABOUT
+            {t("about.label")}
           </span>
           <h2
             id="about-intro-heading"
@@ -41,7 +38,7 @@ const Storytelling = () => {
               boxSizing: "border-box",
             }}
           >
-            {mainLine}
+            {t("about.mainLine")}
           </h2>
           <div
             className="about-note text-muted-foreground w-full text-center"
@@ -50,7 +47,7 @@ const Storytelling = () => {
               marginTop: "clamp(1.5rem, 3vw, 3rem)",
             }}
           >
-            {sideCopy}
+            {t("about.note")}
           </div>
         </div>
       </div>

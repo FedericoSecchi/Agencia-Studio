@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { useI18n } from "@/i18n/context";
 
 const ContactCTA = () => {
+  const { t } = useI18n();
+  const email = t("contact.email");
   const handleWriteUs = () => {
-    window.location.href = "mailto:hello@boldcanvas.studio?subject=New Project Inquiry";
+    window.location.href = `mailto:${email}?subject=New Project Inquiry`;
   };
 
   const handleStartBrief = () => {
@@ -13,21 +16,20 @@ const ContactCTA = () => {
     <section id="contact" className="py-32 bg-secondary text-secondary-foreground relative overflow-hidden">
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center" data-animate="fade-up">
-          <span className="label-text text-primary mb-4 block">CONTACT</span>
+          <span className="label-text text-primary mb-4 block">{t("contact.label")}</span>
           <h2 className="headline-large mb-6">
-            Bored of
+            {t("contact.title")}
             <br />
-            playing safe?
+            {t("contact.titleEnd")}
           </h2>
 
           <p className="body-large text-secondary-foreground/70 max-w-2xl mx-auto mb-12">
-            Tell us what you're working on and we'll reply with a simple plan,
-            timeline and budget.
+            {t("contact.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button variant="neon" size="xl" onClick={handleWriteUs}>
-              Write us
+              {t("contact.ctaWrite")}
             </Button>
             <Button
               variant="heroOutline"
@@ -36,15 +38,15 @@ const ContactCTA = () => {
               onClick={handleStartBrief}
               disabled
             >
-              Start your brief
+              {t("contact.ctaBrief")}
             </Button>
           </div>
 
           <a
-            href="mailto:hello@boldcanvas.studio"
+            href={`mailto:${email}`}
             className="inline-flex items-center gap-2 font-display text-xl font-semibold text-primary hover:underline"
           >
-            hello@boldcanvas.studio
+            {email}
             <svg
               className="w-5 h-5"
               fill="none"

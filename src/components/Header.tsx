@@ -7,10 +7,17 @@ import { useI18n } from "@/i18n/context";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage } = useI18n();
+  const { language, setLanguage, t } = useI18n();
   const navigate = useNavigate();
   const location = useLocation();
   const navigateToSection = createNavigateToSection(navigate, location.pathname);
+  const navItems = [
+    { key: "nav.work", section: "work" },
+    { key: "nav.capabilities", section: "capabilities" },
+    { key: "nav.about", section: "about" },
+    { key: "nav.process", section: "process" },
+    { key: "nav.contact", section: "contact" },
+  ];
 
   const handleStartProject = () => {
     navigateToSection("#contact");
@@ -32,22 +39,22 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" onClick={() => scrollToTop()} className="flex items-center gap-2">
             <span className="font-display text-2xl font-bold tracking-tight">
-              studio<span className="text-primary">.</span>
+              {t("brand.name")}<span className="text-primary">{t("brand.dot")}</span>
             </span>
           </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {["Work", "Capabilities", "About", "Process", "Contact"].map((item) => {
-              const sectionId = `#${item.toLowerCase()}`;
+            {navItems.map((item) => {
+              const sectionId = `#${item.section}`;
               return (
                 <a
-                  key={item}
+                  key={item.section}
                   href={sectionId}
                   onClick={(e) => handleNavClick(e, sectionId)}
                   className="link-animated font-body text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
                 >
-                  {item}
+                  {t(item.key)}
                 </a>
               );
             })}
@@ -58,16 +65,16 @@ const Header = () => {
             <button
               onClick={toggleLanguage}
               className="text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors uppercase"
-              aria-label={`Switch to ${language === 'en' ? 'Spanish' : 'English'}`}
+              aria-label={t("language.toggleAria")}
             >
-              {language === 'en' ? 'ES' : 'EN'}
+              {t("language.toggleLabel")}
             </button>
             <Button
               variant="neon"
               size="sm"
               onClick={handleStartProject}
             >
-              Start a project
+              {t("hero.ctaStart")}
             </Button>
           </div>
 
@@ -75,7 +82,7 @@ const Header = () => {
           <button
             className="md:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setIsMobileMenuOpen(true)}
-            aria-label="Open menu"
+            aria-label={t("aria.openMenu")}
           >
             <span className="w-6 h-0.5 bg-secondary-foreground"></span>
             <span className="w-6 h-0.5 bg-secondary-foreground"></span>

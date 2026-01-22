@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import { projectsData } from "@/data/projects";
+import { useI18n } from "@/i18n/context";
 
 const Portfolio = () => {
+  const { t } = useI18n();
   return (
     <section id="work" className="py-32 bg-secondary text-secondary-foreground">
       <div className="section-container">
         <div className="mb-16" data-animate="fade-up">
-          <span className="label-text text-primary mb-4 block">WORK</span>
-          <h2 className="headline-medium mb-4">Selected projects</h2>
+          <span className="label-text text-primary mb-4 block">{t("work.label")}</span>
+          <h2 className="headline-medium mb-4">{t("work.title")}</h2>
           <p className="body-large text-secondary-foreground/60">
-            Different industries. Same obsession for clarity.
+            {t("work.subtitle")}
           </p>
         </div>
 
@@ -18,7 +20,7 @@ const Portfolio = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
           data-animate="stagger"
         >
-          {projectsData.map((project, index) => (
+          {projectsData.map((project) => (
             <Link
               key={project.id}
               to={`/project/${project.id}`}
@@ -31,7 +33,7 @@ const Portfolio = () => {
             >
               <img
                 src={project.image}
-                alt={project.title}
+                alt={t(`projects.${project.id}.title`)}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
@@ -40,17 +42,17 @@ const Portfolio = () => {
                 {/* Tag */}
                 <div className="absolute top-6 left-6">
                   <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider rounded-full">
-                    {project.tag}
+                    {t(`projects.${project.id}.tag`)}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-sm text-background/70 mb-2">
-                    {project.type}
+                    {t(`projects.${project.id}.type`)}
                   </p>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-background">
-                    {project.title}
+                    {t(`projects.${project.id}.title`)}
                   </h3>
 
                   {/* Arrow indicator */}

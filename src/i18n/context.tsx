@@ -9,7 +9,7 @@ type Translations = typeof en;
 interface I18nContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: Translations;
+  t: <T = string>(key: string) => T;
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -61,9 +61,28 @@ export const I18nProvider = ({ children, defaultLanguage = 'en' }: I18nProviderP
   };
 
   const translations: Translations = language === 'es' ? es : en;
+  const t = <T = string>(key: string): T => {
+    const value = key
+      .split('.')
+      .reduce<unknown>((acc, part) => {
+        if (acc && typeof acc === 'object' && part in (acc as Record<string, unknown>)) {
+          return (acc as Record<string, unknown>)[part];
+        }
+        return undefined;
+      }, translations);
+
+    if (value === undefined) {
+      if (typeof window !== 'undefined') {
+        console.warn(`[i18n] Missing translation key: ${key}`);
+      }
+      return key as T;
+    }
+
+    return value as T;
+  };
 
   return (
-    <I18nContext.Provider value={{ language, setLanguage, t: translations }}>
+    <I18nContext.Provider value={{ language, setLanguage, t }}>
       {children}
     </I18nContext.Provider>
   );

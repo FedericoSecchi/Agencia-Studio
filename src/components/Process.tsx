@@ -1,36 +1,31 @@
 import { scrollToSection } from "@/utils/scroll";
-
-const bullets = [
-  "Design with intention, not just decoration.",
-  "Use motion and interaction only when it supports the message.",
-  "Deliver systems that are easy to maintain after launch.",
-];
+import { useI18n } from "@/i18n/context";
 
 const Process = () => {
+  const { t } = useI18n();
+  const bullets = t<string[]>("process.bullets");
   return (
     <section id="process" className="py-32 bg-muted">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Main statement */}
           <div data-animate="fade-up">
-            <span className="label-text text-primary mb-4 block">PROCESS</span>
+            <span className="label-text text-primary mb-4 block">{t("process.label")}</span>
             <h2 className="headline-medium mb-8">
-              Talk is cheap.
+              {t("process.title")}
               <br />
-              <span className="text-stroke">Clear work isn't.</span>
+              <span className="text-stroke">{t("process.titleHighlight")}</span>
             </h2>
 
             <p className="body-large text-muted-foreground max-w-lg">
-              We keep the process simple: one clear brief, honest feedback loops
-              and realistic timelines. No endless revisions, no disappearing
-              acts.
+              {t("process.description")}
             </p>
           </div>
 
           {/* Right: Bullets */}
           <div data-animate="stagger">
             <span className="label-text text-primary mb-8 block">
-              Clients usually appreciate that we:
+              {t("process.clientsAppreciate")}
             </span>
 
             <div className="space-y-6">
@@ -58,7 +53,7 @@ const Process = () => {
             >
               <span className="text-2xl">😌</span>
               <span className="font-body font-medium">
-                Less drama, more shipping
+                {t("process.cta")}
               </span>
             </button>
           </div>
