@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { en } from './locales/en';
 import { es } from './locales/es';
 
@@ -80,6 +80,12 @@ export const I18nProvider = ({ children, defaultLanguage = 'en' }: I18nProviderP
 
     return value as T;
   };
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = language;
+    }
+  }, [language]);
 
   return (
     <I18nContext.Provider value={{ language, setLanguage, t }}>

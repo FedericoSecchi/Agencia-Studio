@@ -20,6 +20,16 @@ const Index = () => {
   useEffect(() => {
     // Update page title
     document.title = t("meta.homeTitle");
+    const description = t("meta.homeDescription");
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute("content", description);
+    } else {
+      const metaTag = document.createElement("meta");
+      metaTag.setAttribute("name", "description");
+      metaTag.setAttribute("content", description);
+      document.head.appendChild(metaTag);
+    }
   }, [language, t]);
 
   return (

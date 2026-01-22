@@ -173,8 +173,15 @@ export const en = {
   },
   meta: {
     homeTitle: "Creative Studio — Branding, Websites & Experiences",
+    homeDescription:
+      "We design brand identities and modern websites that clarify positioning and help teams sell with confidence.",
     projectNotFoundTitle: "Project Not Found — Creative Studio",
+    projectNotFoundDescription:
+      "The project you're looking for doesn't exist or has been moved.",
+    projectDescriptionFallback: "A selected project from Creative Studio.",
     projectTitleSuffix: "Creative Studio",
+    notFoundTitle: "Page Not Found — Creative Studio",
+    notFoundDescription: "The page you're looking for doesn't exist.",
   },
   brands: {
     "hotel-alpino": "Hotel Alpino",

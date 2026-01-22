@@ -22,6 +22,18 @@ const ProjectCase = () => {
     } else {
       document.title = t("meta.projectNotFoundTitle");
     }
+    const description = project
+      ? t<string>(`projects.${project.id}.miniDescription`)
+      : t("meta.projectNotFoundDescription");
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute("content", description);
+    } else {
+      const metaTag = document.createElement("meta");
+      metaTag.setAttribute("name", "description");
+      metaTag.setAttribute("content", description);
+      document.head.appendChild(metaTag);
+    }
   }, [project, language, t]);
 
   if (!project) {

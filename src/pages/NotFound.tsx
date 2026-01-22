@@ -10,6 +10,20 @@ const NotFound = () => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
 
+  useEffect(() => {
+    document.title = t("meta.notFoundTitle");
+    const description = t("meta.notFoundDescription");
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute("content", description);
+    } else {
+      const metaTag = document.createElement("meta");
+      metaTag.setAttribute("name", "description");
+      metaTag.setAttribute("content", description);
+      document.head.appendChild(metaTag);
+    }
+  }, [t]);
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
       <div className="text-center">
