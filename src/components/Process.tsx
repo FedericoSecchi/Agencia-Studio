@@ -7,13 +7,20 @@ const Process = () => {
   return (
     <section
       id="process"
-      className="py-32 bg-muted border-t border-border/30"
+      className="pb-32 bg-muted/60 border-t border-border/40"
+      style={{
+        paddingTop: "clamp(5rem, 10vw, 9rem)",
+        marginTop: "clamp(2.5rem, 6vw, 5rem)",
+      }}
       aria-labelledby="process-heading"
     >
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Main statement */}
           <div data-animate="fade-up">
+            <span className="label-text text-muted-foreground/80 mb-3 block">
+              HOW WE WORK
+            </span>
             <span className="label-text text-primary mb-4 block">{t("process.label")}</span>
             <h2 id="process-heading" className="headline-medium mb-8">
               {t("process.title")}
