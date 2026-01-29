@@ -216,6 +216,31 @@ html {
     pointer-events: none;
   }
 
+  .process-step-title {
+    color: inherit;
+  }
+
+  .process-step-desc {
+    margin-top: 0.4rem;
+    color: hsl(var(--muted-foreground));
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  .process-step:hover .process-step-desc,
+  .process-step:focus-within .process-step-desc {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .process-step-desc {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
 
   @media (max-width: 1024px) {
     .about-note {

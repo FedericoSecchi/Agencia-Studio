@@ -42,15 +42,28 @@ export const es = {
   },
   process: {
     label: "PROCESO",
-    title: "Hablar es fácil.",
-    titleHighlight: "El trabajo claro no.",
-    description:
+    headline_line_1: "Hablar es fácil.",
+    headline_line_2: "El trabajo claro no.",
+    intro:
       "Mantenemos el proceso simple: brief claro, feedback honesto y plazos realistas. Sin rondas infinitas, sin desapariciones.",
-    clientsAppreciate: "Los clientes suelen valorar que:",
-    bullets: [
-      "Diseñamos con intención, no solo decoración.",
-      "Usamos motion e interacción solo cuando aportan al mensaje.",
-      "Entregamos sistemas fáciles de mantener después del lanzamiento.",
+    list_label: "LOS CLIENTES SUELEN VALORAR QUE:",
+    steps: [
+      {
+        title: "Diseñamos con intención, no solo decoración.",
+        description: "Cada decisión responde a un objetivo claro, no a una moda.",
+      },
+      {
+        title: "Usamos motion solo cuando suma.",
+        description: "La interacción acompaña el mensaje, nunca lo distrae.",
+      },
+      {
+        title: "Limitamos el feedback.",
+        description: "Definimos momentos claros para revisar y avanzar sin vueltas.",
+      },
+      {
+        title: "Entregamos sistemas mantenibles.",
+        description: "Pensados para funcionar bien hoy y mañana.",
+      },
     ],
     cta: "Menos drama, más entregas",
   },

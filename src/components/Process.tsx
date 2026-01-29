@@ -3,7 +3,7 @@ import { useI18n } from "@/i18n/context";
 
 const Process = () => {
   const { t } = useI18n();
-  const bullets = t<string[]>("process.bullets");
+  const steps = t<{ title: string; description: string }[]>("process.steps");
   return (
     <section
       id="process"
@@ -15,45 +15,46 @@ const Process = () => {
       aria-labelledby="process-heading"
     >
       <div className="section-container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Main statement */}
-          <div data-animate="fade-up">
-            <span className="label-text text-muted-foreground/80 mb-3 block">
-              HOW WE WORK
+          <div>
+            <span className="label-text text-primary mb-4 block">
+              {t("process.label")}
             </span>
-            <span className="label-text text-primary mb-4 block">{t("process.label")}</span>
-            <h2 id="process-heading" className="headline-medium mb-8">
-              {t("process.title")}
+            <h2 id="process-heading" className="headline-medium mb-8 max-w-3xl">
+              {t("process.headline_line_1")}
               <br />
-              <span className="text-stroke">{t("process.titleHighlight")}</span>
+              <span className="text-stroke">{t("process.headline_line_2")}</span>
             </h2>
 
             <p className="body-large text-muted-foreground max-w-lg">
-              {t("process.description")}
+              {t("process.intro")}
             </p>
           </div>
 
-          {/* Right: Bullets */}
-          <div data-animate="stagger">
+          {/* Right: Steps */}
+          <div>
             <span className="label-text text-primary mb-8 block">
-              {t("process.clientsAppreciate")}
+              {t("process.list_label")}
             </span>
 
             <div className="space-y-6">
-              {bullets.map((bullet, index) => (
+              {steps.map((step, index) => (
                 <div
-                  key={index}
-                  className="flex gap-4 items-start group cursor-default"
+                  key={step.title}
+                  className="flex gap-4 items-start process-step"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
                     {index + 1}
                   </div>
-                  <p className="body-large pt-1.5">{bullet}</p>
+                  <div className="pt-1.5">
+                    <p className="body-large process-step-title">{step.title}</p>
+                    <p className="process-step-desc">{step.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
 
-            {/* Decorative sticker */}
             <button
               onClick={(e) => {
                 e.preventDefault();

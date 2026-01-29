@@ -24,12 +24,10 @@ const Storytelling = () => {
           </span>
           <h2
             id="about-intro-heading"
-            className="font-display font-extrabold tracking-[-0.02em] text-center"
+            className="font-display font-extrabold tracking-[-0.02em] text-center max-w-3xl mx-auto"
             style={{
               fontSize: "clamp(3.5rem, 9vw, 11.5rem)",
               lineHeight: "1.05",
-              width: "100%",
-              maxWidth: "100%",
               margin: "0",
               padding: "0",
               textWrap: "balance",

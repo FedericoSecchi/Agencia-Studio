@@ -41,15 +41,28 @@ export const en = {
   },
   process: {
     label: "PROCESS",
-    title: "Talk is cheap.",
-    titleHighlight: "Clear work isn't.",
-    description:
-      "We keep the process simple: one clear brief, honest feedback loops and realistic timelines. No endless revisions, no disappearing acts.",
-    clientsAppreciate: "Clients usually appreciate that we:",
-    bullets: [
-      "Design with intention, not just decoration.",
-      "Use motion and interaction only when it supports the message.",
-      "Deliver systems that are easy to maintain after launch.",
+    headline_line_1: "Talk is cheap.",
+    headline_line_2: "Clear work isn’t.",
+    intro:
+      "We keep the process simple: clear briefs, honest feedback, and realistic timelines. No endless loops, no disappearing acts.",
+    list_label: "CLIENTS USUALLY APPRECIATE THAT:",
+    steps: [
+      {
+        title: "We design with intention, not decoration.",
+        description: "Every decision serves a clear goal, not a trend.",
+      },
+      {
+        title: "We use motion only when it adds value.",
+        description: "Interaction supports the message instead of distracting from it.",
+      },
+      {
+        title: "We limit feedback rounds.",
+        description: "Clear moments to review and move forward without friction.",
+      },
+      {
+        title: "We deliver systems that last.",
+        description: "Built to be clear, usable, and easy to maintain.",
+      },
     ],
     cta: "Less drama, more shipping",
   },

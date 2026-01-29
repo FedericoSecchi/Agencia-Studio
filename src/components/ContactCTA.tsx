@@ -17,7 +17,7 @@ const ContactCTA = () => {
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center" data-animate="fade-up">
           <span className="label-text text-primary mb-4 block">{t("contact.label")}</span>
-          <h2 className="headline-large mb-6">
+          <h2 className="headline-medium mb-6">
             {t("contact.title")}
             <br />
             {t("contact.titleEnd")}
