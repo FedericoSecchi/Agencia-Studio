@@ -38,6 +38,13 @@ const Index = () => {
         <Storytelling />
         <Process />
         <Marquee />
+        <div className="py-12 bg-secondary text-secondary-foreground">
+          <div className="section-container">
+            <div className="label-text text-primary uppercase text-center font-medium">
+              What we do → How it looks in the real world
+            </div>
+          </div>
+        </div>
         <Capabilities />
         <Portfolio />
         <Clients />
