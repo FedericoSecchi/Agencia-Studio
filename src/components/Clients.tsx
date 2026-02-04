@@ -7,7 +7,10 @@ const Clients = () => {
   const marqueeBrands = [...brandsData, ...brandsData, ...brandsData];
 
   return (
-    <section className="py-32 bg-background overflow-hidden">
+    <section
+      className="pt-32 bg-background overflow-hidden"
+      style={{ paddingBottom: "clamp(2rem, 5vw, 3rem)" }}
+    >
       <div className="section-container">
         <div className="text-center mb-20" data-animate="fade-up">
           <span className="label-text text-primary mb-4 block">{t("clients.label")}</span>

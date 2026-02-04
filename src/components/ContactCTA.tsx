@@ -13,7 +13,11 @@ const ContactCTA = () => {
   };
 
   return (
-    <section id="contact" className="py-32 bg-background text-foreground relative overflow-hidden">
+    <section
+      id="contact"
+      className="pb-32 bg-background text-foreground relative overflow-hidden"
+      style={{ paddingTop: "clamp(3rem, 6vw, 5rem)" }}
+    >
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center" data-animate="fade-up">
           <span className="label-text text-primary mb-4 block">{t("contact.label")}</span>
