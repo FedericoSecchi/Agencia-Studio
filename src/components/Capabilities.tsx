@@ -107,7 +107,7 @@ const Capabilities = () => {
           </div>
         </div>
 
-        <CollageShowcase embedded />
+        <CollageShowcase embedded showIntro={false} />
       </div>
     </section>
   );

@@ -15,25 +15,31 @@ const collageProjectMap = {
 
 type CollageShowcaseProps = {
   embedded?: boolean;
+  showIntro?: boolean;
 };
 
-const CollageShowcase = ({ embedded = false }: CollageShowcaseProps) => {
+const CollageShowcase = ({
+  embedded = false,
+  showIntro = true,
+}: CollageShowcaseProps) => {
   const { t } = useI18n();
   const content = (
     <>
-      <div className="text-center mb-20" data-animate="fade-up">
-        {!embedded && (
-          <span className="label-text text-primary mb-4 block">{t("work.label")}</span>
-        )}
-        <h2 className="headline-medium mb-4">
-          {t("work.collageTitle")}
-          <br />
-          {t("work.collageSubtitle")}
-        </h2>
-        <p className="body-large text-muted-foreground max-w-xl mx-auto">
-          {t("work.collageDescription")}
-        </p>
-      </div>
+      {showIntro && (
+        <div className="text-center mb-20" data-animate="fade-up">
+          {!embedded && (
+            <span className="label-text text-primary mb-4 block">{t("work.label")}</span>
+          )}
+          <h2 className="headline-medium mb-4">
+            {t("work.collageTitle")}
+            <br />
+            {t("work.collageSubtitle")}
+          </h2>
+          <p className="body-large text-muted-foreground max-w-xl mx-auto">
+            {t("work.collageDescription")}
+          </p>
+        </div>
+      )}
 
       {/* Collage Grid */}
       <div className="bg-background rounded-xl p-6 md:p-8" data-animate="scale">
