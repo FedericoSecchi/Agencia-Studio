@@ -31,8 +31,7 @@ const CollageShowcase = () => {
         </div>
 
         {/* Collage Grid */}
-        <div className="bg-background rounded-xl p-6 md:p-8" data-animate="scale">
-          <div className="relative h-[800px] md:h-[900px]">
+        <div className="relative h-[800px] md:h-[900px]" data-animate="scale">
             {/* Large image */}
             <Link
               to={`/project/${collageProjectMap[heroImage1]}`}
@@ -125,7 +124,6 @@ const CollageShowcase = () => {
               🌟
             </div>
           </div>
-        </div>
       </div>
     </section>
   );
