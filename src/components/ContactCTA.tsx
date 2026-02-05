@@ -15,8 +15,8 @@ const ContactCTA = () => {
   return (
     <section
       id="contact"
-      className="pb-32 bg-background text-foreground relative overflow-hidden"
-      style={{ paddingTop: "clamp(3rem, 6vw, 5rem)" }}
+      className="pb-32 bg-background text-foreground relative overflow-hidden border-t border-border/30"
+      style={{ paddingTop: "clamp(4rem, 7vw, 6rem)" }}
     >
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center" data-animate="fade-up">
