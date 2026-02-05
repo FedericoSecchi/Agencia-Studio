@@ -13,23 +13,13 @@ const collageProjectMap = {
   [portfolioHotel]: "hotel-alpino", // Hotel branding -> Hotel Alpino
 };
 
-type CollageShowcaseProps = {
-  embedded?: boolean;
-  showIntro?: boolean;
-};
-
-const CollageShowcase = ({
-  embedded = false,
-  showIntro = true,
-}: CollageShowcaseProps) => {
+const CollageShowcase = () => {
   const { t } = useI18n();
-  const content = (
-    <>
-      {showIntro && (
+  return (
+    <section className="py-32 bg-secondary text-secondary-foreground overflow-hidden">
+      <div className="section-container">
         <div className="text-center mb-20" data-animate="fade-up">
-          {!embedded && (
-            <span className="label-text text-primary mb-4 block">{t("work.label")}</span>
-          )}
+          <span className="label-text text-primary mb-4 block">{t("work.label")}</span>
           <h2 className="headline-medium mb-4">
             {t("work.collageTitle")}
             <br />
@@ -39,115 +29,105 @@ const CollageShowcase = ({
             {t("work.collageDescription")}
           </p>
         </div>
-      )}
 
-      {/* Collage Grid */}
-      <div className="bg-background rounded-xl p-6 md:p-8" data-animate="scale">
-        <div className="relative h-[800px] md:h-[900px]">
-        {/* Large image */}
-        <Link
-          to={`/project/${collageProjectMap[heroImage1]}`}
-          className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block"
-          style={{ transform: "rotate(-2deg)" }}
-          data-parallax="0.1"
-        >
-          <img
-            src={heroImage1}
-            alt={t("work.collageAltProjectShowcase")}
-            className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div className="absolute bottom-6 left-6">
-              <span className="label-text text-background">{t("work.collageOverlayLabel")}</span>
-              <h3 className="font-display text-xl font-bold text-background">
-                {t("work.collageOverlayTitle")}
-              </h3>
+        {/* Collage Grid */}
+        <div className="bg-background rounded-xl p-6 md:p-8" data-animate="scale">
+          <div className="relative h-[800px] md:h-[900px]">
+            {/* Large image */}
+            <Link
+              to={`/project/${collageProjectMap[heroImage1]}`}
+              className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block"
+              style={{ transform: "rotate(-2deg)" }}
+              data-parallax="0.1"
+            >
+              <img
+                src={heroImage1}
+                alt={t("work.collageAltProjectShowcase")}
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-6 left-6">
+                  <span className="label-text text-background">{t("work.collageOverlayLabel")}</span>
+                  <h3 className="font-display text-xl font-bold text-background">
+                    {t("work.collageOverlayTitle")}
+                  </h3>
+                </div>
+              </div>
+            </Link>
+
+            {/* Medium image right */}
+            <Link
+              to={`/project/${collageProjectMap[heroImage2]}`}
+              className="collage-card absolute top-10 right-0 w-[50%] md:w-[40%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
+              style={{ transform: "rotate(4deg)" }}
+              data-parallax="0.15"
+            >
+              <img
+                src={heroImage2}
+                alt={t("work.collageAltDesignProcess")}
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+            </Link>
+
+            {/* Small image center */}
+            <Link
+              to={`/project/${collageProjectMap[heroImage3]}`}
+              className="collage-card absolute top-[40%] left-[30%] w-[35%] md:w-[25%] h-[30%] rounded-2xl overflow-hidden shadow-xl cursor-pointer z-10 block"
+              style={{ transform: "rotate(-1deg)" }}
+              data-parallax="0.2"
+            >
+              <img
+                src={heroImage3}
+                alt={t("work.collageAltWebsiteDesign")}
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+              {/* Sticker overlay */}
+              <div className="absolute -top-4 -right-4 sticker w-16 h-16 text-xs z-20">
+                🔥
+              </div>
+            </Link>
+
+            {/* Bottom left */}
+            <Link
+              to={`/project/${collageProjectMap[portfolioHotel]}`}
+              className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
+              style={{ transform: "rotate(3deg)" }}
+              data-parallax="0.08"
+            >
+              <img
+                src={portfolioHotel}
+                alt={t("work.collageAltHotelBranding")}
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+            </Link>
+
+            {/* Bottom right decorative card */}
+            <div
+              className="absolute bottom-10 right-20 w-[30%] md:w-[20%] h-[25%] bg-primary rounded-2xl flex items-center justify-center"
+              style={{ transform: "rotate(-5deg)" }}
+            >
+              <span className="font-display text-4xl md:text-6xl font-bold text-primary-foreground">
+                ✦
+              </span>
+            </div>
+
+            {/* Floating elements */}
+            <div
+              className="absolute top-[20%] right-[30%] text-5xl animate-float"
+              style={{ animationDelay: "0.3s" }}
+            >
+              👀
+            </div>
+            <div
+              className="absolute bottom-[30%] left-[60%] text-4xl animate-float"
+              style={{ animationDelay: "0.8s" }}
+            >
+              🌟
             </div>
           </div>
-        </Link>
-
-        {/* Medium image right */}
-        <Link
-          to={`/project/${collageProjectMap[heroImage2]}`}
-          className="collage-card absolute top-10 right-0 w-[50%] md:w-[40%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
-          style={{ transform: "rotate(4deg)" }}
-          data-parallax="0.15"
-        >
-          <img
-            src={heroImage2}
-            alt={t("work.collageAltDesignProcess")}
-            className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-          />
-        </Link>
-
-        {/* Small image center */}
-        <Link
-          to={`/project/${collageProjectMap[heroImage3]}`}
-          className="collage-card absolute top-[40%] left-[30%] w-[35%] md:w-[25%] h-[30%] rounded-2xl overflow-hidden shadow-xl cursor-pointer z-10 block"
-          style={{ transform: "rotate(-1deg)" }}
-          data-parallax="0.2"
-        >
-          <img
-            src={heroImage3}
-            alt={t("work.collageAltWebsiteDesign")}
-            className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-          />
-          {/* Sticker overlay */}
-          <div className="absolute -top-4 -right-4 sticker w-16 h-16 text-xs z-20">
-            🔥
-          </div>
-        </Link>
-
-        {/* Bottom left */}
-        <Link
-          to={`/project/${collageProjectMap[portfolioHotel]}`}
-          className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
-          style={{ transform: "rotate(3deg)" }}
-          data-parallax="0.08"
-        >
-          <img
-            src={portfolioHotel}
-            alt={t("work.collageAltHotelBranding")}
-            className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-          />
-        </Link>
-
-        {/* Bottom right decorative card */}
-        <div
-          className="absolute bottom-10 right-20 w-[30%] md:w-[20%] h-[25%] bg-primary rounded-2xl flex items-center justify-center"
-          style={{ transform: "rotate(-5deg)" }}
-        >
-          <span className="font-display text-4xl md:text-6xl font-bold text-primary-foreground">
-            ✦
-          </span>
-        </div>
-
-        {/* Floating elements */}
-        <div
-          className="absolute top-[20%] right-[30%] text-5xl animate-float"
-          style={{ animationDelay: "0.3s" }}
-        >
-          👀
-        </div>
-        <div
-          className="absolute bottom-[30%] left-[60%] text-4xl animate-float"
-          style={{ animationDelay: "0.8s" }}
-        >
-          🌟
-        </div>
         </div>
       </div>
-    </>
-  );
-
-  return (
-    embedded ? (
-      <div className="mt-24 overflow-hidden">{content}</div>
-    ) : (
-      <section className="py-32 bg-secondary text-secondary-foreground overflow-hidden">
-        <div className="section-container">{content}</div>
-      </section>
-    )
+    </section>
   );
 };
 

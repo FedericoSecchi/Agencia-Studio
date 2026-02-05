@@ -1,5 +1,4 @@
 import { useState } from "react";
-import CollageShowcase from "@/components/CollageShowcase";
 import { useI18n } from "@/i18n/context";
 
 const Capabilities = () => {
@@ -112,7 +111,6 @@ const Capabilities = () => {
           </div>
         </div>
 
-        <CollageShowcase embedded showIntro={false} />
       </div>
     </section>
   );
