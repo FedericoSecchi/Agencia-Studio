@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Storytelling from "@/components/Storytelling";
 import Process from "@/components/Process";
 import Marquee from "@/components/Marquee";
+import CollageShowcase from "@/components/CollageShowcase";
 import Portfolio from "@/components/Portfolio";
 import Capabilities from "@/components/Capabilities";
 import Clients from "@/components/Clients";
@@ -38,15 +39,21 @@ const Index = () => {
         <Storytelling />
         <Process />
         <Marquee />
-        <div className="py-12 bg-secondary text-secondary-foreground">
-          <div className="section-container">
-            <div className="label-text text-primary uppercase text-center font-medium">
-              What we do → How it looks in the real world
-            </div>
+        <div className="section-container" data-animate="fade-up">
+          <div className="text-center mb-20">
+            <h2 className="headline-medium mb-4">
+              Selected moments
+              <br />
+              from our work.
+            </h2>
+            <p className="body-large text-muted-foreground max-w-xl mx-auto">
+              A snapshot of identities, websites and visual worlds
+            </p>
           </div>
         </div>
-        <Capabilities />
+        <CollageShowcase />
         <Portfolio />
+        <Capabilities />
         <Clients />
         <ContactCTA />
       </main>
