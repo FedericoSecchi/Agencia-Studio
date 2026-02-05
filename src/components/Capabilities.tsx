@@ -23,59 +23,64 @@ const Capabilities = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left: Capability list */}
           <div className="space-y-2" data-animate="stagger">
-            {capabilities.map((cap, index) => (
-              <div
-                key={cap.title}
-                className={`group cursor-pointer border-b border-border transition-all duration-300 ${
-                  activeIndex === index ? "pb-8" : "pb-4"
-                }`}
-                onClick={() => setActiveIndex(index)}
-                onMouseEnter={() => setActiveIndex(index)}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
+            {capabilities.map((cap, index) => {
+              const hasDetail = index !== 3;
+              return (
+                <div
+                  key={cap.title}
+                  className={`group cursor-pointer border-b border-border transition-all duration-300 ${
+                    activeIndex === index && hasDetail ? "pb-8" : "pb-4"
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                  onMouseEnter={() => setActiveIndex(index)}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <span
+                        className={`text-2xl transition-transform duration-300 ${
+                          activeIndex === index
+                            ? "scale-125 text-primary"
+                            : "text-muted-foreground"
+                        }`}
+                      >
+                        {icons[index]}
+                      </span>
+                      <h3
+                        className={`font-display text-2xl md:text-3xl font-bold transition-colors duration-300 ${
+                          activeIndex === index
+                            ? "text-foreground"
+                            : "text-muted-foreground"
+                        }`}
+                      >
+                        {cap.title}
+                      </h3>
+                    </div>
                     <span
                       className={`text-2xl transition-transform duration-300 ${
-                        activeIndex === index
-                          ? "scale-125 text-primary"
-                          : "text-muted-foreground"
+                        activeIndex === index ? "rotate-45" : ""
                       }`}
                     >
-                    {icons[index]}
+                      +
                     </span>
-                    <h3
-                      className={`font-display text-2xl md:text-3xl font-bold transition-colors duration-300 ${
+                  </div>
+
+                  {/* Expandable content */}
+                  {hasDetail && (
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ${
                         activeIndex === index
-                          ? "text-foreground"
-                          : "text-muted-foreground"
+                          ? "max-h-32 opacity-100 mt-4"
+                          : "max-h-0 opacity-0"
                       }`}
                     >
-                    {cap.title}
-                    </h3>
-                  </div>
-                  <span
-                    className={`text-2xl transition-transform duration-300 ${
-                      activeIndex === index ? "rotate-45" : ""
-                    }`}
-                  >
-                    +
-                  </span>
+                      <p className="body-regular text-muted-foreground pl-10">
+                        {cap.text}
+                      </p>
+                    </div>
+                  )}
                 </div>
-
-                {/* Expandable content */}
-                <div
-                  className={`overflow-hidden transition-all duration-500 ${
-                    activeIndex === index
-                      ? "max-h-32 opacity-100 mt-4"
-                      : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <p className="body-regular text-muted-foreground pl-10">
-                    {cap.text}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Right: Visual display */}
