@@ -75,7 +75,13 @@ const Capabilities = () => {
                             : "max-h-0 opacity-0"
                         }`}
                       >
-                        <p className="body-regular text-muted-foreground pl-10">
+                      <p
+                        className={`body-regular pl-10 ${
+                          activeIndex === index
+                            ? "text-primary"
+                            : "text-muted-foreground group-hover:text-primary"
+                        }`}
+                      >
                           {cap.text}
                         </p>
                       </div>
