@@ -39,18 +39,6 @@ const Index = () => {
         <Storytelling />
         <Process />
         <Marquee />
-        <div className="section-container" data-animate="fade-up">
-          <div className="text-center mb-20">
-            <h2 className="headline-medium mb-4">
-              Selected moments
-              <br />
-              from our work.
-            </h2>
-            <p className="body-large text-muted-foreground max-w-xl mx-auto">
-              A snapshot of identities, websites and visual worlds
-            </p>
-          </div>
-        </div>
         <CollageShowcase />
         <Portfolio />
         <Capabilities />
