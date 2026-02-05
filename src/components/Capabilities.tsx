@@ -50,7 +50,7 @@ const Capabilities = () => {
                         <h3
                           className={`font-display text-2xl md:text-3xl font-bold transition-colors duration-300 ${
                             activeIndex === index
-                              ? "text-foreground"
+                              ? "text-background"
                               : "text-muted-foreground"
                           }`}
                         >
