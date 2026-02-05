@@ -42,7 +42,7 @@ const Capabilities = () => {
                           className={`text-2xl transition-transform duration-300 ${
                             activeIndex === index
                               ? "scale-125 text-primary"
-                              : "text-muted-foreground"
+                              : "text-muted-foreground group-hover:text-primary"
                           }`}
                         >
                           {icons[index]}
