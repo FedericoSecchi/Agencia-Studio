@@ -131,8 +131,6 @@ export const es = {
       },
       {
         title: "Sistemas y automatizaciones",
-        text:
-          "Automatizaciones simples para formularios, emails y flujos que ahorran tiempo cada semana.",
       },
     ],
   },

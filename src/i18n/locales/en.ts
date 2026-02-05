@@ -130,8 +130,6 @@ export const en = {
       },
       {
         title: "Systems & Automations",
-        text:
-          "Small automations for forms, email flows and simple workflows that save time every week.",
       },
     ],
   },

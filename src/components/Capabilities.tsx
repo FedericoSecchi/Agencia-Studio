@@ -5,7 +5,7 @@ import { useI18n } from "@/i18n/context";
 const Capabilities = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { t } = useI18n();
-  const capabilities = t<{ title: string; text: string }[]>("capabilities.items");
+  const capabilities = t<{ title: string; text?: string }[]>("capabilities.items");
   const icons = ["✦", "◈", "◎", "⬡"];
 
   return (
@@ -24,7 +24,7 @@ const Capabilities = () => {
           {/* Left: Capability list */}
           <div className="space-y-2" data-animate="stagger">
             {capabilities.map((cap, index) => {
-              const hasDetail = index !== 3;
+              const hasDetail = Boolean(cap.text);
               return (
                 <div
                   key={cap.title}
