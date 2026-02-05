@@ -27,7 +27,7 @@ const ContactCTA = () => {
             {t("contact.titleEnd")}
           </h2>
 
-          <p className="body-large text-secondary-foreground/70 max-w-2xl mx-auto mb-12">
+          <p className="body-large text-muted-foreground max-w-2xl mx-auto mb-12">
             {t("contact.description")}
           </p>
 
@@ -38,7 +38,7 @@ const ContactCTA = () => {
             <Button
               variant="heroOutline"
               size="xl"
-              className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary opacity-50 cursor-not-allowed"
+              className="border-foreground/30 text-foreground hover:bg-foreground hover:text-background opacity-50 cursor-not-allowed"
               onClick={handleStartBrief}
               disabled
             >
