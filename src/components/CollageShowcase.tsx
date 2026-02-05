@@ -36,7 +36,8 @@ const CollageShowcase = ({ embedded = false }: CollageShowcaseProps) => {
       </div>
 
       {/* Collage Grid */}
-      <div className="relative h-[800px] md:h-[900px]" data-animate="scale">
+      <div className="bg-background rounded-xl p-6 md:p-8" data-animate="scale">
+        <div className="relative h-[800px] md:h-[900px]">
         {/* Large image */}
         <Link
           to={`/project/${collageProjectMap[heroImage1]}`}
@@ -128,6 +129,7 @@ const CollageShowcase = ({ embedded = false }: CollageShowcaseProps) => {
         >
           🌟
         </div>
+        </div>
       </div>
     </>
   );
@@ -136,7 +138,7 @@ const CollageShowcase = ({ embedded = false }: CollageShowcaseProps) => {
     embedded ? (
       <div className="mt-24 overflow-hidden">{content}</div>
     ) : (
-      <section className="py-32 bg-background overflow-hidden">
+      <section className="py-32 bg-secondary text-secondary-foreground overflow-hidden">
         <div className="section-container">{content}</div>
       </section>
     )
