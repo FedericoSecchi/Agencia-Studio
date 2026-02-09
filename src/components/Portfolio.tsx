@@ -24,12 +24,9 @@ const Portfolio = () => {
             <Link
               key={project.id}
               to={`/project/${project.id}`}
-              className={`group relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl block ${
+              className={`group relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl block aspect-[2560/1400] ${
                 project.size === "large" ? "md:row-span-2" : ""
               }`}
-              style={{
-                height: project.size === "large" ? "600px" : "280px",
-              }}
             >
               <img
                 src={project.image}

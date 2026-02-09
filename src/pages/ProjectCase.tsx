@@ -108,7 +108,7 @@ const ProjectCase = () => {
           </div>
 
           {/* Cover Image */}
-          <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
+          <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
             <img
               src={project.image}
               alt={t(`projects.${project.id}.title`)}
@@ -174,7 +174,7 @@ const ProjectCase = () => {
         <div className="section-container">
           {/* 1 large image */}
           <div className="mb-6">
-            <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 1`}
@@ -185,14 +185,14 @@ const ProjectCase = () => {
           
           {/* 2 small images side by side */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="relative h-[400px] rounded-2xl overflow-hidden">
+            <div className="relative aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 2`}
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden">
+            <div className="relative aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 3`}
@@ -203,7 +203,7 @@ const ProjectCase = () => {
           
           {/* 1 large image */}
           <div>
-            <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 4`}
