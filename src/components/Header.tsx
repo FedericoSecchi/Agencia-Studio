@@ -52,7 +52,7 @@ const Header = () => {
                   key={item.section}
                   href={sectionId}
                   onClick={(e) => handleNavClick(e, sectionId)}
-                  className="link-animated font-body text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                  className="link-animated font-body text-base font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
                 >
                   {t(item.key)}
                 </a>
@@ -64,7 +64,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4">
             <button
               onClick={toggleLanguage}
-              className="text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors uppercase"
+              className="text-base font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors uppercase"
               aria-label={t("language.toggleAria")}
             >
               {t("language.toggleLabel")}
@@ -72,6 +72,7 @@ const Header = () => {
             <Button
               variant="neon"
               size="sm"
+              className="text-base"
               onClick={handleStartProject}
             >
               {t("hero.ctaStart")}
