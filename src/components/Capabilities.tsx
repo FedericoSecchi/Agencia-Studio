@@ -76,7 +76,7 @@ const Capabilities = () => {
                         }`}
                       >
                       <p
-                        className={`body-regular pl-10 ${
+                        className={`body-large pl-10 ${
                           activeIndex === index
                             ? "text-primary"
                             : "text-muted-foreground group-hover:text-primary"
