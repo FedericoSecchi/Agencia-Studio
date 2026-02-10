@@ -52,7 +52,7 @@ const Header = () => {
                   key={item.section}
                   href={sectionId}
                   onClick={(e) => handleNavClick(e, sectionId)}
-                  className="link-animated font-body text-base font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                  className="link-animated font-body text-base font-medium text-secondary-foreground/80 hover:text-background hover:after:bg-primary focus-visible:text-background focus-visible:after:bg-primary transition-colors"
                 >
                   {t(item.key)}
                 </a>
