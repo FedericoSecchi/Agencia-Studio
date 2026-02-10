@@ -1,7 +1,7 @@
-import portfolioHotel from "@/assets/portfolio-hotel.jpg";
-import portfolioBakery from "@/assets/portfolio-bakery.jpg";
-import portfolioOutdoor from "@/assets/portfolio-outdoor.jpg";
-import portfolioWellness from "@/assets/portfolio-wellness.jpg";
+import workImage1 from "@/assets/work/work-1.jpg";
+import workImage2 from "@/assets/work/work-2.jpg";
+import workImage3 from "@/assets/work/work-3.jpg";
+import workImage5 from "@/assets/work/work-5.jpg";
 
 export interface Project {
   id: string;
@@ -12,22 +12,22 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: "hotel-alpino",
-    image: portfolioHotel,
+    image: workImage1,
     size: "large",
   },
   {
     id: "bakery-studio",
-    image: portfolioBakery,
+    image: workImage2,
     size: "medium",
   },
   {
     id: "outdoor-gear",
-    image: portfolioOutdoor,
+    image: workImage3,
     size: "medium",
   },
   {
     id: "wellness-space",
-    image: portfolioWellness,
+    image: workImage5,
     size: "large",
   },
 ];

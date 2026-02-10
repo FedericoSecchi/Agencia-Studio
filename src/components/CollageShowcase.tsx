@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import heroImage1 from "@/assets/hero-collage-1.jpg";
-import heroImage2 from "@/assets/hero-collage-2.jpg";
-import heroImage3 from "@/assets/hero-collage-3.jpg";
-import portfolioHotel from "@/assets/portfolio-hotel.jpg";
+import workImage1 from "@/assets/work/work-1.jpg";
+import workImage2 from "@/assets/work/work-2.jpg";
+import workImage3 from "@/assets/work/work-3.jpg";
+import workImage4 from "@/assets/work/work-4.jpg";
 import { useI18n } from "@/i18n/context";
 
 // Mapping collage images to project IDs
 const collageProjectMap = {
-  [heroImage1]: "hotel-alpino", // Brand Vision -> Hotel Alpino
-  [heroImage2]: "bakery-studio", // Design process -> Bakery Studio
-  [heroImage3]: "wellness-space", // Website design -> Wellness Space
-  [portfolioHotel]: "hotel-alpino", // Hotel branding -> Hotel Alpino
+  [workImage1]: "hotel-alpino",
+  [workImage2]: "bakery-studio",
+  [workImage3]: "outdoor-gear",
+  [workImage4]: "hotel-alpino",
 };
 
 const CollageShowcase = () => {
@@ -34,13 +34,13 @@ const CollageShowcase = () => {
         <div className="relative h-[800px] md:h-[900px]" data-animate="scale">
             {/* Large image */}
             <Link
-              to={`/project/${collageProjectMap[heroImage1]}`}
+              to={`/project/${collageProjectMap[workImage1]}`}
               className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block"
               style={{ transform: "rotate(-2deg)" }}
               data-parallax="0.1"
             >
               <img
-                src={heroImage1}
+                src={workImage1}
                 alt={t("work.collageAltProjectShowcase")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
@@ -56,13 +56,13 @@ const CollageShowcase = () => {
 
             {/* Medium image right */}
             <Link
-              to={`/project/${collageProjectMap[heroImage2]}`}
+              to={`/project/${collageProjectMap[workImage2]}`}
               className="collage-card absolute top-10 right-0 w-[50%] md:w-[40%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
               style={{ transform: "rotate(4deg)" }}
               data-parallax="0.15"
             >
               <img
-                src={heroImage2}
+                src={workImage2}
                 alt={t("work.collageAltDesignProcess")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
@@ -70,13 +70,13 @@ const CollageShowcase = () => {
 
             {/* Small image center */}
             <Link
-              to={`/project/${collageProjectMap[heroImage3]}`}
+              to={`/project/${collageProjectMap[workImage3]}`}
               className="collage-card absolute top-[40%] left-[30%] w-[35%] md:w-[25%] h-[30%] rounded-2xl overflow-hidden shadow-xl cursor-pointer z-10 block"
               style={{ transform: "rotate(-1deg)" }}
               data-parallax="0.2"
             >
               <img
-                src={heroImage3}
+                src={workImage3}
                 alt={t("work.collageAltWebsiteDesign")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
@@ -88,13 +88,13 @@ const CollageShowcase = () => {
 
             {/* Bottom left */}
             <Link
-              to={`/project/${collageProjectMap[portfolioHotel]}`}
+              to={`/project/${collageProjectMap[workImage4]}`}
               className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
               style={{ transform: "rotate(3deg)" }}
               data-parallax="0.08"
             >
               <img
-                src={portfolioHotel}
+                src={workImage4}
                 alt={t("work.collageAltHotelBranding")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
