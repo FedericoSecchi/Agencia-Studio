@@ -75,15 +75,11 @@ const ProjectCase = () => {
   let galleryImage2 = project.image;
   let galleryImage3 = project.image;
   let galleryImage4 = project.image;
-  let heroAlt = t(`projects.${project.id}.title`);
-  let heroWrapperClass = "relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden";
-  let heroImageSrc = project.image;
   if (isSecurityAlliance) {
     galleryImage1 = securityGallery1;
     galleryImage2 = securityAllianceGallery2;
     galleryImage3 = securityAllianceGallery3;
     galleryImage4 = securityAllianceGallery4;
-    heroImageSrc = securityGallery1;
   }
 
   return (
@@ -126,11 +122,11 @@ const ProjectCase = () => {
             </p>
           </div>
 
-          {/* Cover Image */}
-          <div className={heroWrapperClass}>
+          {/* Cover Image - security-alliance uses gallery-1; others use project.image */}
+          <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
             <img
-              src={heroImageSrc}
-              alt={heroAlt}
+              src={project.id === "security-alliance" ? securityGallery1 : project.image}
+              alt={t(`projects.${project.id}.title`)}
               className="w-full h-full object-cover"
             />
           </div>
