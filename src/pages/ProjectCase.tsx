@@ -6,6 +6,10 @@ import Footer from "@/components/Footer";
 import { projectsData, getProjectById } from "@/data/projects";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 import { useI18n } from "@/i18n/context";
+import securityGallery1 from "@/assets/projects/security-alliance/gallery-1.jpg";
+import securityAllianceGallery2 from "@/assets/projects/security-alliance/gallery-2.jpg";
+import securityAllianceGallery3 from "@/assets/projects/security-alliance/gallery-3.jpg";
+import securityAllianceGallery4 from "@/assets/projects/security-alliance/gallery-4.jpg";
 
 const ProjectCase = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -66,6 +70,21 @@ const ProjectCase = () => {
   // Get next project for navigation
   const currentIndex = projectsData.findIndex((p) => p.id === project.id);
   const nextProject = projectsData[(currentIndex + 1) % projectsData.length];
+  const isSecurityAlliance = project.id === "security-alliance";
+  let galleryImage1 = project.image;
+  let galleryImage2 = project.image;
+  let galleryImage3 = project.image;
+  let galleryImage4 = project.image;
+  let heroAlt = t(`projects.${project.id}.title`);
+  let heroWrapperClass = "relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden";
+  let heroImageSrc = project.image;
+  if (isSecurityAlliance) {
+    galleryImage1 = securityGallery1;
+    galleryImage2 = securityAllianceGallery2;
+    galleryImage3 = securityAllianceGallery3;
+    galleryImage4 = securityAllianceGallery4;
+    heroImageSrc = securityGallery1;
+  }
 
   return (
     <div className="relative min-h-screen bg-background">
@@ -108,10 +127,10 @@ const ProjectCase = () => {
           </div>
 
           {/* Cover Image */}
-          <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
+          <div className={heroWrapperClass}>
             <img
-              src={project.image}
-              alt={t(`projects.${project.id}.title`)}
+              src={heroImageSrc}
+              alt={heroAlt}
               className="w-full h-full object-cover"
             />
           </div>
@@ -176,7 +195,7 @@ const ProjectCase = () => {
           <div className="mb-6">
             <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
-                src={project.image}
+                src={galleryImage1}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 1`}
                 className="w-full h-full object-cover"
               />
@@ -187,14 +206,14 @@ const ProjectCase = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div className="relative aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
-                src={project.image}
+                src={galleryImage2}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 2`}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
-                src={project.image}
+                src={galleryImage3}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 3`}
                 className="w-full h-full object-cover"
               />
@@ -205,7 +224,7 @@ const ProjectCase = () => {
           <div>
             <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
-                src={project.image}
+                src={galleryImage4}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 4`}
                 className="w-full h-full object-cover"
               />

@@ -204,6 +204,7 @@ export const es = {
     "bakery-studio": "Bakery Studio",
     "outdoor-gear": "Outdoor Gear",
     "wellness-space": "Wellness Space",
+    "security-alliance": "Security Alliance",
     "shawarmaz": "Shawarmaz",
     "swap-coffee": "Swap Coffee",
     "fmag": "FMAG",
@@ -261,6 +262,15 @@ export const es = {
         "Diseñamos un sistema sereno con color suave, tipografía limpia e imágenes conscientes.",
       solution:
         "Construimos un sitio en Webflow con reservas, kit social y guías de marca cohesionadas.",
+    },
+    "security-alliance": {
+      title: "Security Alliance",
+      type: "Branding",
+      tag: "Branding",
+      miniDescription: "Branding vivo para una alianza global de seguridad en crypto",
+      task: "",
+      idea: "",
+      solution: "",
     },
   },
 };
