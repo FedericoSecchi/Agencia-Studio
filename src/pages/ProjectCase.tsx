@@ -213,10 +213,11 @@ const ProjectCase = () => {
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
-              <div className="flex items-center justify-start lg:pr-12">
+              <div className="flex items-center justify-center lg:justify-start lg:pr-12">
                 <h2 className="headline-medium">Solución</h2>
               </div>
-              <div className="max-w-[680px] space-y-6">
+              <div className="flex items-center h-full">
+                <div className="max-w-[680px] space-y-6">
                 <div>
                   <h3 className="font-semibold text-foreground">Sistema de marca extendido</h3>
                   <p className="body-large text-muted-foreground mt-2">
@@ -234,6 +235,7 @@ const ProjectCase = () => {
                   <p className="body-large text-muted-foreground mt-2">
                     Definimos criterios para nuevos logos y aplicaciones, asegurando que cada proyecto nuevo siga sintiéndose parte del mismo ecosistema de Security Alliance.
                   </p>
+                </div>
                 </div>
               </div>
             </div>
