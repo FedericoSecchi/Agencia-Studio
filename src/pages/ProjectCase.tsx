@@ -8,6 +8,7 @@ import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 import { useI18n } from "@/i18n/context";
 import securityGallery1 from "@/assets/projects/security-alliance/gallery-1.jpg";
 import securityGallery2 from "@/assets/projects/security-alliance/gallery-2.jpg";
+import securityGallery3 from "@/assets/projects/security-alliance/gallery-3.jpg";
 
 const ProjectCase = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -187,6 +188,15 @@ const ProjectCase = () => {
                 <img
                   src={securityGallery2}
                   alt="Security Alliance Gallery 2"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
+            {project.id === "hotel-alpino" && (
+              <div className="mt-20 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={securityGallery3}
+                  alt="Security Alliance Gallery 3"
                   className="w-full h-auto object-contain"
                 />
               </div>
