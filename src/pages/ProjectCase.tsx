@@ -208,6 +208,42 @@ const ProjectCase = () => {
         </section>
       )}
 
+      {/* Solución section (hotel-alpino only) */}
+      {project.id === "hotel-alpino" && (
+        <section className="py-20 bg-background" data-animate="fade-up">
+          <div className="section-container">
+            <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
+              <div className="flex items-center justify-start">
+                <h2 className="headline-medium">Solución</h2>
+              </div>
+              <div className="max-w-[680px] space-y-6">
+                <div>
+                  <h3 className="font-semibold text-foreground">Sistema de marca extendido</h3>
+                  <p className="body-large text-muted-foreground mt-2">
+                    Organizamos el logo, la paleta y la tipografía existentes en un sistema claro y escalable para todas sus iniciativas.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Visuales para servicios clave</h3>
+                  <p className="body-large text-muted-foreground mt-2">
+                    Creamos ilustraciones, presentaciones y piezas para redes que explican mejor sus servicios y proyectos (como SEAL 911, Safe Harbor o Wargames).
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Arquitectura para nuevas iniciativas</h3>
+                  <p className="body-large text-muted-foreground mt-2">
+                    Definimos criterios para nuevos logos y aplicaciones, asegurando que cada proyecto nuevo siga sintiéndose parte del mismo ecosistema de Security Alliance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="section-container">
+            <hr className="border-t border-border/30 mt-20" />
+          </div>
+        </section>
+      )}
+
       {/* Solution Block */}
       {t(`projects.${project.id}.solution`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
