@@ -169,7 +169,7 @@ export const es = {
     nextProject: "Siguiente proyecto",
     viewAll: "Ver todos los proyectos",
     h1Prefix: "Caso de estudio:",
-    task: "Contexto",
+    task: "Tarea",
     idea: "Problema",
     solution: "Resultado",
     notFoundTitle: "Proyecto no encontrado",
@@ -204,7 +204,6 @@ export const es = {
     "bakery-studio": "Bakery Studio",
     "outdoor-gear": "Outdoor Gear",
     "wellness-space": "Wellness Space",
-    "security-alliance": "Security Alliance",
     "shawarmaz": "Shawarmaz",
     "swap-coffee": "Swap Coffee",
     "fmag": "FMAG",
@@ -218,7 +217,7 @@ export const es = {
       miniDescription:
         "Hotel boutique de montaña que necesitaba identidad completa y sitio renovado.",
       task:
-        "Hotel Alpino necesitaba una marca cohesionada que transmitiera la experiencia alpina y atrajera a viajeros modernos.",
+        "Security Alliance es una organización que impulsa iniciativas de seguridad para el ecosistema cripto, como SEAL 911, Safe Harbor, Wargames y SEAL Intel.\n\nYa contaban con un logo y una base visual, pero el sistema se quedaba corto frente a la velocidad con la que crecían sus proyectos.\n\nEl reto fue convertir ese punto de partida en un universo de marca coherente y flexible, capaz de adaptarse a nuevas iniciativas, formatos y audiencias sin perder identidad.",
       idea:
         "Combinamos rasgos rústicos con tipografía refinada y una paleta contenida inspirada en la montaña.",
       solution:
@@ -262,15 +261,6 @@ export const es = {
         "Diseñamos un sistema sereno con color suave, tipografía limpia e imágenes conscientes.",
       solution:
         "Construimos un sitio en Webflow con reservas, kit social y guías de marca cohesionadas.",
-    },
-    "security-alliance": {
-      title: "Security Alliance",
-      type: "Branding",
-      tag: "Branding",
-      miniDescription: "Branding vivo para una alianza global de seguridad en crypto",
-      task: "",
-      idea: "",
-      solution: "",
     },
   },
 };

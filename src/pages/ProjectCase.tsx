@@ -7,9 +7,7 @@ import { projectsData, getProjectById } from "@/data/projects";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 import { useI18n } from "@/i18n/context";
 import securityGallery1 from "@/assets/projects/security-alliance/gallery-1.jpg";
-import securityAllianceGallery2 from "@/assets/projects/security-alliance/gallery-2.jpg";
-import securityAllianceGallery3 from "@/assets/projects/security-alliance/gallery-3.jpg";
-import securityAllianceGallery4 from "@/assets/projects/security-alliance/gallery-4.jpg";
+import securityGallery2 from "@/assets/projects/security-alliance/gallery-2.jpg";
 
 const ProjectCase = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -70,17 +68,6 @@ const ProjectCase = () => {
   // Get next project for navigation
   const currentIndex = projectsData.findIndex((p) => p.id === project.id);
   const nextProject = projectsData[(currentIndex + 1) % projectsData.length];
-  const isSecurityAlliance = project.id === "security-alliance";
-  let galleryImage1 = project.image;
-  let galleryImage2 = project.image;
-  let galleryImage3 = project.image;
-  let galleryImage4 = project.image;
-  if (isSecurityAlliance) {
-    galleryImage1 = securityGallery1;
-    galleryImage2 = securityAllianceGallery2;
-    galleryImage3 = securityAllianceGallery3;
-    galleryImage4 = securityAllianceGallery4;
-  }
 
   return (
     <div className="relative min-h-screen bg-background">
@@ -112,20 +99,20 @@ const ProjectCase = () => {
 
           <div className="mb-12">
             <span className="label-text text-primary mb-4 block">
-              {t(`projects.${project.id}.tag`)}
+              {project.id === "hotel-alpino" ? "BRANDING" : t(`projects.${project.id}.tag`)}
             </span>
             <h1 className="headline-large mb-4">
-              {t("caseStudy.h1Prefix")} {t(`projects.${project.id}.title`)}
+              {project.id === "hotel-alpino" ? "Security Alliance" : `${t("caseStudy.h1Prefix")} ${t(`projects.${project.id}.title`)}`}
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl">
-              {t(`projects.${project.id}.miniDescription`)}
+              {project.id === "hotel-alpino" ? "Branding vivo para una alianza global de seguridad en crypto" : t(`projects.${project.id}.miniDescription`)}
             </p>
           </div>
 
-          {/* Cover Image - security-alliance uses gallery-1; others use project.image */}
+          {/* Cover Image */}
           <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
             <img
-              src={project.id === "security-alliance" ? securityGallery1 : project.image}
+              src={project.image}
               alt={t(`projects.${project.id}.title`)}
               className="w-full h-full object-cover"
             />
@@ -137,12 +124,34 @@ const ProjectCase = () => {
       {t(`projects.${project.id}.task`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
-            <div className="max-w-4xl">
-              <h2 className="headline-medium mb-6">{t("caseStudy.task")}</h2>
-              <p className="body-large text-muted-foreground">
-                {t(`projects.${project.id}.task`)}
-              </p>
-            </div>
+            {project.id === "hotel-alpino" ? (
+              <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
+                <div className="flex items-center justify-start">
+                  <h2 className="headline-medium">{t("caseStudy.task")}</h2>
+                </div>
+                <div className="max-w-[680px]">
+                  <p className="body-large text-muted-foreground">
+                    {t(`projects.${project.id}.task`)}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="max-w-4xl">
+                <h2 className="headline-medium mb-6">{t("caseStudy.task")}</h2>
+                <p className="body-large text-muted-foreground">
+                  {t(`projects.${project.id}.task`)}
+                </p>
+              </div>
+            )}
+            {project.id === "hotel-alpino" && (
+              <div className="mt-12 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={securityGallery1}
+                  alt="Security Alliance Gallery 1"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
           </div>
           <div className="section-container">
             <hr className="border-t border-border/30 mt-20" />
@@ -151,15 +160,37 @@ const ProjectCase = () => {
       )}
 
       {/* Idea Block */}
-      {t(`projects.${project.id}.idea`) && (
+      {(project.id === "hotel-alpino" || t(`projects.${project.id}.idea`)) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
-            <div className="max-w-4xl">
-              <h2 className="headline-medium mb-6">{t("caseStudy.idea")}</h2>
-              <p className="body-large text-muted-foreground">
-                {t(`projects.${project.id}.idea`)}
-              </p>
-            </div>
+            {project.id === "hotel-alpino" ? (
+              <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
+                <div className="flex items-center justify-start">
+                  <h2 className="headline-medium">Idea</h2>
+                </div>
+                <div className="max-w-[680px]">
+                  <p className="body-large text-muted-foreground">
+                    En lugar de rediseñar todo desde cero, trabajamos como "amplificadores" de la marca existente. La idea fue construir un lenguaje visual modular: una identidad que se sintiera sólida y consistente, pero lo bastante elástica como para albergar productos muy distintos entre sí, desde servicios de respuesta a incidentes hasta programas legales y wargames educativos. Cada pieza —presentaciones, redes, ilustraciones o nuevos logos— debía ayudar a Security Alliance a explicar mejor qué hace y por qué es tan crítica para la seguridad del ecosistema.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="max-w-4xl">
+                <h2 className="headline-medium mb-6">{t("caseStudy.idea")}</h2>
+                <p className="body-large text-muted-foreground">
+                  {t(`projects.${project.id}.idea`)}
+                </p>
+              </div>
+            )}
+            {project.id === "hotel-alpino" && (
+              <div className="mt-20 relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
+                <img
+                  src={securityGallery2}
+                  alt="Security Alliance Gallery 2"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            )}
           </div>
           <div className="section-container">
             <hr className="border-t border-border/30 mt-20" />
@@ -191,7 +222,7 @@ const ProjectCase = () => {
           <div className="mb-6">
             <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
-                src={galleryImage1}
+                src={project.image}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 1`}
                 className="w-full h-full object-cover"
               />
@@ -202,14 +233,14 @@ const ProjectCase = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div className="relative aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
-                src={galleryImage2}
+                src={project.image}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 2`}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
-                src={galleryImage3}
+                src={project.image}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 3`}
                 className="w-full h-full object-cover"
               />
@@ -220,7 +251,7 @@ const ProjectCase = () => {
           <div>
             <div className="relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
               <img
-                src={galleryImage4}
+                src={project.image}
                 alt={`${t(`projects.${project.id}.title`)} - ${t("caseStudy.detailAlt")} 4`}
                 className="w-full h-full object-cover"
               />

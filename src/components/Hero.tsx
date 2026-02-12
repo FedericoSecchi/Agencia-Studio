@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
-import heroImage1 from "@/assets/hero-collage-1.jpg";
-import heroImage2 from "@/assets/hero-collage-2.jpg";
-import heroImage3 from "@/assets/hero-collage-3.jpg";
+import heroImage1 from "@/assets/work/work-1.jpg";
+import heroImage2 from "@/assets/work/work-2.jpg";
+import heroImage3 from "@/assets/work/work-3.jpg";
 import { scrollToSection } from "@/utils/scroll";
 import { useI18n } from "@/i18n/context";
 

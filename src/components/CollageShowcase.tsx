@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
-import workImage1 from "@/assets/work/work-1.jpg";
 import workImage2 from "@/assets/work/work-2.jpg";
 import workImage3 from "@/assets/work/work-3.jpg";
-import workImage4 from "@/assets/work/work-4.jpg";
+import { getProjectById } from "@/data/projects";
 import { useI18n } from "@/i18n/context";
 
-// Mapping collage images to project IDs
-const collageProjectMap = {
-  [workImage1]: "hotel-alpino",
+const hotelAlpinoImage = getProjectById("hotel-alpino")?.image ?? "";
+
+// Mapping collage images to project IDs (hotel-alpino cards use hotelAlpinoImage from projects data)
+const collageProjectMap: Record<string, string> = {
   [workImage2]: "bakery-studio",
   [workImage3]: "outdoor-gear",
-  [workImage4]: "hotel-alpino",
 };
 
 const CollageShowcase = () => {
@@ -34,13 +33,13 @@ const CollageShowcase = () => {
         <div className="relative h-[800px] md:h-[900px]" data-animate="scale">
             {/* Large image */}
             <Link
-              to={`/project/${collageProjectMap[workImage1]}`}
+              to="/project/hotel-alpino"
               className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block"
               style={{ transform: "rotate(-2deg)" }}
               data-parallax="0.1"
             >
               <img
-                src={workImage1}
+                src={hotelAlpinoImage}
                 alt={t("work.collageAltProjectShowcase")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
@@ -88,13 +87,13 @@ const CollageShowcase = () => {
 
             {/* Bottom left */}
             <Link
-              to={`/project/${collageProjectMap[workImage4]}`}
+              to="/project/hotel-alpino"
               className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
               style={{ transform: "rotate(3deg)" }}
               data-parallax="0.08"
             >
               <img
-                src={workImage4}
+                src={hotelAlpinoImage}
                 alt={t("work.collageAltHotelBranding")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
