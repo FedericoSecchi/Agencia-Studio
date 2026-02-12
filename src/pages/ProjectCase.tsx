@@ -183,11 +183,11 @@ const ProjectCase = () => {
               </div>
             )}
             {project.id === "hotel-alpino" && (
-              <div className="mt-20 relative w-full aspect-[2560/1400] rounded-2xl overflow-hidden">
+              <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={securityGallery2}
                   alt="Security Alliance Gallery 2"
-                  className="w-full h-full object-contain"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             )}
