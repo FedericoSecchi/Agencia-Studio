@@ -212,8 +212,8 @@ const ProjectCase = () => {
       {project.id === "hotel-alpino" && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
-            <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-start">
-              <div className="flex items-start justify-start">
+            <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
+              <div className="flex items-center justify-start">
                 <h2 className="headline-medium">Solución</h2>
               </div>
               <div className="max-w-[680px] space-y-6">
