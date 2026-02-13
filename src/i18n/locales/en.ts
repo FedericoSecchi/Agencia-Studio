@@ -200,7 +200,7 @@ export const en = {
       "The page you're looking for doesn't exist. Visit the Creative Studio home or browse case studies for process, context, and results.",
   },
   brands: {
-    "hotel-alpino": "Hotel Alpino",
+    "security-alliance": "Security Alliance",
     "bakery-studio": "Bakery Studio",
     "outdoor-gear": "Outdoor Gear",
     "wellness-space": "Wellness Space",
@@ -210,8 +210,8 @@ export const en = {
     "baba-sturite": "Baba Sturite",
   },
   projects: {
-    "hotel-alpino": {
-      title: "Hotel Alpino",
+    "security-alliance": {
+      title: "Security Alliance",
       type: "Identity · Website",
       tag: "Hospitality",
       miniDescription:

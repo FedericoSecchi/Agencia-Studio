@@ -101,13 +101,13 @@ const ProjectCase = () => {
 
           <div className="mb-12">
             <span className="label-text text-primary mb-4 block">
-              {project.id === "hotel-alpino" ? "BRANDING" : t(`projects.${project.id}.tag`)}
+              {project.id === "security-alliance" ? "BRANDING" : t(`projects.${project.id}.tag`)}
             </span>
             <h1 className="headline-large mb-4">
-              {project.id === "hotel-alpino" ? "Security Alliance" : `${t("caseStudy.h1Prefix")} ${t(`projects.${project.id}.title`)}`}
+              {project.id === "security-alliance" ? "Security Alliance" : `${t("caseStudy.h1Prefix")} ${t(`projects.${project.id}.title`)}`}
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl">
-              {project.id === "hotel-alpino" ? "Branding vivo para una alianza global de seguridad en crypto" : t(`projects.${project.id}.miniDescription`)}
+              {project.id === "security-alliance" ? "Branding vivo para una alianza global de seguridad en crypto" : t(`projects.${project.id}.miniDescription`)}
             </p>
           </div>
 
@@ -126,7 +126,7 @@ const ProjectCase = () => {
       {t(`projects.${project.id}.task`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
-            {project.id === "hotel-alpino" ? (
+            {project.id === "security-alliance" ? (
               <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
                 <div className="flex items-center justify-start">
                   <h2 className="headline-medium">{t("caseStudy.task")}</h2>
@@ -145,7 +145,7 @@ const ProjectCase = () => {
                 </p>
               </div>
             )}
-            {project.id === "hotel-alpino" && (
+            {project.id === "security-alliance" && (
               <div className="mt-12 w-full rounded-2xl overflow-hidden">
                 <img
                   src={securityGallery1}
@@ -162,10 +162,10 @@ const ProjectCase = () => {
       )}
 
       {/* Idea Block */}
-      {(project.id === "hotel-alpino" || t(`projects.${project.id}.idea`)) && (
+      {(project.id === "security-alliance" || t(`projects.${project.id}.idea`)) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
-            {project.id === "hotel-alpino" ? (
+            {project.id === "security-alliance" ? (
               <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
                 <div className="flex items-center justify-start">
                   <h2 className="headline-medium">Idea</h2>
@@ -184,7 +184,7 @@ const ProjectCase = () => {
                 </p>
               </div>
             )}
-            {project.id === "hotel-alpino" && (
+            {project.id === "security-alliance" && (
               <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={securityGallery2}
@@ -193,7 +193,7 @@ const ProjectCase = () => {
                 />
               </div>
             )}
-            {project.id === "hotel-alpino" && (
+            {project.id === "security-alliance" && (
               <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={securityGallery3}
@@ -209,8 +209,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Solución section (hotel-alpino only) */}
-      {project.id === "hotel-alpino" && (
+      {/* Solución section (security-alliance only) */}
+      {project.id === "security-alliance" && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-16 lg:gap-32 items-center">
@@ -238,7 +238,7 @@ const ProjectCase = () => {
                 </div>
               </div>
             </div>
-            {project.id === "hotel-alpino" && (
+            {project.id === "security-alliance" && (
               <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={securityGallery4}
@@ -254,8 +254,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Resultado section (hotel-alpino only) */}
-      {project.id === "hotel-alpino" && (
+      {/* Resultado section (security-alliance only) */}
+      {project.id === "security-alliance" && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-16 lg:gap-32 items-center">
@@ -275,8 +275,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Solution Block (not shown for hotel-alpino; uses Solución + Resultado) */}
-      {project.id !== "hotel-alpino" && t(`projects.${project.id}.solution`) && (
+      {/* Solution Block (not shown for security-alliance; uses Solución + Resultado) */}
+      {project.id !== "security-alliance" && t(`projects.${project.id}.solution`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
@@ -292,8 +292,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Visual Gallery Block (not shown for hotel-alpino) */}
-      {project.id !== "hotel-alpino" && (
+      {/* Visual Gallery Block (not shown for security-alliance) */}
+      {project.id !== "security-alliance" && (
       <section className="py-20 bg-background">
         <div className="section-container">
           {/* 1 large image */}
@@ -339,8 +339,8 @@ const ProjectCase = () => {
       </section>
       )}
 
-      {/* Next Project Navigation (not shown for hotel-alpino) */}
-      {project.id !== "hotel-alpino" && (
+      {/* Next Project Navigation (not shown for security-alliance) */}
+      {project.id !== "security-alliance" && (
       <section className="py-20 bg-background border-t">
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center">

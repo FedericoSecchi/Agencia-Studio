@@ -200,7 +200,7 @@ export const es = {
       "Esa página no existe. Volvé al inicio o revisá los casos para ver proceso, criterio y resultados.",
   },
   brands: {
-    "hotel-alpino": "Hotel Alpino",
+    "security-alliance": "Security Alliance",
     "bakery-studio": "Bakery Studio",
     "outdoor-gear": "Outdoor Gear",
     "wellness-space": "Wellness Space",
@@ -210,8 +210,8 @@ export const es = {
     "baba-sturite": "Baba Sturite",
   },
   projects: {
-    "hotel-alpino": {
-      title: "Hotel Alpino",
+    "security-alliance": {
+      title: "Security Alliance",
       type: "Identidad · Sitio web",
       tag: "Hospitalidad",
       miniDescription:

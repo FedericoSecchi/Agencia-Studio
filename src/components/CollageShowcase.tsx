@@ -4,9 +4,9 @@ import workImage3 from "@/assets/work/work-3.jpg";
 import { getProjectById } from "@/data/projects";
 import { useI18n } from "@/i18n/context";
 
-const hotelAlpinoImage = getProjectById("hotel-alpino")?.image ?? "";
+const securityAllianceImage = getProjectById("security-alliance")?.image ?? "";
 
-// Mapping collage images to project IDs (hotel-alpino cards use hotelAlpinoImage from projects data)
+// Mapping collage images to project IDs (security-alliance cards use securityAllianceImage from projects data)
 const collageProjectMap: Record<string, string> = {
   [workImage2]: "bakery-studio",
   [workImage3]: "outdoor-gear",
@@ -33,13 +33,13 @@ const CollageShowcase = () => {
         <div className="relative h-[800px] md:h-[900px]" data-animate="scale">
             {/* Large image */}
             <Link
-              to="/project/hotel-alpino"
+              to="/project/security-alliance"
               className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block"
               style={{ transform: "rotate(-2deg)" }}
               data-parallax="0.1"
             >
               <img
-                src={hotelAlpinoImage}
+                src={securityAllianceImage}
                 alt={t("work.collageAltProjectShowcase")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
@@ -87,13 +87,13 @@ const CollageShowcase = () => {
 
             {/* Bottom left */}
             <Link
-              to="/project/hotel-alpino"
+              to="/project/security-alliance"
               className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
               style={{ transform: "rotate(3deg)" }}
               data-parallax="0.08"
             >
               <img
-                src={hotelAlpinoImage}
+                src={securityAllianceImage}
                 alt={t("work.collageAltHotelBranding")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />

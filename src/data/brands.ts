@@ -5,8 +5,8 @@ export interface Brand {
 
 export const brandsData: Brand[] = [
   {
-    id: "hotel-alpino",
-    // logo: "/logos/hotel-alpino.svg", // Placeholder path
+    id: "security-alliance",
+    // logo: "/logos/security-alliance.svg", // Placeholder path
   },
   {
     id: "bakery-studio",
