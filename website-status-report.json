@@ -162,7 +162,7 @@
         "element": "Project cards",
         "action": "Navigate to /project/{projectId}",
         "implementation": "Link components to ProjectCase pages",
-        "projects": ["hotel-alpino", "bakery-studio", "outdoor-gear", "wellness-space"]
+        "projects": ["security-alliance", "bakery-studio", "outdoor-gear", "wellness-space"]
       }
     ],
     "collage_showcase_links": [

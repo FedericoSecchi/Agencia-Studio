@@ -106,7 +106,7 @@ export const en = {
     collageAltProjectShowcase: "Project showcase",
     collageAltDesignProcess: "Design process",
     collageAltWebsiteDesign: "Website design",
-    collageAltHotelBranding: "Hotel branding",
+    collageAltHotelBranding: "Security Alliance branding",
   },
   capabilities: {
     label: "CAPABILITIES",
@@ -215,13 +215,13 @@ export const en = {
       type: "Identity · Website",
       tag: "Branding",
       miniDescription:
-        "A boutique alpine hotel needing a full identity and website refresh.",
+        "Live branding for a global crypto security alliance.",
       task:
-        "Hotel Alpino needed a cohesive brand that captured the alpine experience and appealed to modern travelers.",
+        "Security Alliance is an organization that drives security initiatives for the crypto ecosystem, such as SEAL 911, Safe Harbor, Wargames and SEAL Intel. They already had a logo and visual base, but the system fell short of the speed at which their projects were growing. The challenge was to turn that starting point into a coherent, flexible brand universe able to adapt to new initiatives, formats and audiences without losing identity.",
       idea:
-        "We blended rustic cues with refined typography and a restrained palette inspired by the mountains.",
+        "Rather than redesigning from scratch, we acted as amplifiers of the existing brand, building a modular visual language that could support everything from incident response services to legal programs and educational wargames.",
       solution:
-        "Delivered a full identity system, website, and guidelines that unify every touchpoint and elevate the hospitality feel.",
+        "A clearer, more consistent brand ready to scale: a visual system that helps Security Alliance communicate its value, launch new initiatives and maintain a professional presence at every touchpoint.",
     },
     "bakery-studio": {
       title: "Bakery Studio",

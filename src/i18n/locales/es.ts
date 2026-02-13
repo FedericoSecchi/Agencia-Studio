@@ -107,7 +107,7 @@ export const es = {
     collageAltProjectShowcase: "Proyecto destacado",
     collageAltDesignProcess: "Proceso de diseño",
     collageAltWebsiteDesign: "Diseño web",
-    collageAltHotelBranding: "Branding para hotel",
+    collageAltHotelBranding: "Branding Security Alliance",
   },
   capabilities: {
     label: "CAPACIDADES",
@@ -215,13 +215,13 @@ export const es = {
       type: "Identidad · Sitio web",
       tag: "Branding",
       miniDescription:
-        "Hotel boutique de montaña que necesitaba identidad completa y sitio renovado.",
+        "Branding vivo para una alianza global de seguridad en crypto.",
       task:
         "Security Alliance es una organización que impulsa iniciativas de seguridad para el ecosistema cripto, como SEAL 911, Safe Harbor, Wargames y SEAL Intel.\n\nYa contaban con un logo y una base visual, pero el sistema se quedaba corto frente a la velocidad con la que crecían sus proyectos.\n\nEl reto fue convertir ese punto de partida en un universo de marca coherente y flexible, capaz de adaptarse a nuevas iniciativas, formatos y audiencias sin perder identidad.",
       idea:
-        "Combinamos rasgos rústicos con tipografía refinada y una paleta contenida inspirada en la montaña.",
+        "En lugar de rediseñar todo desde cero, trabajamos como amplificadores de la marca existente y construimos un lenguaje visual modular.",
       solution:
-        "Entregamos un sistema de identidad completo, sitio web y guías que unifican cada punto de contacto.",
+        "Una marca más clara, consistente y preparada para crecer: un sistema visual que ayuda a Security Alliance a explicar su valor y sostener una presencia profesional en cada punto de contacto.",
     },
     "bakery-studio": {
       title: "Bakery Studio",
