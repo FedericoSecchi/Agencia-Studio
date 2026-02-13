@@ -275,8 +275,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Solution Block */}
-      {t(`projects.${project.id}.solution`) && (
+      {/* Solution Block (not shown for hotel-alpino; uses Solución + Resultado) */}
+      {project.id !== "hotel-alpino" && t(`projects.${project.id}.solution`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
@@ -292,7 +292,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Visual Gallery Block */}
+      {/* Visual Gallery Block (not shown for hotel-alpino) */}
+      {project.id !== "hotel-alpino" && (
       <section className="py-20 bg-background">
         <div className="section-container">
           {/* 1 large image */}
@@ -336,8 +337,10 @@ const ProjectCase = () => {
           </div>
         </div>
       </section>
+      )}
 
-      {/* Next Project Navigation */}
+      {/* Next Project Navigation (not shown for hotel-alpino) */}
+      {project.id !== "hotel-alpino" && (
       <section className="py-20 bg-background border-t">
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center">
@@ -355,6 +358,7 @@ const ProjectCase = () => {
           </div>
         </div>
       </section>
+      )}
       <Footer />
     </div>
   );
