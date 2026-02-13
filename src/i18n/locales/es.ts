@@ -213,7 +213,7 @@ export const es = {
     "security-alliance": {
       title: "Security Alliance",
       type: "Identidad · Sitio web",
-      tag: "Hospitalidad",
+      tag: "Branding",
       miniDescription:
         "Hotel boutique de montaña que necesitaba identidad completa y sitio renovado.",
       task:
