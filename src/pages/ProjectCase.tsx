@@ -9,6 +9,7 @@ import { useI18n } from "@/i18n/context";
 import securityGallery1 from "@/assets/projects/security-alliance/gallery-1.jpg";
 import securityGallery2 from "@/assets/projects/security-alliance/gallery-2.jpg";
 import securityGallery3 from "@/assets/projects/security-alliance/gallery-3.jpg";
+import securityGallery4 from "@/assets/projects/security-alliance/gallery-4.jpg";
 
 const ProjectCase = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -237,6 +238,15 @@ const ProjectCase = () => {
                 </div>
               </div>
             </div>
+            {project.id === "hotel-alpino" && (
+              <div className="mt-20 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={securityGallery4}
+                  alt="Security Alliance Gallery 4"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
           </div>
           <div className="section-container">
             <hr className="border-t border-border/30 mt-20" />
