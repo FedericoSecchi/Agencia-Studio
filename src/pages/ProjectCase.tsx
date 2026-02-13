@@ -254,6 +254,27 @@ const ProjectCase = () => {
         </section>
       )}
 
+      {/* Resultado section (hotel-alpino only) */}
+      {project.id === "hotel-alpino" && (
+        <section className="py-20 bg-background" data-animate="fade-up">
+          <div className="section-container">
+            <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
+              <div className="flex items-center justify-start">
+                <h2 className="headline-medium">Resultado</h2>
+              </div>
+              <div className="max-w-[680px]">
+                <p className="body-large text-muted-foreground">
+                  El resultado es una marca más clara, consistente y preparada para crecer: un sistema visual que ayuda a Security Alliance a explicar mejor su valor, activar nuevas iniciativas y sostener una presencia profesional en cada punto de contacto.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="section-container">
+            <hr className="border-t border-border/30 mt-20" />
+          </div>
+        </section>
+      )}
+
       {/* Solution Block */}
       {t(`projects.${project.id}.solution`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
