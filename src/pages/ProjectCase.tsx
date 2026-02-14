@@ -260,7 +260,8 @@ const ProjectCase = () => {
 
       {/* Galleries 3, 4, 5 below Solución (the-red-guild only), no spacing between images */}
       {isPremium && project.id === "the-red-guild" && (
-        <div className="w-full max-w-[1200px] mx-auto">
+        <div className="section-container">
+          <div className="w-full max-w-[1200px] mx-auto">
           {galleries[2] && (
             <div className="mt-20 w-full rounded-2xl overflow-hidden">
               <img
@@ -285,6 +286,7 @@ const ProjectCase = () => {
               alt={`${t(`projects.${project.id}.title`)} Gallery 5`}
               className="w-full h-auto object-contain"
             />
+          </div>
           </div>
         </div>
       )}
