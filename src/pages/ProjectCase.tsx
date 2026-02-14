@@ -258,9 +258,9 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Galleries 3, 4, 5 below Solución (the-red-guild only) */}
+      {/* Galleries 3, 4, 5 below Solución (the-red-guild only), no spacing between images */}
       {isPremium && project.id === "the-red-guild" && (
-        <section className="section-container">
+        <div className="w-full max-w-[1200px] mx-auto">
           {galleries[2] && (
             <div className="mt-20 w-full rounded-2xl overflow-hidden">
               <img
@@ -271,7 +271,7 @@ const ProjectCase = () => {
             </div>
           )}
           {galleries[3] && (
-            <div className="mt-20 w-full rounded-2xl overflow-hidden">
+            <div className="w-full rounded-2xl overflow-hidden">
               <img
                 src={galleries[3]}
                 alt={`${t(`projects.${project.id}.title`)} Gallery 4`}
@@ -279,14 +279,14 @@ const ProjectCase = () => {
               />
             </div>
           )}
-          <div className="mt-20 w-full rounded-2xl overflow-hidden">
+          <div className="w-full rounded-2xl overflow-hidden">
             <img
               src={redGuildGallery5}
               alt={`${t(`projects.${project.id}.title`)} Gallery 5`}
               className="w-full h-auto object-contain"
             />
           </div>
-        </section>
+        </div>
       )}
 
       {/* Resultado section (premium only) */}
