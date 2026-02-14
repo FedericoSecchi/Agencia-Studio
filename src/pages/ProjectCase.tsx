@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { projectsData, getProjectById } from "@/data/projects";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 import { useI18n } from "@/i18n/context";
+import redGuildGallery5 from "@/assets/projects/the-red-guild/gallery-5.jpg";
 import redGuildGallery6 from "@/assets/projects/the-red-guild/gallery-6.jpg";
 
 const ProjectCase = () => {
@@ -241,7 +242,7 @@ const ProjectCase = () => {
                 })()}
               </div>
             </div>
-            {galleries[3] && (
+            {galleries[3] && project.id !== "the-red-guild" && (
               <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={galleries[3]}
@@ -257,13 +258,31 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Gallery 3 below Solución (the-red-guild only) */}
-      {isPremium && project.id === "the-red-guild" && galleries[2] && (
+      {/* Galleries 3, 4, 5 below Solución (the-red-guild only) */}
+      {isPremium && project.id === "the-red-guild" && (
         <section className="section-container">
+          {galleries[2] && (
+            <div className="mt-20 w-full rounded-2xl overflow-hidden">
+              <img
+                src={galleries[2]}
+                alt={`${t(`projects.${project.id}.title`)} Gallery 3`}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          )}
+          {galleries[3] && (
+            <div className="mt-20 w-full rounded-2xl overflow-hidden">
+              <img
+                src={galleries[3]}
+                alt={`${t(`projects.${project.id}.title`)} Gallery 4`}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          )}
           <div className="mt-20 w-full rounded-2xl overflow-hidden">
             <img
-              src={galleries[2]}
-              alt={`${t(`projects.${project.id}.title`)} Gallery 3`}
+              src={redGuildGallery5}
+              alt={`${t(`projects.${project.id}.title`)} Gallery 5`}
               className="w-full h-auto object-contain"
             />
           </div>
