@@ -236,9 +236,9 @@ export const en = {
     "the-red-guild": {
       title: "The Red Guild",
       type: "Project · Visual system",
-      tag: "Branding",
+      tag: "BRANDING & WEB DESIGN",
       miniDescription:
-        "The Red Guild — project in preparation.",
+        "Full brand and web redesign for a security guild in the crypto ecosystem.",
       task:
         "Case study content in preparation.",
       idea:

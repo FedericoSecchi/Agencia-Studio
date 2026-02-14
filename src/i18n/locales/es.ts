@@ -236,9 +236,9 @@ export const es = {
     "the-red-guild": {
       title: "The Red Guild",
       type: "Proyecto · Sistema visual",
-      tag: "Branding",
+      tag: "BRANDING & WEB DESIGN",
       miniDescription:
-        "The Red Guild — proyecto en preparación.",
+        "Rediseño integral de marca y web para un guild de seguridad en el ecosistema cripto.",
       task:
         "Contenido del caso de estudio en preparación.",
       idea:
