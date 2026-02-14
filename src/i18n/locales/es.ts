@@ -242,7 +242,7 @@ export const es = {
       task:
         "Rediseñar por completo la identidad de The Red Guild —logo, sistema visual y sitio web— para reflejar su rol como colectivo de seguridad y educación en el ecosistema cripto. La marca debía diferenciarse de otras organizaciones de seguridad, manteniendo credibilidad técnica pero con una personalidad más cercana y lúdica.",
       idea:
-        "Contenido del caso de estudio en preparación.",
+        "Convertir la experiencia de aprender seguridad en una especie de \"dojo\" y \"guild\" de juego serio: un universo visual propio donde entrenar, fallar y mejorar se siente como avanzar de nivel. La identidad debía unir todas sus iniciativas (Phishing Dojo, Damn Vulnerable DeFi, Security Frameworks, research, educación) bajo una misma narrativa de entrenamiento continuo.",
       solution:
         "Contenido del caso de estudio en preparación.",
       result:
