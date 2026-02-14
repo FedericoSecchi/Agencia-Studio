@@ -10,6 +10,10 @@ import securityGallery1 from "@/assets/projects/security-alliance/gallery-1.jpg"
 import securityGallery2 from "@/assets/projects/security-alliance/gallery-2.jpg";
 import securityGallery3 from "@/assets/projects/security-alliance/gallery-3.jpg";
 import securityGallery4 from "@/assets/projects/security-alliance/gallery-4.jpg";
+import redGuildGallery1 from "@/assets/projects/the-red-guild/gallery-1.jpg.png";
+import redGuildGallery2 from "@/assets/projects/the-red-guild/gallery-2.jpg.png";
+import redGuildGallery3 from "@/assets/projects/the-red-guild/gallery-3.jpg.png";
+import redGuildGallery4 from "@/assets/projects/the-red-guild/gallery-4.jpg.png";
 
 const ProjectCase = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -71,6 +75,10 @@ const ProjectCase = () => {
   const currentIndex = projectsData.findIndex((p) => p.id === project.id);
   const nextProject = projectsData[(currentIndex + 1) % projectsData.length];
 
+  // Same layout structure as security-alliance: 2-col sections, galleries, Solución, Resultado, no generic Solution/Gallery/Next
+  const useCustomLayout =
+    project.id === "security-alliance" || project.id === "the-red-guild";
+
   return (
     <div className="relative min-h-screen bg-background">
       <Header />
@@ -104,7 +112,7 @@ const ProjectCase = () => {
               {project.id === "security-alliance" ? "BRANDING" : t(`projects.${project.id}.tag`)}
             </span>
             <h1 className="headline-large mb-4">
-              {project.id === "security-alliance" ? "Security Alliance" : `${t("caseStudy.h1Prefix")} ${t(`projects.${project.id}.title`)}`}
+              {project.id === "security-alliance" ? "Security Alliance" : project.id === "the-red-guild" ? t(`projects.${project.id}.title`) : `${t("caseStudy.h1Prefix")} ${t(`projects.${project.id}.title`)}`}
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl">
               {project.id === "security-alliance" ? "Branding vivo para una alianza global de seguridad en crypto" : t(`projects.${project.id}.miniDescription`)}
@@ -126,7 +134,7 @@ const ProjectCase = () => {
       {t(`projects.${project.id}.task`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
-            {project.id === "security-alliance" ? (
+            {useCustomLayout ? (
               <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
                 <div className="flex items-center justify-start">
                   <h2 className="headline-medium">{t("caseStudy.task")}</h2>
@@ -154,6 +162,15 @@ const ProjectCase = () => {
                 />
               </div>
             )}
+            {project.id === "the-red-guild" && (
+              <div className="mt-12 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={redGuildGallery1}
+                  alt="The Red Guild Gallery 1"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
           </div>
           <div className="section-container">
             <hr className="border-t border-border/30 mt-20" />
@@ -162,17 +179,19 @@ const ProjectCase = () => {
       )}
 
       {/* Idea Block */}
-      {(project.id === "security-alliance" || t(`projects.${project.id}.idea`)) && (
+      {(useCustomLayout || t(`projects.${project.id}.idea`)) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
-            {project.id === "security-alliance" ? (
+            {useCustomLayout ? (
               <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-16 lg:gap-24 items-center">
                 <div className="flex items-center justify-start">
                   <h2 className="headline-medium">Idea</h2>
                 </div>
                 <div className="max-w-[680px]">
                   <p className="body-large text-muted-foreground">
-                    En lugar de rediseñar todo desde cero, trabajamos como "amplificadores" de la marca existente. La idea fue construir un lenguaje visual modular: una identidad que se sintiera sólida y consistente, pero lo bastante elástica como para albergar productos muy distintos entre sí, desde servicios de respuesta a incidentes hasta programas legales y wargames educativos. Cada pieza —presentaciones, redes, ilustraciones o nuevos logos— debía ayudar a Security Alliance a explicar mejor qué hace y por qué es tan crítica para la seguridad del ecosistema.
+                    {project.id === "security-alliance"
+                      ? 'En lugar de rediseñar todo desde cero, trabajamos como "amplificadores" de la marca existente. La idea fue construir un lenguaje visual modular: una identidad que se sintiera sólida y consistente, pero lo bastante elástica como para albergar productos muy distintos entre sí, desde servicios de respuesta a incidentes hasta programas legales y wargames educativos. Cada pieza —presentaciones, redes, ilustraciones o nuevos logos— debía ayudar a Security Alliance a explicar mejor qué hace y por qué es tan crítica para la seguridad del ecosistema.'
+                      : t(`projects.${project.id}.idea`)}
                   </p>
                 </div>
               </div>
@@ -193,11 +212,29 @@ const ProjectCase = () => {
                 />
               </div>
             )}
+            {project.id === "the-red-guild" && (
+              <div className="mt-20 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={redGuildGallery2}
+                  alt="The Red Guild Gallery 2"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
             {project.id === "security-alliance" && (
               <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={securityGallery3}
                   alt="Security Alliance Gallery 3"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
+            {project.id === "the-red-guild" && (
+              <div className="mt-20 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={redGuildGallery3}
+                  alt="The Red Guild Gallery 3"
                   className="w-full h-auto object-contain"
                 />
               </div>
@@ -209,8 +246,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Solución section (security-alliance only) */}
-      {project.id === "security-alliance" && (
+      {/* Solución section (security-alliance + the-red-guild same layout) */}
+      {useCustomLayout && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-16 lg:gap-32 items-center">
@@ -218,24 +255,32 @@ const ProjectCase = () => {
                 <h2 className="headline-medium">Solución</h2>
               </div>
               <div className="max-w-[680px] space-y-6">
-                <div>
-                  <h3 className="font-semibold text-foreground">Sistema de marca extendido</h3>
-                  <p className="body-large text-muted-foreground mt-2">
-                    Organizamos el logo, la paleta y la tipografía existentes en un sistema claro y escalable para todas sus iniciativas.
+                {project.id === "security-alliance" ? (
+                  <>
+                    <div>
+                      <h3 className="font-semibold text-foreground">Sistema de marca extendido</h3>
+                      <p className="body-large text-muted-foreground mt-2">
+                        Organizamos el logo, la paleta y la tipografía existentes en un sistema claro y escalable para todas sus iniciativas.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">Visuales para servicios clave</h3>
+                      <p className="body-large text-muted-foreground mt-2">
+                        Creamos ilustraciones, presentaciones y piezas para redes que explican mejor sus servicios y proyectos (como SEAL 911, Safe Harbor o Wargames).
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">Arquitectura para nuevas iniciativas</h3>
+                      <p className="body-large text-muted-foreground mt-2">
+                        Definimos criterios para nuevos logos y aplicaciones, asegurando que cada proyecto nuevo siga sintiéndose parte del mismo ecosistema de Security Alliance.
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <p className="body-large text-muted-foreground">
+                    {t(`projects.${project.id}.solution`)}
                   </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Visuales para servicios clave</h3>
-                  <p className="body-large text-muted-foreground mt-2">
-                    Creamos ilustraciones, presentaciones y piezas para redes que explican mejor sus servicios y proyectos (como SEAL 911, Safe Harbor o Wargames).
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Arquitectura para nuevas iniciativas</h3>
-                  <p className="body-large text-muted-foreground mt-2">
-                    Definimos criterios para nuevos logos y aplicaciones, asegurando que cada proyecto nuevo siga sintiéndose parte del mismo ecosistema de Security Alliance.
-                  </p>
-                </div>
+                )}
               </div>
             </div>
             {project.id === "security-alliance" && (
@@ -247,6 +292,15 @@ const ProjectCase = () => {
                 />
               </div>
             )}
+            {project.id === "the-red-guild" && (
+              <div className="mt-20 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={redGuildGallery4}
+                  alt="The Red Guild Gallery 4"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
           </div>
           <div className="section-container">
             <hr className="border-t border-border/30 mt-20" />
@@ -254,8 +308,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Resultado section (security-alliance only) */}
-      {project.id === "security-alliance" && (
+      {/* Resultado section (security-alliance + the-red-guild same layout) */}
+      {useCustomLayout && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-16 lg:gap-32 items-center">
@@ -264,7 +318,9 @@ const ProjectCase = () => {
               </div>
               <div className="max-w-[680px]">
                 <p className="body-large text-muted-foreground">
-                  El resultado es una marca más clara, consistente y preparada para crecer: un sistema visual que ayuda a Security Alliance a explicar mejor su valor, activar nuevas iniciativas y sostener una presencia profesional en cada punto de contacto.
+                  {project.id === "security-alliance"
+                    ? "El resultado es una marca más clara, consistente y preparada para crecer: un sistema visual que ayuda a Security Alliance a explicar mejor su valor, activar nuevas iniciativas y sostener una presencia profesional en cada punto de contacto."
+                    : t(`projects.${project.id}.solution`)}
                 </p>
               </div>
             </div>
@@ -275,8 +331,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Solution Block (not shown for security-alliance; uses Solución + Resultado) */}
-      {project.id !== "security-alliance" && t(`projects.${project.id}.solution`) && (
+      {/* Solution Block (not shown for security-alliance / the-red-guild; they use Solución + Resultado) */}
+      {!useCustomLayout && t(`projects.${project.id}.solution`) && (
         <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
@@ -292,8 +348,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Visual Gallery Block (not shown for security-alliance) */}
-      {project.id !== "security-alliance" && (
+      {/* Visual Gallery Block (not shown for security-alliance / the-red-guild) */}
+      {!useCustomLayout && (
       <section className="py-20 bg-background">
         <div className="section-container">
           {/* 1 large image */}
@@ -339,8 +395,8 @@ const ProjectCase = () => {
       </section>
       )}
 
-      {/* Next Project Navigation (not shown for security-alliance) */}
-      {project.id !== "security-alliance" && (
+      {/* Next Project Navigation (not shown for security-alliance / the-red-guild) */}
+      {!useCustomLayout && (
       <section className="py-20 bg-background border-t">
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center">

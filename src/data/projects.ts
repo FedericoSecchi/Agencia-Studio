@@ -1,7 +1,7 @@
 import workImage3 from "@/assets/work/work-3.jpg";
 import workImage5 from "@/assets/work/work-5.jpg";
 import securityAllianceImage from "@/assets/projects/security-alliance/hero.jpg";
-import theRedGuildImage from "@/assets/projects/the-red-guild/hero.jpg";
+import theRedGuildImage from "@/assets/projects/the-red-guild/hero.jpg.png";
 
 export interface Project {
   id: string;
