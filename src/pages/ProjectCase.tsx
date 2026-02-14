@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { projectsData, getProjectById } from "@/data/projects";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 import { useI18n } from "@/i18n/context";
+import redGuildGallery6 from "@/assets/projects/the-red-guild/gallery-6.jpg";
 
 const ProjectCase = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -273,6 +274,19 @@ const ProjectCase = () => {
           </div>
           <div className="section-container">
             <hr className="border-t border-border/30 mt-20" />
+          </div>
+        </section>
+      )}
+
+      {/* Gallery 6 (the-red-guild only, below Resultado) */}
+      {isPremium && project.id === "the-red-guild" && (
+        <section className="section-container">
+          <div className="mt-20 w-full rounded-2xl overflow-hidden">
+            <img
+              src={redGuildGallery6}
+              alt={`${t(`projects.${project.id}.title`)} Gallery 6`}
+              className="w-full h-auto object-contain"
+            />
           </div>
         </section>
       )}
