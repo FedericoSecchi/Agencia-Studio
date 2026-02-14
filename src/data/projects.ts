@@ -1,7 +1,7 @@
-import workImage2 from "@/assets/work/work-2.jpg";
 import workImage3 from "@/assets/work/work-3.jpg";
 import workImage5 from "@/assets/work/work-5.jpg";
 import securityAllianceImage from "@/assets/projects/security-alliance/hero.jpg";
+import theRedGuildImage from "@/assets/projects/the-red-guild/hero.jpg";
 
 export interface Project {
   id: string;
@@ -16,8 +16,8 @@ export const projectsData: Project[] = [
     size: "large",
   },
   {
-    id: "bakery-studio",
-    image: workImage2,
+    id: "the-red-guild",
+    image: theRedGuildImage,
     size: "medium",
   },
   {

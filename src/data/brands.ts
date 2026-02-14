@@ -9,8 +9,8 @@ export const brandsData: Brand[] = [
     // logo: "/logos/security-alliance.svg", // Placeholder path
   },
   {
-    id: "bakery-studio",
-    // logo: "/logos/bakery-studio.svg",
+    id: "the-red-guild",
+    // logo: "/logos/the-red-guild.svg",
   },
   {
     id: "outdoor-gear",

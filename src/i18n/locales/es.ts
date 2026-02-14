@@ -201,7 +201,7 @@ export const es = {
   },
   brands: {
     "security-alliance": "Security Alliance",
-    "bakery-studio": "Bakery Studio",
+    "the-red-guild": "The Red Guild",
     "outdoor-gear": "Outdoor Gear",
     "wellness-space": "Wellness Space",
     "shawarmaz": "Shawarmaz",
@@ -223,18 +223,18 @@ export const es = {
       solution:
         "Una marca más clara, consistente y preparada para crecer: un sistema visual que ayuda a Security Alliance a explicar su valor y sostener una presencia profesional en cada punto de contacto.",
     },
-    "bakery-studio": {
-      title: "Bakery Studio",
-      type: "Refresh de marca · Sistema visual",
-      tag: "Food & Beverage",
+    "the-red-guild": {
+      title: "The Red Guild",
+      type: "Proyecto · Sistema visual",
+      tag: "Branding",
       miniDescription:
-        "Refresh para panadería artesanal con foco en calidez y relato visual.",
+        "The Red Guild — proyecto en preparación.",
       task:
-        "La panadería quería modernizarse sin perder su carácter artesanal.",
+        "Contenido del caso de estudio en preparación.",
       idea:
-        "Construimos un sistema visual cálido con trazos manuales y fotografía con carácter.",
+        "Contenido del caso de estudio en preparación.",
       solution:
-        "Lanzamos una identidad renovada, tipografía propia y un sistema flexible, actual y cercano.",
+        "Contenido del caso de estudio en preparación.",
     },
     "outdoor-gear": {
       title: "Outdoor Gear",
