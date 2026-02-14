@@ -193,7 +193,7 @@ const ProjectCase = () => {
                 />
               </div>
             )}
-            {isPremium && galleries[2] && (
+            {isPremium && galleries[2] && project.id !== "the-red-guild" && (
               <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={galleries[2]}
@@ -253,6 +253,19 @@ const ProjectCase = () => {
           </div>
           <div className="section-container">
             <hr className="border-t border-border/30 mt-20" />
+          </div>
+        </section>
+      )}
+
+      {/* Gallery 3 below Solución (the-red-guild only) */}
+      {isPremium && project.id === "the-red-guild" && galleries[2] && (
+        <section className="section-container">
+          <div className="mt-20 w-full rounded-2xl overflow-hidden">
+            <img
+              src={galleries[2]}
+              alt={`${t(`projects.${project.id}.title`)} Gallery 3`}
+              className="w-full h-auto object-contain"
+            />
           </div>
         </section>
       )}
