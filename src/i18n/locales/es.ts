@@ -240,7 +240,7 @@ export const es = {
       miniDescription:
         "Rediseño integral de marca y web para un guild de seguridad en el ecosistema cripto.",
       task:
-        "Contenido del caso de estudio en preparación.",
+        "Rediseñar por completo la identidad de The Red Guild —logo, sistema visual y sitio web— para reflejar su rol como colectivo de seguridad y educación en el ecosistema cripto. La marca debía diferenciarse de otras organizaciones de seguridad, manteniendo credibilidad técnica pero con una personalidad más cercana y lúdica.",
       idea:
         "Contenido del caso de estudio en preparación.",
       solution:
