@@ -246,7 +246,7 @@ export const en = {
       solution:
         "We created a visual system unique within the industry: a bold logo, vibrant palette and graphic elements that reinforce the guild, missions and challenges narrative. The new website was designed as a gamified hub, where each initiative is presented as a \"level\" or \"mission\" with subtle interactions and moments of discovery throughout the navigation.",
       result:
-        "Case study content in preparation.",
+        "The Red Guild now looks and feels clearly distinct within the crypto security and education ecosystem, without losing technical rigor. The web experience better reflects the way they work: practical, community-driven and challenge-oriented, making it easier for new people to understand what they do and feel encouraged to participate in their initiatives.",
     },
     "outdoor-gear": {
       title: "Outdoor Gear",

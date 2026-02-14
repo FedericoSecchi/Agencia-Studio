@@ -246,7 +246,7 @@ export const es = {
       solution:
         "Creamos un sistema visual único dentro de la industria: logo contundente, paleta vibrante y elementos gráficos que refuerzan el imaginario de guild, misiones y desafíos. La nueva web se diseñó como un hub gamificado, donde cada iniciativa se presenta como un \"nivel\" o \"misión\" con interacciones sutiles y momentos de descubrimiento en la navegación.",
       result:
-        "Contenido del caso de estudio en preparación.",
+        "The Red Guild ahora se ve y se siente claramente distinta dentro del ecosistema de seguridad y educación en cripto, sin perder rigor técnico. La experiencia web acompaña mejor su manera de trabajar: práctica, comunitaria y orientada a desafíos, facilitando que nuevas personas entiendan qué hacen y se animen a participar en sus iniciativas.",
     },
     "outdoor-gear": {
       title: "Outdoor Gear",
