@@ -107,7 +107,7 @@ export const es = {
     collageAltProjectShowcase: "Proyecto destacado",
     collageAltDesignProcess: "Proceso de diseño",
     collageAltWebsiteDesign: "Diseño web",
-    collageAltHotelBranding: "Branding Security Alliance",
+    collageAltFeaturedBranding: "Branding Security Alliance",
   },
   capabilities: {
     label: "CAPACIDADES",
@@ -172,6 +172,9 @@ export const es = {
     task: "Tarea",
     idea: "Problema",
     solution: "Resultado",
+    sectionIdea: "Idea",
+    sectionSolution: "Solución",
+    sectionResult: "Resultado",
     notFoundTitle: "Proyecto no encontrado",
     notFoundDescription:
       "El proyecto que buscás no existe o fue movido.",
@@ -219,9 +222,16 @@ export const es = {
       task:
         "Security Alliance es una organización que impulsa iniciativas de seguridad para el ecosistema cripto, como SEAL 911, Safe Harbor, Wargames y SEAL Intel.\n\nYa contaban con un logo y una base visual, pero el sistema se quedaba corto frente a la velocidad con la que crecían sus proyectos.\n\nEl reto fue convertir ese punto de partida en un universo de marca coherente y flexible, capaz de adaptarse a nuevas iniciativas, formatos y audiencias sin perder identidad.",
       idea:
-        "En lugar de rediseñar todo desde cero, trabajamos como amplificadores de la marca existente y construimos un lenguaje visual modular.",
+        'En lugar de rediseñar todo desde cero, trabajamos como "amplificadores" de la marca existente. La idea fue construir un lenguaje visual modular: una identidad que se sintiera sólida y consistente, pero lo bastante elástica como para albergar productos muy distintos entre sí, desde servicios de respuesta a incidentes hasta programas legales y wargames educativos. Cada pieza —presentaciones, redes, ilustraciones o nuevos logos— debía ayudar a Security Alliance a explicar mejor qué hace y por qué es tan crítica para la seguridad del ecosistema.',
       solution:
         "Una marca más clara, consistente y preparada para crecer: un sistema visual que ayuda a Security Alliance a explicar su valor y sostener una presencia profesional en cada punto de contacto.",
+      solutionItems: [
+        { title: "Sistema de marca extendido", text: "Organizamos el logo, la paleta y la tipografía existentes en un sistema claro y escalable para todas sus iniciativas." },
+        { title: "Visuales para servicios clave", text: "Creamos ilustraciones, presentaciones y piezas para redes que explican mejor sus servicios y proyectos (como SEAL 911, Safe Harbor o Wargames)." },
+        { title: "Arquitectura para nuevas iniciativas", text: "Definimos criterios para nuevos logos y aplicaciones, asegurando que cada proyecto nuevo siga sintiéndose parte del mismo ecosistema de Security Alliance." },
+      ],
+      result:
+        "El resultado es una marca más clara, consistente y preparada para crecer: un sistema visual que ayuda a Security Alliance a explicar mejor su valor, activar nuevas iniciativas y sostener una presencia profesional en cada punto de contacto.",
     },
     "the-red-guild": {
       title: "The Red Guild",
@@ -234,6 +244,8 @@ export const es = {
       idea:
         "Contenido del caso de estudio en preparación.",
       solution:
+        "Contenido del caso de estudio en preparación.",
+      result:
         "Contenido del caso de estudio en preparación.",
     },
     "outdoor-gear": {

@@ -106,7 +106,7 @@ export const en = {
     collageAltProjectShowcase: "Project showcase",
     collageAltDesignProcess: "Design process",
     collageAltWebsiteDesign: "Website design",
-    collageAltHotelBranding: "Security Alliance branding",
+    collageAltFeaturedBranding: "Security Alliance branding",
   },
   capabilities: {
     label: "CAPABILITIES",
@@ -171,6 +171,9 @@ export const en = {
     task: "Task",
     idea: "Idea",
     solution: "Solution",
+    sectionIdea: "Idea",
+    sectionSolution: "Solution",
+    sectionResult: "Result",
     notFoundTitle: "Project not found",
     notFoundDescription:
       "The project you're looking for doesn't exist or has been moved.",
@@ -219,9 +222,16 @@ export const en = {
       task:
         "Security Alliance is an organization that drives security initiatives for the crypto ecosystem, such as SEAL 911, Safe Harbor, Wargames and SEAL Intel. They already had a logo and visual base, but the system fell short of the speed at which their projects were growing. The challenge was to turn that starting point into a coherent, flexible brand universe able to adapt to new initiatives, formats and audiences without losing identity.",
       idea:
-        "Rather than redesigning from scratch, we acted as amplifiers of the existing brand, building a modular visual language that could support everything from incident response services to legal programs and educational wargames.",
+        'Rather than redesigning from scratch, we acted as "amplifiers" of the existing brand. The idea was to build a modular visual language: an identity that felt solid and consistent, but elastic enough to hold very different products—from incident response services to legal programs and educational wargames. Every piece—presentations, social, illustrations or new logos—had to help Security Alliance explain what it does and why it matters for ecosystem security.',
       solution:
         "A clearer, more consistent brand ready to scale: a visual system that helps Security Alliance communicate its value, launch new initiatives and maintain a professional presence at every touchpoint.",
+      solutionItems: [
+        { title: "Extended brand system", text: "We organized the existing logo, palette and typography into a clear, scalable system for all their initiatives." },
+        { title: "Visuals for key services", text: "We created illustrations, presentations and social pieces that better explain their services and projects (such as SEAL 911, Safe Harbor or Wargames)." },
+        { title: "Architecture for new initiatives", text: "We defined criteria for new logos and applications, so every new project still feels part of the same Security Alliance ecosystem." },
+      ],
+      result:
+        "The result is a clearer, more consistent brand ready to grow: a visual system that helps Security Alliance communicate its value, launch new initiatives and maintain a professional presence at every touchpoint.",
     },
     "the-red-guild": {
       title: "The Red Guild",
@@ -234,6 +244,8 @@ export const en = {
       idea:
         "Case study content in preparation.",
       solution:
+        "Case study content in preparation.",
+      result:
         "Case study content in preparation.",
     },
     "outdoor-gear": {

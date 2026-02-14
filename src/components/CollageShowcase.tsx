@@ -95,7 +95,7 @@ const CollageShowcase = () => {
             >
               <img
                 src={securityAllianceImage}
-                alt={t("work.collageAltHotelBranding")}
+                alt={t("work.collageAltFeaturedBranding")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
             </Link>
