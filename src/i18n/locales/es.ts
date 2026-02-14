@@ -244,7 +244,7 @@ export const es = {
       idea:
         "Convertir la experiencia de aprender seguridad en una especie de \"dojo\" y \"guild\" de juego serio: un universo visual propio donde entrenar, fallar y mejorar se siente como avanzar de nivel. La identidad debía unir todas sus iniciativas (Phishing Dojo, Damn Vulnerable DeFi, Security Frameworks, research, educación) bajo una misma narrativa de entrenamiento continuo.",
       solution:
-        "Contenido del caso de estudio en preparación.",
+        "Creamos un sistema visual único dentro de la industria: logo contundente, paleta vibrante y elementos gráficos que refuerzan el imaginario de guild, misiones y desafíos. La nueva web se diseñó como un hub gamificado, donde cada iniciativa se presenta como un \"nivel\" o \"misión\" con interacciones sutiles y momentos de descubrimiento en la navegación.",
       result:
         "Contenido del caso de estudio en preparación.",
     },
