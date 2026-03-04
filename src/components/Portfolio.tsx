@@ -28,18 +28,18 @@ const Portfolio = () => {
                 project.size === "large" ? "md:row-span-2" : ""
               }`}
             >
-              {/* Image — dims on hover */}
+              {/* Image — full opacity default, dims on hover */}
               <div className="absolute inset-0 flex flex-col justify-end">
                 <img
                   src={project.image}
                   alt={t(`projects.${project.id}.title`)}
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:opacity-60"
+                  className="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:opacity-40"
                 />
 
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
 
-                {/* Arrow button — top-left, visible on hover */}
+                {/* Arrow button — top-left, revealed on hover */}
                 <div className="absolute top-4 left-4 z-10 w-10 h-10 rounded-full bg-foreground/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
                   <svg
                     className="w-5 h-5 text-background"
@@ -56,12 +56,12 @@ const Portfolio = () => {
                   </svg>
                 </div>
 
-                {/* Badge + title — bottom-left aligned */}
+                {/* Badge always visible; title revealed on hover */}
                 <div className="absolute bottom-6 left-6 right-6 z-10 flex flex-col items-start">
                   <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider rounded-full mb-3">
                     {t(`projects.${project.id}.tag`)}
                   </span>
-                  <h3 className="font-display text-2xl md:text-3xl font-bold text-background">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-background opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {t(`projects.${project.id}.title`)}
                   </h3>
                 </div>
