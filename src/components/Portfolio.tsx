@@ -28,50 +28,43 @@ const Portfolio = () => {
                 project.size === "large" ? "md:row-span-2" : ""
               }`}
             >
-              {/* Image + overlay — fills card; title anchored below in overlay */}
+              {/* Image — dims on hover */}
               <div className="absolute inset-0 flex flex-col justify-end">
                 <img
                   src={project.image}
                   alt={t(`projects.${project.id}.title`)}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:opacity-60"
                 />
 
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
 
-                {/* Tag */}
-                <div className="absolute top-6 left-6 z-10">
-                  <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider rounded-full">
+                {/* Arrow button — top-left, visible on hover */}
+                <div className="absolute top-4 left-4 z-10 w-10 h-10 rounded-full bg-foreground/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                  <svg
+                    className="w-5 h-5 text-background"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
+
+                {/* Badge + title — bottom-left aligned */}
+                <div className="absolute bottom-6 left-6 right-6 z-10 flex flex-col items-start">
+                  <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider rounded-full mb-3">
                     {t(`projects.${project.id}.tag`)}
                   </span>
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-background">
+                    {t(`projects.${project.id}.title`)}
+                  </h3>
                 </div>
-
-                {/* Content block — type and arrow */}
-                <div className="relative z-10 px-6 pb-2">
-                  <p className="text-sm text-background/70 mb-2">
-                    {t(`projects.${project.id}.type`)}
-                  </p>
-                  <div className="mt-4 w-10 h-10 rounded-full bg-background/10 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                    <svg
-                      className="w-5 h-5 text-background"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* Title anchored to bottom of card */}
-                <h3 className="relative z-10 font-display text-2xl md:text-3xl font-bold text-background text-center pb-6">
-                  {t(`projects.${project.id}.title`)}
-                </h3>
               </div>
             </Link>
           ))}
