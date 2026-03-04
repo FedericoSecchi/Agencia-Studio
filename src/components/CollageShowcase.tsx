@@ -1,15 +1,7 @@
-import { Link } from "react-router-dom";
-import { getProjectById } from "@/data/projects";
 import { useI18n } from "@/i18n/context";
-
-const securityAllianceImage = getProjectById("security-alliance")?.image ?? "";
-const theRedGuildImage = getProjectById("the-red-guild")?.image ?? "";
-const orbitaImage = getProjectById("orbita")?.image ?? "";
-
-const collageProjectMap: Record<string, string> = {
-  [theRedGuildImage]: "the-red-guild",
-  [orbitaImage]: "orbita",
-};
+import heroImage1 from "@/assets/work/work-1.jpg";
+import heroImage2 from "@/assets/work/work-2.jpg";
+import heroImage3 from "@/assets/work/work-3.jpg";
 
 const CollageShowcase = () => {
   const { t } = useI18n();
@@ -28,75 +20,59 @@ const CollageShowcase = () => {
           </p>
         </div>
 
-        {/* Collage Grid */}
+        {/* Collage Grid — studio photos (reusing hero images) */}
         <div className="relative h-[800px] md:h-[900px] isolate" data-animate="scale">
             {/* Large image */}
-            <Link
-              to="/project/security-alliance"
-              className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block"
+            <div
+              className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl block"
               style={{ transform: "rotate(-2deg)" }}
               data-parallax="0.1"
             >
               <img
-                src={securityAllianceImage}
-                alt={t("work.collageAltProjectShowcase")}
+                src={heroImage1}
+                alt={t("hero.collageAlt1")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-6 left-6">
-                  <span className="label-text text-background">{t("work.collageOverlayLabel")}</span>
-                  <h3 className="font-display text-xl font-bold text-background">
-                    {t("work.collageOverlayTitle")}
-                  </h3>
-                </div>
-              </div>
-            </Link>
+            </div>
 
             {/* Medium image right */}
-            <Link
-              to={`/project/${collageProjectMap[theRedGuildImage]}`}
-              className="collage-card absolute top-10 right-0 w-[50%] md:w-[40%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
+            <div
+              className="collage-card absolute top-10 right-0 w-[50%] md:w-[40%] h-[35%] rounded-2xl overflow-hidden shadow-xl block"
               style={{ transform: "rotate(4deg)" }}
               data-parallax="0.15"
             >
               <img
-                src={theRedGuildImage}
-                alt={t("work.collageAltDesignProcess")}
+                src={heroImage2}
+                alt={t("hero.collageAlt2")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
-            </Link>
+            </div>
 
             {/* Small image center */}
-            <Link
-              to={`/project/${collageProjectMap[orbitaImage]}`}
-              className="collage-card absolute top-[40%] left-[30%] w-[35%] md:w-[25%] h-[30%] rounded-2xl overflow-hidden shadow-xl cursor-pointer z-10 block"
+            <div
+              className="collage-card absolute top-[40%] left-[30%] w-[35%] md:w-[25%] h-[30%] rounded-2xl overflow-hidden shadow-xl z-10 block"
               style={{ transform: "rotate(-1deg)" }}
               data-parallax="0.2"
             >
               <img
-                src={orbitaImage}
-                alt={t("work.collageAltWebsiteDesign")}
+                src={heroImage3}
+                alt={t("hero.collageAlt3")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
-              {/* Sticker overlay */}
-              <div className="absolute -top-4 -right-4 sticker w-16 h-16 text-xs z-20">
-                🔥
-              </div>
-            </Link>
+            </div>
 
             {/* Bottom left */}
-            <Link
-              to="/project/security-alliance"
-              className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
+            <div
+              className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl block"
               style={{ transform: "rotate(3deg)" }}
               data-parallax="0.08"
             >
               <img
-                src={securityAllianceImage}
-                alt={t("work.collageAltFeaturedBranding")}
+                src={heroImage1}
+                alt={t("hero.collageAlt1")}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
-            </Link>
+            </div>
 
             {/* Bottom right decorative card */}
             <div
