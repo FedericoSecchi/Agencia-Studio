@@ -83,12 +83,12 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             ))}
           </nav>
 
-          {/* Language switcher — dividers aligned with label */}
-          <div className="mt-8 flex flex-col items-center gap-2 py-3">
+          {/* Language switcher — left-aligned, dividers aligned with label */}
+          <div className="mt-8 flex flex-col items-start gap-2 py-3">
             <div className="w-16 border-t border-secondary-foreground/20 shrink-0" />
             <button
               onClick={toggleLanguage}
-              className="font-body text-base font-medium text-secondary-foreground/80 hover:text-primary transition-colors uppercase py-1"
+              className="text-left font-body text-base font-medium text-secondary-foreground/80 hover:text-primary transition-colors uppercase py-1"
               aria-label={t("language.toggleAria")}
             >
               {t("language.toggleLabel")}
