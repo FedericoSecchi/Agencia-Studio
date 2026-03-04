@@ -155,7 +155,7 @@ const ProjectCase = () => {
               </div>
             )}
             {isOrbitaNarrative && galleries[0] && galleries[1] && galleries[2] && (
-              <div className="mt-12 w-full overflow-hidden rounded-2xl grid grid-cols-1 sm:grid-cols-3 gap-0">
+              <div className="mt-12 w-full overflow-hidden rounded-2xl grid grid-cols-1 gap-0">
                 <img
                   src={galleries[0]}
                   alt={`${t(`projects.${project.id}.title`)} Gallery 1`}
