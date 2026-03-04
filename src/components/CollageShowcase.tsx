@@ -110,7 +110,7 @@ const CollageShowcase = () => {
 
             {/* Floating elements — low z-index so they don't overlap Works section below */}
             <div
-              className="absolute top-[20%] right-[30%] text-5xl animate-float z-0"
+              className="absolute top-[5%] md:top-[15%] lg:top-[20%] right-[30%] text-5xl animate-float z-0"
               style={{ animationDelay: "0.3s" }}
             >
               👀
