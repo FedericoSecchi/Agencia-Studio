@@ -60,8 +60,8 @@ const Portfolio = () => {
                 {t(`projects.${project.id}.title`)}
               </h3>
 
-              {/* Green badge — bottom-left; normal: muy abajo; hover: bottom-4 + counter-translate */}
-              <div className="absolute left-4 bottom-0 z-10 flex flex-col items-start pb-1 transition-all duration-500 group-hover:bottom-4 group-hover:pb-0 group-hover:translate-y-2">
+              {/* Green badge — 30px above bottom; hover: bottom-4 + counter-translate */}
+              <div className="absolute left-4 bottom-[30px] z-10 flex flex-col items-start transition-all duration-500 group-hover:bottom-4 group-hover:translate-y-2">
                 <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider rounded-full">
                   {t(`projects.${project.id}.tag`)}
                 </span>
