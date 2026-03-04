@@ -67,6 +67,7 @@ const ProjectCase = () => {
   const nextProject = projectsData[(currentIndex + 1) % projectsData.length];
   const isPremium = project.layout === "premium";
   const galleries = project.galleries ?? [];
+  const isOrbitaNarrative = project.id === "orbita" && galleries.length >= 6;
 
   return (
     <div className="relative min-h-screen bg-background">
@@ -153,6 +154,24 @@ const ProjectCase = () => {
                 />
               </div>
             )}
+            {isOrbitaNarrative && galleries[1] && (
+              <div className="mt-6 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={galleries[1]}
+                  alt={`${t(`projects.${project.id}.title`)} Gallery 2`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
+            {isOrbitaNarrative && galleries[2] && (
+              <div className="mt-6 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={galleries[2]}
+                  alt={`${t(`projects.${project.id}.title`)} Gallery 3`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
           </div>
           <div className="section-container">
             <hr className="border-t border-border/30 mt-20" />
@@ -183,11 +202,20 @@ const ProjectCase = () => {
                 </p>
               </div>
             )}
-            {isPremium && galleries[1] && (
+            {isPremium && galleries[1] && !isOrbitaNarrative && (
               <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={galleries[1]}
                   alt={`${t(`projects.${project.id}.title`)} Gallery 2`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
+            {isOrbitaNarrative && galleries[3] && (
+              <div className="mt-20 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={galleries[3]}
+                  alt={`${t(`projects.${project.id}.title`)} Gallery 4`}
                   className="w-full h-auto object-contain"
                 />
               </div>
@@ -240,11 +268,20 @@ const ProjectCase = () => {
                 })()}
               </div>
             </div>
-            {galleries[3] && galleries.length < 6 && (
+            {galleries[3] && galleries.length < 6 && !isOrbitaNarrative && (
               <div className="mt-20 w-full rounded-2xl overflow-hidden">
                 <img
                   src={galleries[3]}
                   alt={`${t(`projects.${project.id}.title`)} Gallery 4`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
+            {isOrbitaNarrative && galleries[4] && (
+              <div className="mt-20 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={galleries[4]}
+                  alt={`${t(`projects.${project.id}.title`)} Gallery 5`}
                   className="w-full h-auto object-contain"
                 />
               </div>
@@ -256,8 +293,8 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Galleries 3–6 block (premium with 6 galleries only) */}
-      {isPremium && galleries.length >= 6 && (
+      {/* Galleries 3–6 block (premium with 6 galleries only, not Orbita narrative) */}
+      {isPremium && galleries.length >= 6 && !isOrbitaNarrative && (
         <div className="section-container">
           <div className="w-full max-w-[1200px] mx-auto">
           {galleries[2] && (
@@ -312,7 +349,7 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Gallery 6 (premium with 6 galleries only, below Resultado) */}
+      {/* Gallery 6 (premium with 6 galleries only, below Resultado; or Orbita narrative) */}
       {isPremium && galleries.length >= 6 && galleries[5] && (
         <section className="section-container">
           <div className="mt-20 w-full rounded-2xl overflow-hidden">
