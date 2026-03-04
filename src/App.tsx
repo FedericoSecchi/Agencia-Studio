@@ -10,7 +10,7 @@ import ProjectCase from "./pages/ProjectCase";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
-  <I18nProvider defaultLanguage="en">
+  <I18nProvider defaultLanguage="es">
     <TooltipProvider>
       <Toaster />
       <Sonner />

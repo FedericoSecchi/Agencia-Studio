@@ -67,6 +67,7 @@ export const I18nProvider = ({ children, defaultLanguage = 'en' }: I18nProviderP
   };
 
   const translations: Translations = language === 'es' ? es : en;
+
   const t = <T = string>(key: string): T => {
     const value = key
       .split('.')

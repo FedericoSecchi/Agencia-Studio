@@ -249,9 +249,10 @@ export const es = {
     },
     "orbita": {
       title: "Orbita",
-      type: "Contenido en preparación.",
-      tag: "En preparación",
-      miniDescription: "Contenido en preparación.",
+      type: "Identidad · Web · Contenidos",
+      tag: "Branding",
+      miniDescription:
+        "Identidad completa para Órbita Comms, agencia de PR y growth marketing en Web3.",
       task:
         "Rediseñar la identidad de Órbita Comms, una agencia de PR y growth marketing fundada por dos profesionales con años de carrera que se unieron para acompañar proyectos Web3. El objetivo era construir una marca sólida y coherente que pudiera extenderse a web, materiales comerciales y presencia en redes sociales.",
       idea:
