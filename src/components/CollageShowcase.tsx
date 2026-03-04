@@ -116,7 +116,7 @@ const CollageShowcase = () => {
               👀
             </div>
             <div
-              className="absolute bottom-[30%] left-[60%] text-4xl animate-float z-0"
+              className="absolute bottom-[40%] left-[80%] md:left-[70%] text-4xl animate-float z-0"
               style={{ animationDelay: "0.8s" }}
             >
               🌟
