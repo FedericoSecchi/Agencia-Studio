@@ -180,15 +180,12 @@ const ProjectCase = () => {
               </div>
             )}
           </div>
-          <div className="section-container">
-            <hr className="border-t border-border/30 mt-8 md:mt-12" />
-          </div>
         </section>
       )}
 
       {/* Idea Block */}
       {(isPremium || t(`projects.${project.id}.idea`)) && (
-        <section className="pt-8 pb-12 md:pt-12 md:pb-20 bg-background" data-animate="fade-up">
+        <section className="pt-6 pb-12 md:pt-10 md:pb-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             {isPremium ? (
               <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 md:gap-16 lg:gap-24 items-center">
