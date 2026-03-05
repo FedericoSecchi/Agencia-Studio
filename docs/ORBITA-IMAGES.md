@@ -31,4 +31,4 @@ El código usa **exactamente** estos nombres. Formato actual: **PNG**.
 
 1. Coloca los archivos en `src/assets/projects/orbita/` con los nombres indicados.
 2. No hace falta tocar código si mantienes los mismos nombres y extensión.
-3. Ejecuta `npm run build` o `npm run dev` y abre `/#/project/orbita` para comprobar.
+3. Ejecuta `npm run build` o `npm run dev` y abre `/project/orbita` para comprobar.
