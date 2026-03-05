@@ -240,15 +240,12 @@ const ProjectCase = () => {
               </div>
             )}
           </div>
-          <div className="section-container">
-            <hr className="border-t border-border/30 mt-12 md:mt-20" />
-          </div>
         </section>
       )}
 
       {/* Solución section (premium only) */}
       {isPremium && (
-        <section className="py-12 md:py-20 bg-background" data-animate="fade-up">
+        <section className="pt-6 pb-12 md:pt-10 md:pb-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-8 md:gap-16 lg:gap-32 items-center">
               <div className="flex items-center justify-start">
@@ -301,9 +298,6 @@ const ProjectCase = () => {
               </div>
             )}
           </div>
-          <div className="section-container">
-            <hr className="border-t border-border/30 mt-12 md:mt-20" />
-          </div>
         </section>
       )}
 
@@ -344,7 +338,7 @@ const ProjectCase = () => {
 
       {/* Resultado section (premium only) */}
       {isPremium && t(`projects.${project.id}.result`) && (
-        <section className="py-12 md:py-20 bg-background" data-animate="fade-up">
+        <section className="pt-6 pb-12 md:pt-10 md:pb-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-8 md:gap-16 lg:gap-32 items-center">
               <div className="flex items-center justify-start">
@@ -356,9 +350,6 @@ const ProjectCase = () => {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="section-container">
-            <hr className="border-t border-border/30 mt-12 md:mt-20" />
           </div>
         </section>
       )}
@@ -378,7 +369,7 @@ const ProjectCase = () => {
 
       {/* Solution Block (default layout only) */}
       {!isPremium && t(`projects.${project.id}.solution`) && (
-        <section className="py-12 md:py-20 bg-background" data-animate="fade-up">
+        <section className="pt-6 pb-12 md:pt-10 md:pb-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
               <h2 className="headline-medium mb-6">{t("caseStudy.solution")}</h2>
@@ -386,9 +377,6 @@ const ProjectCase = () => {
                 {t(`projects.${project.id}.solution`)}
               </p>
             </div>
-          </div>
-          <div className="section-container">
-            <hr className="border-t border-border/30 mt-12 md:mt-20" />
           </div>
         </section>
       )}
