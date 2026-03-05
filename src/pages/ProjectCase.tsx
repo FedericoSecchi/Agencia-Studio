@@ -73,7 +73,7 @@ const ProjectCase = () => {
     <div className="relative min-h-screen bg-background">
       <Header />
       {/* Hero Section — mobile-first vertical spacing */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-background">
+      <section className="pt-24 pb-8 md:pt-32 md:pb-12 bg-background">
         <div className="section-container">
           <div className="mb-4 md:mb-6">
             <Link
@@ -126,7 +126,7 @@ const ProjectCase = () => {
 
       {/* Task Block */}
       {t(`projects.${project.id}.task`) && (
-        <section className="py-12 md:py-20 bg-background" data-animate="fade-up">
+        <section className="pt-8 pb-12 md:pt-12 md:pb-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             {isPremium ? (
               <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 md:gap-16 lg:gap-24 items-center">
