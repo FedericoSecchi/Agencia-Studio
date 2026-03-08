@@ -31,7 +31,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="mb-6 block">
-              <Logo variant="dark" size={48} />
+              <Logo variant="light" size={90} />
             </Link>
             <p className="body-regular text-background/60 mb-6 max-w-xs">
               {t("footer.description")}

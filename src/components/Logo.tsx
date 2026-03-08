@@ -13,10 +13,9 @@ export default function Logo({
   return (
     <img
       src={src}
-      alt="Kosmos Studio logo"
-      width={size}
+      alt="Kosmos Studio"
       loading="eager"
-      style={{ display: "block" }}
+      style={{ height: size, width: "auto", display: "block" }}
     />
   );
 }
