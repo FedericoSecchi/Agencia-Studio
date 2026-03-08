@@ -1,22 +1,16 @@
-# Kosmos Studio
+# Kosmos Studio Website
 
-Creative studio for branding, design and digital experiences.
+Creative studio portfolio built with Vite + React.
 
-🌐 Website:
-https://somoskosmos.com
+## Development
 
----
+npm install
+npm run dev
 
-## About
-Kosmos Studio is a design and branding studio focused on building strong visual identities, websites and creative systems for companies, products and startups.
+## Build
 
-## Stack
-- React
-- Vite
-- Tailwind
-- Structured SEO
+npm run build
 
----
+## Deployment
 
-## Live site
-https://somoskosmos.com
+Automatic deploy via GitHub.
