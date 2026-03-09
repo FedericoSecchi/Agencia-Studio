@@ -32,7 +32,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen bg-background overflow-hidden flex items-center pt-20 lg:pt-28 xl:pt-32 isolate">
+    <section id="home" className="relative min-h-screen bg-background overflow-hidden flex items-center pt-12 md:pt-14 lg:pt-24 xl:pt-32 isolate">
       <div className="section-container w-full pt-8 pb-16 lg:pt-20 lg:pb-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left: Text content */}
