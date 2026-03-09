@@ -38,7 +38,7 @@ const Hero = () => {
           {/* Left: Text content */}
           <div className="relative z-10">
             <h1
-              className="headline-display mb-8 break-words"
+              className="headline-hero mb-8"
             >
               {t("hero.headline")}
             </h1>

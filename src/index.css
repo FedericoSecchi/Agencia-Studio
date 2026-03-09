@@ -117,6 +117,19 @@ html {
     @apply font-display;
   }
 
+  .headline-hero {
+    font-size: clamp(2.5rem, 7vw, 7rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    max-width: 14ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow-wrap: anywhere;
+    @apply font-display;
+  }
+
   .headline-large {
     @apply font-display font-bold text-5xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight;
   }
