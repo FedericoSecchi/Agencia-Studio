@@ -11,7 +11,7 @@ const Process = () => {
       aria-labelledby="process-heading"
     >
       <div className="section-container">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Left: Main statement */}
           <div>
             <span className="label-text text-primary mb-4 block">

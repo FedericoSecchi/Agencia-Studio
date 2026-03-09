@@ -9,11 +9,10 @@ const Clients = () => {
   return (
     <section
       id="clientes"
-      className="pt-16 md:pt-24 lg:pt-32 bg-background overflow-hidden"
-      style={{ paddingBottom: "clamp(2rem, 5vw, 3rem)" }}
+      className="py-16 md:py-24 lg:py-32 bg-background overflow-hidden"
     >
       <div className="section-container">
-        <div className="text-center mb-20" data-animate="fade-up">
+        <div className="text-center mb-12 md:mb-16 lg:mb-20" data-animate="fade-up">
           <span className="label-text text-primary mb-4 block">{t("clients.label")}</span>
           <h2 className="headline-medium mb-4">
             {t("clients.title")}

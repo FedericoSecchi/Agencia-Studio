@@ -5,8 +5,7 @@ const Storytelling = () => {
   return (
     <section
       id="nosotros"
-      className="about-section relative bg-background overflow-x-clip"
-      style={{ paddingBottom: "clamp(2.5rem, 6vw, 6rem)" }}
+      className="about-section relative bg-background overflow-x-clip py-16 md:py-20 lg:py-24"
       aria-labelledby="about-intro-heading"
     >
       <div
@@ -18,7 +17,7 @@ const Storytelling = () => {
           style={{ position: "relative", isolation: "isolate" }}
         >
           <span
-            className="label-text text-primary mb-4 mt-12 md:mt-16 lg:mt-20 block text-center"
+            className="label-text text-primary mb-4 block text-center"
             style={{ paddingInline: "clamp(1.25rem, 6vw, 6rem)" }}
           >
             {t("about.label")}

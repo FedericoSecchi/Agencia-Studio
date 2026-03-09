@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     <section id="trabajos" className="relative z-20 py-16 md:py-24 lg:py-32 bg-neutral-950 text-white">
       <div className="section-container">
-        <div className="mb-16" data-animate="fade-up">
+        <div className="mb-12 md:mb-16" data-animate="fade-up">
           <span className="label-text text-primary mb-4 block">{t("work.label")}</span>
           <h2 className="headline-medium mb-4">{t("work.title")}</h2>
           <p className="body-large text-neutral-400">
@@ -17,7 +17,7 @@ const Portfolio = () => {
 
         {/* Portfolio Grid — fluid auto-fit: cards grow with viewport */}
         <div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
           data-animate="stagger"
         >
           {projectsData.map((project) => (

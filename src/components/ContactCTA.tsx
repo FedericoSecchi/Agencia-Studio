@@ -15,8 +15,7 @@ const ContactCTA = () => {
   return (
     <section
       id="contacto"
-      className="pb-32 bg-background text-foreground relative overflow-hidden border-t border-border/30"
-      style={{ paddingTop: "clamp(4rem, 7vw, 6rem)" }}
+      className="pt-16 md:pt-24 lg:pt-28 pb-24 md:pb-32 bg-background text-foreground relative overflow-hidden border-t border-border/30"
     >
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center" data-animate="fade-up">
@@ -27,11 +26,11 @@ const ContactCTA = () => {
             {t("contact.titleEnd")}
           </h2>
 
-          <p className="body-large text-muted-foreground max-w-2xl mx-auto mb-12">
+          <p className="body-large text-muted-foreground max-w-2xl mx-auto mb-10 md:mb-12">
             {t("contact.description")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 md:mb-12">
             <Button variant="neon" size="xl" onClick={handleWriteUs}>
               {t("contact.ctaWrite")}
             </Button>

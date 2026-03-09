@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen bg-background overflow-hidden flex items-center pt-20 md:pt-28 lg:pt-32 isolate">
       <div className="section-container w-full pt-8 pb-16 md:pt-20 md:pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-20 items-center">
           {/* Left: Text content */}
           <div className="relative z-10">
             <span className="label-text text-primary mb-3 block">{t("hero.label")}</span>
