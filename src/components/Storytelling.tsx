@@ -18,7 +18,7 @@ const Storytelling = () => {
           style={{ position: "relative", isolation: "isolate" }}
         >
           <span
-            className="label-text text-primary mb-4 block text-center"
+            className="label-text text-primary mb-4 mt-12 md:mt-16 lg:mt-20 block text-center"
             style={{ paddingInline: "clamp(1.25rem, 6vw, 6rem)" }}
           >
             {t("about.label")}
