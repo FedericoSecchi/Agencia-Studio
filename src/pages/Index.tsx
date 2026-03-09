@@ -24,7 +24,9 @@ const Index = () => {
         title={t("meta.homeTitle")}
         description={t("meta.homeDescription")}
         url={`${SITE_URL}/`}
-        image={`${SITE_URL}/branding/og-image.svg`}
+        image={`${SITE_URL}/branding/og-image.jpg`}
+        imageWidth={1200}
+        imageHeight={630}
         type="website"
       />
       <Header />
