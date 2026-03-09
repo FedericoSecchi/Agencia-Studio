@@ -128,12 +128,9 @@ const Capabilities = () => {
                 {/* Background shape */}
                 <div className="absolute inset-0 bg-muted rounded-3xl" />
 
-                {/* Mobile: muted block (no video) */}
-                <div className="absolute inset-0 bg-muted rounded-3xl lg:hidden" />
-
-                {/* Active capability visual — Content & Motion shows drone video when section open (desktop only) */}
+                {/* Active capability visual — icon on all sizes; Content & Motion shows drone video on desktop only */}
                 <div
-                  className="absolute inset-8 bg-secondary rounded-2xl flex items-center justify-center overflow-hidden hidden lg:flex"
+                  className="absolute inset-8 bg-secondary rounded-2xl flex items-center justify-center overflow-hidden"
                   data-state={activeIndex === 2 ? "open" : "closed"}
                 >
                   {activeIndex === 2 ? (
@@ -141,7 +138,7 @@ const Capabilities = () => {
                       <video
                         id="drone-video"
                         src="/videos/video-dji.mp4"
-                        className="w-full h-full object-cover opacity-0 transition-opacity duration-500"
+                        className="hidden lg:block w-full h-full object-cover opacity-0 transition-opacity duration-500"
                         autoPlay
                         muted
                         loop

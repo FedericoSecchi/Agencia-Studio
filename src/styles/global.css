@@ -1,8 +1,10 @@
-/* Drone video — visible when Content & Motion section is open */
-[data-state="open"] #drone-video {
-  opacity: 1;
-}
+/* Drone video — visible when Content & Motion is open, desktop only (mobile shows icon fallback) */
+@media (min-width: 1024px) {
+  [data-state="open"] #drone-video {
+    opacity: 1;
+  }
 
-[data-state="open"] #motion-icon {
-  opacity: 0;
+  [data-state="open"] #motion-icon {
+    opacity: 0;
+  }
 }
