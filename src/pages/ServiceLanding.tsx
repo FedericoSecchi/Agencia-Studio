@@ -1,10 +1,12 @@
 import { useParams, Navigate, Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/seo/SEO";
 import { projectsData } from "@/data/projects";
 import { useI18n } from "@/i18n/context";
+import { serviceContent } from "@/content/services";
 
 const SITE_URL = "https://somoskosmos.com";
 
@@ -28,10 +30,11 @@ const ServiceLanding = () => {
   const title = t(`services.${key}.title`);
   const description = t(`services.${key}.description`);
   const seoKeywords = t(`services.${key}.seo`);
+  const content = serviceContent[serviceSlug];
 
   const canonicalUrl = `${SITE_URL}/services/${serviceSlug}`;
   const seoTitle = `${title} | Kosmos Studio`;
-  const seoDescription = `${description} ${seoKeywords ? `— ${seoKeywords}` : ""}`;
+  const seoDescription = content?.description || `${description} ${seoKeywords ? `— ${seoKeywords}` : ""}`;
 
   return (
     <div className="relative min-h-screen bg-background">
@@ -47,6 +50,34 @@ const ServiceLanding = () => {
             <h1 className="headline-large mb-6">{title}</h1>
             <p className="body-large text-muted-foreground max-w-2xl">{description}</p>
           </div>
+
+          {content?.body && (
+            <article className="prose prose-neutral dark:prose-invert max-w-none mb-16 lg:mb-20">
+              <ReactMarkdown
+                components={{
+                  h1: ({ children }) => null,
+                  h2: ({ children }) => (
+                    <h2 className="font-display text-xl lg:text-2xl font-semibold mt-10 mb-4 text-foreground">
+                      {children}
+                    </h2>
+                  ),
+                  h3: ({ children }) => (
+                    <h3 className="font-display text-lg font-semibold mt-6 mb-3 text-foreground">
+                      {children}
+                    </h3>
+                  ),
+                  p: ({ children }) => (
+                    <p className="body-large text-muted-foreground mb-4">{children}</p>
+                  ),
+                  strong: ({ children }) => (
+                    <strong className="font-semibold text-foreground">{children}</strong>
+                  ),
+                }}
+              >
+                {content.body}
+              </ReactMarkdown>
+            </article>
+          )}
 
           <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
             {projectsData.map((project) => (
