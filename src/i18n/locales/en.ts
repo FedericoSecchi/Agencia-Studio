@@ -119,20 +119,22 @@ export const en = {
       {
         title: "Branding",
         text:
-          "Visual identities, logo refinements, typography and color systems, and brand guidelines built for real-world use.",
+          "Visual identities, logos, typography and color systems, with brand guidelines designed for real-world use.",
       },
       {
         title: "Websites",
         text:
-          "Modern, responsive sites with clear structure, smooth interactions and fast performance.",
+          "Modern websites with clear structure, smooth interactions and fast performance.",
       },
       {
         title: "Content & Motion",
         text:
-          "Layouts for social, short motion pieces, product visuals and campaign assets.",
+          "Content layouts, motion pieces, product visuals and campaign assets for digital channels.",
       },
       {
         title: "Systems & Automations",
+        text:
+          "Design systems and lightweight automations that help teams manage their brand and content more efficiently.",
       },
     ],
   },

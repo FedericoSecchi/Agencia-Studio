@@ -121,22 +121,22 @@ export const es = {
       {
         title: "Branding",
         text:
-          "Creamos identidades visuales claras que ayudan a posicionar proyectos y comunicar su valor.",
+          "Identidades visuales, logotipos, tipografía y sistemas de color, con guías de marca pensadas para el uso real.",
       },
       {
         title: "Sitios web",
         text:
-          "Diseñamos y desarrollamos sitios web claros, rápidos y preparados para acompañar el crecimiento del proyecto.",
+          "Sitios web modernos con estructura clara, interacciones fluidas y alto rendimiento.",
       },
       {
         title: "Contenido y motion",
         text:
-          "Layouts para redes, piezas cortas de motion, visuales de producto y assets de campaña.",
+          "Diseño de contenidos, piezas de motion, visuales de producto y materiales para campañas digitales.",
       },
       {
         title: "Sistemas y automatizaciones",
         text:
-          "Construimos sistemas visuales que mantienen coherencia en cada punto de contacto de la marca.",
+          "Sistemas de diseño y automatizaciones ligeras que ayudan a los equipos a gestionar su marca y su contenido con eficiencia.",
       },
     ],
   },
