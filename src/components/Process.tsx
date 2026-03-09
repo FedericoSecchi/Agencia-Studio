@@ -7,11 +7,7 @@ const Process = () => {
   return (
     <section
       id="proceso"
-      className="pb-32 bg-muted/60 border-t border-border/40"
-      style={{
-        paddingTop: "clamp(5rem, 10vw, 9rem)",
-        marginTop: "clamp(2.5rem, 6vw, 5rem)",
-      }}
+      className="pt-16 md:pt-24 lg:pt-32 pb-32 bg-neutral-950 text-white border-t border-white/10"
       aria-labelledby="process-heading"
     >
       <div className="section-container">
@@ -27,7 +23,7 @@ const Process = () => {
               <span className="text-stroke">{t("process.headline_line_2")}</span>
             </h2>
 
-            <p className="body-large text-muted-foreground max-w-lg">
+            <p className="body-large text-neutral-400 max-w-lg">
               {t("process.intro")}
             </p>
           </div>
@@ -60,7 +56,7 @@ const Process = () => {
                 e.preventDefault();
                 scrollToSection("#contacto");
               }}
-              className="mt-12 inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-6 py-4 rounded-full cursor-pointer hover:opacity-90 transition-opacity animate-heartbeat"
+              className="mt-12 inline-flex items-center gap-3 bg-white text-neutral-950 px-6 py-4 rounded-full cursor-pointer hover:bg-neutral-200 transition-colors animate-heartbeat"
               type="button"
             >
               <span className="text-2xl">😌</span>
