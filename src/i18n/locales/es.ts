@@ -103,6 +103,15 @@ export const es = {
     headline: "Dentro del estudio.",
     subtext: "Ideas, pruebas y momentos del proceso detrás de nuestro trabajo.",
   },
+  visualContent: {
+    label: "CONTENIDO VISUAL",
+    title: "Contenido visual",
+    description:
+      "Producimos fotografía y video para marcas, proyectos al aire libre y destinos turísticos.",
+    services: ["Fotografía", "Producción de video", "Footage con drone"],
+    note: "Producción con drone en colaboración con SkyShot.",
+    videoLabel: "Ejemplo de producción con drone",
+  },
   work: {
     label: "TRABAJO",
     title: "Proyectos seleccionados",

@@ -102,6 +102,15 @@ export const en = {
     headline: "Behind the scenes.",
     subtext: "Ideas, experiments and moments from the process behind our work.",
   },
+  visualContent: {
+    label: "VISUAL CONTENT",
+    title: "Visual Content",
+    description:
+      "We produce photo and video content for brands, outdoor projects and tourism destinations.",
+    services: ["Photography", "Video production", "Drone footage"],
+    note: "Drone production in collaboration with SkyShot.",
+    videoLabel: "Drone production example",
+  },
   work: {
     label: "WORK",
     title: "Selected projects",

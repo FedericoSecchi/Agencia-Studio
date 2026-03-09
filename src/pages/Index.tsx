@@ -5,6 +5,7 @@ import Process from "@/components/Process";
 import CollageShowcase from "@/components/CollageShowcase";
 import Portfolio from "@/components/Portfolio";
 import Capabilities from "@/components/Capabilities";
+import VisualContentSection from "@/components/VisualContentSection";
 import Clients from "@/components/Clients";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
@@ -34,6 +35,7 @@ const Index = () => {
         <Hero />
         <Clients />
         <Capabilities />
+        <VisualContentSection />
         <Portfolio />
         <Process />
         <Storytelling />
