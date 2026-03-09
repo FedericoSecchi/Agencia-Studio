@@ -124,13 +124,16 @@ const Capabilities = () => {
           {/* Right: Visual display */}
           <div className="relative mt-12 lg:mt-0 flex justify-center lg:block h-full">
             <div className="lg:sticky lg:top-32 h-full w-full max-w-md lg:max-w-none">
-              <div className="hidden md:block relative w-full aspect-square lg:h-full lg:aspect-square lg:max-w-full">
+              <div className="block relative w-full aspect-square lg:h-full lg:aspect-square lg:max-w-full">
                 {/* Background shape */}
                 <div className="absolute inset-0 bg-muted rounded-3xl" />
 
-                {/* Active capability visual — Content & Motion shows drone video when section open */}
+                {/* Mobile: muted block (no video) */}
+                <div className="absolute inset-0 bg-muted rounded-3xl lg:hidden" />
+
+                {/* Active capability visual — Content & Motion shows drone video when section open (desktop only) */}
                 <div
-                  className="absolute inset-8 bg-secondary rounded-2xl flex items-center justify-center overflow-hidden"
+                  className="absolute inset-8 bg-secondary rounded-2xl flex items-center justify-center overflow-hidden hidden lg:flex"
                   data-state={activeIndex === 2 ? "open" : "closed"}
                 >
                   {activeIndex === 2 ? (
