@@ -17,13 +17,9 @@ import orbitaGallery3 from "@/assets/projects/orbita/orbita-03.png";
 import orbitaGallery4 from "@/assets/projects/orbita/orbita-04.png";
 import orbitaGallery5 from "@/assets/projects/orbita/orbita-05.png";
 import orbitaGallery6 from "@/assets/projects/orbita/orbita-06.png";
-import nudeImage from "@/assets/projects/nude/hero.jpg";
-import nudeGallery1 from "@/assets/projects/nude/tarea.jpg";
-import nudeGallery2 from "@/assets/projects/nude/idea.jpg";
-import nudeGallery3 from "@/assets/projects/nude/solucion.jpg";
-import nudeGallery4 from "@/assets/projects/nude/resultado.jpg";
-import nudeGallery5 from "@/assets/projects/nude/grid-01.jpg";
-import nudeGallery6 from "@/assets/projects/nude/grid-02.jpg";
+import nudeImage from "@/assets/projects/nude/hero.png";
+import nudeGallery1 from "@/assets/projects/nude/grid-01.png";
+import nudeGallery2 from "@/assets/projects/nude/grid-02.png";
 
 export type ProjectLayout = "premium" | "default";
 
@@ -94,10 +90,10 @@ export const projectsData: Project[] = [
     galleries: [
       nudeGallery1,
       nudeGallery2,
-      nudeGallery3,
-      nudeGallery4,
-      nudeGallery5,
-      nudeGallery6,
+      nudeGallery1,
+      nudeGallery2,
+      nudeGallery1,
+      nudeGallery2,
     ],
     seoTitle: "Nude Case Study — Kosmos Studio",
     seoDescription: "Brand and web redesign for a growth marketing and press agency.",
