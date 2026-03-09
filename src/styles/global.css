@@ -1,8 +1,18 @@
-/* Drone video — visible when Content & Motion is open; icon hidden when video shows */
-[data-state="open"] #drone-video {
+/* Capabilities videos — visible when their service is active; icon hidden when any video shows */
+[data-state="websites"] #websites-video {
   opacity: 1;
 }
 
-[data-state="open"] #motion-icon {
+[data-state="content"] #drone-video {
+  opacity: 1;
+}
+
+[data-state="systems"] #automation-video {
+  opacity: 1;
+}
+
+[data-state="websites"] #service-icon,
+[data-state="content"] #service-icon,
+[data-state="systems"] #service-icon {
   opacity: 0;
 }

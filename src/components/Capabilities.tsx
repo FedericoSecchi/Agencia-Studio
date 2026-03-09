@@ -128,39 +128,50 @@ const Capabilities = () => {
                 {/* Background shape */}
                 <div className="absolute inset-0 bg-muted rounded-3xl" />
 
-                {/* Active capability visual — Content & Motion: video when open, icon when closed */}
+                {/* Active capability visual — videos for Websites, Content & Motion, Systems; icon fallback */}
                 <div
                   className="absolute inset-8 bg-secondary rounded-2xl flex items-center justify-center overflow-hidden"
-                  data-state={activeIndex === 2 ? "open" : "closed"}
+                  data-state={SERVICE_KEYS[activeIndex]}
                 >
-                  {activeIndex === 2 ? (
-                    <>
-                      <video
-                        id="drone-video"
-                        src="/videos/video-dji.mp4"
-                        className="w-full h-full object-cover opacity-0 transition-opacity duration-500"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="auto"
-                        aria-hidden
-                      />
-                      <span
-                        id="motion-icon"
-                        className="absolute inset-0 flex items-center justify-center text-[180px] text-primary opacity-20 transition-opacity duration-500"
-                      >
-                        ◎
-                      </span>
-                    </>
-                  ) : (
-                    <span
-                      className="text-[180px] text-primary opacity-20 transition-all duration-500"
-                      key={activeIndex}
-                    >
-                      {icons[activeIndex]}
-                    </span>
-                  )}
+                  <video
+                    id="websites-video"
+                    src="/videos/website.mov"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    aria-hidden
+                  />
+                  <video
+                    id="drone-video"
+                    src="/videos/video-dji.mp4"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    aria-hidden
+                  />
+                  <video
+                    id="automation-video"
+                    src="/videos/automatizacion.mov"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    aria-hidden
+                  />
+                  <span
+                    id="service-icon"
+                    className="absolute inset-0 flex items-center justify-center text-[180px] text-primary opacity-20 transition-opacity duration-500"
+                  >
+                    {icons[activeIndex]}
+                  </span>
                 </div>
 
                 {/* Floating badge */}
