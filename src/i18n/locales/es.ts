@@ -25,11 +25,11 @@ export const es = {
     headline:
       "Diseño y desarrollo web para marcas que quieren vender mejor.",
     description:
-      "Identidad visual, sitios web modernos y contenido digital para equipos que cuidan su imagen y lo que venden.",
+      "Identidad visual y sitios web claros para equipos que quieren posicionarse mejor y comunicar su valor.",
     ctaStart: "Iniciar un proyecto",
     ctaWork: "Ver proyectos",
     ctaProjects: "Ver proyectos",
-    ctaCall: "Agendar llamada",
+    ctaCall: "Iniciar proyecto",
     badgeNew: "Nuevo",
     collageAlt1: "Estudio creativo en su espacio",
     collageAlt2: "Diseñador bocetando",
