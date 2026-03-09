@@ -210,6 +210,7 @@ export const en = {
     "security-alliance": "Security Alliance",
     "the-red-guild": "The Red Guild",
     "orbita": "Orbita",
+    "nude": "Nude",
     "shawarmaz": "Shawarmaz",
     "swap-coffee": "Swap Coffee",
     "fmag": "FMAG",
@@ -264,6 +265,22 @@ export const en = {
         "Redesign the identity of Órbita Comms, a PR and growth marketing agency founded by two professionals with years of experience who joined forces to support Web3 projects. The goal was to build a solid, coherent brand that could extend to web, sales materials, and social presence.",
       idea:
         "Use the metaphor of \"reaching orbit\" as the brand's core: an agency that helps Web3 projects take off and gain sustained visibility. The identity had to balance the warmth and approachability of its founders with a clear positioning as a team specialized in the Web3 and frontier tech industry.",
+      solution:
+        "We designed a complete visual identity —logo, palette, typefaces, and graphic system— built to scale across all touchpoints. We applied the brand to website, sales presentations, sales collateral, and social content, creating a unified visual universe that reinforces their PR + growth marketing message for Web3 projects.",
+      result:
+        "We designed a complete visual identity —logo, palette, typefaces, and graphic system— built to scale across all touchpoints. We applied the brand to website, sales presentations, sales collateral, and social content, creating a unified visual universe that reinforces their PR + growth marketing message for Web3 projects.",
+    },
+    nude: {
+      title: "Nude",
+      type: "Rebranding · Web · Content",
+      tag: "REBRANDING & WEB DESIGN",
+      miniDescription:
+        "Full brand and web redesign for an agency dedicated to growth marketing and press presence.",
+      coverImageAlt: "Nude brand identity and digital experience",
+      task:
+        "Redesign the identity of Órbita Comms, a PR and growth marketing agency founded by two professionals with years of experience who joined forces to support Web3 projects. The goal was to build a solid, coherent brand that could extend to web, sales materials, and social presence.",
+      idea:
+        "Use the metaphor of 'reaching orbit' as the brand's core: an agency that helps Web3 projects take off and gain sustained visibility. The identity had to balance the warmth and approachability of its founders with a clear positioning as a team specialized in the Web3 and frontier tech industry.",
       solution:
         "We designed a complete visual identity —logo, palette, typefaces, and graphic system— built to scale across all touchpoints. We applied the brand to website, sales presentations, sales collateral, and social content, creating a unified visual universe that reinforces their PR + growth marketing message for Web3 projects.",
       result:

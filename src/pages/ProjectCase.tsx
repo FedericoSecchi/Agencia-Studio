@@ -111,6 +111,7 @@ const ProjectCase = () => {
     "security-alliance": "Security Alliance branding project",
     "the-red-guild": "The Red Guild visual identity",
     "orbita": "Orbita design system",
+    nude: "Nude rebranding and web design",
   };
 
   return (
