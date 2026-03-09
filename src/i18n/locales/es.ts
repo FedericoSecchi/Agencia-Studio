@@ -236,7 +236,7 @@ export const es = {
       type: "Identidad · Sitio web",
       tag: "Branding",
       miniDescription:
-        "Branding vivo para una alianza global de seguridad en crypto.",
+        "Sistema de marca para una alianza global de seguridad en crypto.",
       coverImageAlt: "Sistema de identidad Security Alliance",
       task:
         "Security Alliance impulsa iniciativas de seguridad para el ecosistema cripto —SEAL 911, Safe Harbor, Wargames y SEAL Intel—. Ya tenían un logo y una base visual, pero el sistema no daba abasto ante la velocidad con la que crecían sus proyectos. El reto fue convertir ese punto de partida en un universo de marca coherente y flexible, capaz de adaptarse a nuevas iniciativas, formatos y audiencias sin perder identidad.",
@@ -257,7 +257,7 @@ export const es = {
       type: "Branding · Web",
       tag: "BRANDING & WEB DESIGN",
       miniDescription:
-        "Rediseño integral de marca y web para un guild de seguridad en el ecosistema cripto.",
+        "Marca y sitio web para un guild de seguridad en crypto.",
       coverImageAlt: "Branding y web The Red Guild",
       task:
         "Rediseñar la identidad de The Red Guild —logo, sistema visual y sitio web— para reflejar su rol como colectivo de seguridad y educación en el ecosistema cripto. La marca debía diferenciarse de otras organizaciones: credibilidad técnica, pero más cercana y lúdica.",
@@ -273,7 +273,7 @@ export const es = {
       type: "Identidad · Web · Contenidos",
       tag: "Branding",
       miniDescription:
-        "Identidad completa para Órbita Comms, agencia de PR y growth marketing en Web3.",
+        "Identidad de marca para una agencia de PR y growth marketing en Web3.",
       coverImageAlt: "Identidad de marca y experiencia digital Orbita Comms",
       task:
         "Rediseñar la identidad de Órbita Comms, una agencia de PR y growth marketing fundada por dos profesionales con años de carrera que se unieron para acompañar proyectos Web3. El objetivo era construir una marca sólida y coherente que pudiera extenderse a web, materiales comerciales y presencia en redes sociales.",
@@ -289,7 +289,7 @@ export const es = {
       type: "Rebranding · Web · Contenidos",
       tag: "REBRANDING & WEB DESIGN",
       miniDescription:
-        "Rediseño de marca y web para una marca de skincare natural.",
+        "Marca y sitio web para una marca de skincare natural.",
       coverImageAlt: "Identidad de marca Nude skincare natural",
       task:
         "Rediseñar la identidad y presencia web de Nude, una marca de skincare natural. Necesitaban un sistema visual que reflejara sus valores—ingredientes honestos, fórmulas mínimas, sin aditivos innecesarios—y que destacara en un mercado saturado. El objetivo era una marca que se sintiera limpia, confiable y con identidad propia.",
