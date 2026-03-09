@@ -27,13 +27,14 @@ const Storytelling = () => {
           </p>
           <h2
             id="about-intro-heading"
-            className="headline-large text-center"
+            className="headline-large text-center break-words"
             style={{
               width: "90vw",
               maxWidth: "1600px",
               margin: "0 auto",
               padding: "0",
               boxSizing: "border-box",
+              overflowWrap: "anywhere",
             }}
           >
             {t("about.mainLine")}
