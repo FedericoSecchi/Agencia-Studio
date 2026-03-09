@@ -121,12 +121,12 @@ export const es = {
       {
         title: "Branding",
         text:
-          "Identidades visuales, ajustes de logo, tipografía y sistemas de color, con guías pensadas para el uso real.",
+          "Creamos identidades visuales claras que ayudan a posicionar proyectos y comunicar su valor.",
       },
       {
         title: "Sitios web",
         text:
-          "Sitios modernos y responsivos con estructura clara, interacción suave y alto rendimiento.",
+          "Diseñamos y desarrollamos sitios web claros, rápidos y preparados para acompañar el crecimiento del proyecto.",
       },
       {
         title: "Contenido y motion",
@@ -135,6 +135,8 @@ export const es = {
       },
       {
         title: "Sistemas y automatizaciones",
+        text:
+          "Construimos sistemas visuales que mantienen coherencia en cada punto de contacto de la marca.",
       },
     ],
   },
@@ -194,7 +196,7 @@ export const es = {
   meta: {
     homeTitle: "Somos Kosmos — Branding, sitios web y experiencias",
     homeDescription:
-      "Estudio de diseño y desarrollo para marcas y sitios web. Alineamos estrategia, identidad y ejecución para vender con claridad.",
+      "Branding, identidad visual y diseño web para equipos que quieren posicionarse mejor y comunicar su valor.",
     projectNotFoundTitle: "Proyecto no encontrado | Somos Kosmos",
     projectNotFoundDescription:
       "Ese proyecto no existe o se movió. Podés ver los casos de Somos Kosmos para conocer proceso, criterio y resultados.",

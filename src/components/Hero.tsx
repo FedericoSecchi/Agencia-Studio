@@ -47,7 +47,7 @@ const Hero = () => {
               {t("hero.description")}
             </p>
 
-            {/* CTA Buttons Container - Ver proyectos (outline) + Agendar llamada (primary green) */}
+            {/* CTA Buttons Container - Ver proyectos (outline) + Iniciar proyecto (primary green) */}
             <div className="relative">
               <div className="flex flex-wrap gap-4">
                 <Button
