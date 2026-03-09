@@ -30,7 +30,16 @@ const VisualContentSection = () => {
               ))}
             </ul>
             <p className="body-regular text-muted-foreground text-sm">
-              {t("visualContent.note")}
+              {t("visualContent.noteBefore")}
+              <a
+                href="https://federicosecchi.github.io/Skyshot-Web/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                {t("visualContent.noteLink")}
+              </a>
+              {t("visualContent.noteAfter")}
             </p>
           </div>
 

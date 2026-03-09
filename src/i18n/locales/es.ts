@@ -109,7 +109,9 @@ export const es = {
     description:
       "Producimos fotografía y video para marcas, proyectos al aire libre y destinos turísticos.",
     services: ["Fotografía", "Producción de video", "Footage con drone"],
-    note: "Producción con drone en colaboración con SkyShot.",
+    noteBefore: "Producción con drone en colaboración con ",
+    noteLink: "SkyShot",
+    noteAfter: ".",
     videoLabel: "Ejemplo de producción con drone",
     cameraLine1: "Filmado con DJI Mavic 4 Pro",
     cameraLine2: "Cámara aérea 6K",
