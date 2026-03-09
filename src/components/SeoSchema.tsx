@@ -19,6 +19,14 @@ const SeoSchema = () => {
       description,
       url: siteUrl,
     };
+    const professionalService = {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      name: "Kosmos Studio",
+      url: siteUrl,
+      serviceType: ["Branding", "Web Design", "Motion Design", "Design Systems"],
+    };
+
     const schema = [
       organization,
       {
@@ -29,6 +37,7 @@ const SeoSchema = () => {
         url: siteUrl,
         inLanguage: language,
       },
+      professionalService,
     ];
 
     const existing = document.querySelector("script[data-schema='studio']");

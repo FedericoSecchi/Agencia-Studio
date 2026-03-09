@@ -21,18 +21,16 @@ const ContactCTA = () => {
         <div className="max-w-4xl mx-auto text-center" data-animate="fade-up">
           <span className="label-text text-primary mb-4 block">{t("contact.label")}</span>
           <h2 className="headline-medium mb-6">
-            {t("contact.title")}
-            <br />
-            {t("contact.titleEnd")}
+            {t("contact.headline")}
           </h2>
 
           <p className="body-large text-muted-foreground max-w-2xl mx-auto mb-10 lg:mb-12">
-            {t("contact.description")}
+            {t("contact.subtext")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 lg:mb-12">
             <Button variant="neon" size="xl" onClick={handleWriteUs}>
-              {t("contact.ctaWrite")}
+              {t("contact.primaryButton")}
             </Button>
             <Button
               variant="heroOutline"
@@ -41,7 +39,7 @@ const ContactCTA = () => {
               onClick={handleStartBrief}
               disabled
             >
-              {t("contact.ctaBrief")}
+              {t("contact.secondaryButton")}
             </Button>
           </div>
 

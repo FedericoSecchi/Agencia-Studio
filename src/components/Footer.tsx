@@ -11,7 +11,7 @@ const Footer = () => {
   const footerLinks = [
     { key: "nav.home", section: "home" },
     { key: "nav.work", section: "trabajos" },
-    { key: "nav.capabilities", section: "servicios" },
+    { key: "nav.services", section: "services" },
     { key: "nav.contact", section: "contacto" },
   ];
   const socials = [

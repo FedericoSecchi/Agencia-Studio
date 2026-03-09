@@ -23,7 +23,7 @@ const Storytelling = () => {
             {t("about.label")}
           </span>
           <p className="body-large text-center text-muted-foreground mb-6" style={{ paddingInline: "clamp(1.25rem, 6vw, 6rem)" }}>
-            «{t("about.quote")}»
+            «{t("about.microcopy")}»
           </p>
           <h2
             id="about-intro-heading"
@@ -37,7 +37,10 @@ const Storytelling = () => {
               overflowWrap: "anywhere",
             }}
           >
-            {t("about.mainLine")}
+            {t("about.headlineLine1")}{" "}
+            {t("about.headlineLine2")}{" "}
+            {t("about.headlineLine3")}{" "}
+            {t("about.headlineLine4")}
           </h2>
           <div
             className="about-note text-muted-foreground w-full text-center"
@@ -47,7 +50,7 @@ const Storytelling = () => {
               marginBottom: "clamp(2rem, 4vw, 4rem)",
             }}
           >
-            {t("about.note")}
+            {t("about.subtext")}
           </div>
         </div>
       </div>

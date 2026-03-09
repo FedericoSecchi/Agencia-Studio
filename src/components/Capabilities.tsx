@@ -1,37 +1,45 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useI18n } from "@/i18n/context";
+
+const SERVICE_KEYS = ["branding", "websites", "content", "systems"] as const;
+const SERVICE_SLUGS: Record<(typeof SERVICE_KEYS)[number], string> = {
+  branding: "branding",
+  websites: "websites",
+  content: "content-motion",
+  systems: "systems-automation",
+};
 
 const Capabilities = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { t } = useI18n();
-  const capabilities = t<{ title: string; text?: string }[]>("capabilities.items");
   const icons = ["✦", "◈", "◎", "⬡"];
 
   return (
-    <section id="servicios" className="py-16 lg:py-24 xl:py-32 bg-secondary text-secondary-foreground">
+    <section id="services" className="py-16 lg:py-24 xl:py-32 bg-secondary text-secondary-foreground">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-stretch">
           {/* Left: Title + Capability list */}
           <div className="space-y-10" data-animate="fade-up">
             <div>
               <span className="label-text text-primary mb-4 block">
-                {t("capabilities.label")}
+                {t("services.label")}
               </span>
               <h2 className="headline-medium">
-                {t("capabilities.title")}
-                <br />
-                <span className="text-primary">{t("capabilities.titleHighlight")}</span>
+                {t("services.title")}
               </h2>
             </div>
 
             <div className="space-y-2" data-animate="stagger">
-              {capabilities.map((cap, index) => {
-                const hasDetail = Boolean(cap.text);
+              {SERVICE_KEYS.map((key, index) => {
+                const title = t(`services.${key}.title`);
+                const description = t(`services.${key}.description`);
+                const hasDetail = Boolean(description);
                 return (
                   <div
-                    key={cap.title}
+                    key={key}
                     className={`group cursor-pointer border-b border-border transition-all duration-300 ${
-                      activeIndex === index && hasDetail ? "pb-8" : "pb-4"
+                      activeIndex === index && hasDetail ? "pb-10" : "pb-4"
                     }`}
                     onClick={() => setActiveIndex(index)}
                     onMouseEnter={() => setActiveIndex(index)}
@@ -54,7 +62,7 @@ const Capabilities = () => {
                               : "text-muted-foreground"
                           }`}
                         >
-                          {cap.title}
+                          {title}
                         </h3>
                       </div>
                       <span
@@ -71,19 +79,25 @@ const Capabilities = () => {
                       <div
                         className={`overflow-hidden transition-all duration-500 ${
                           activeIndex === index
-                            ? "max-h-32 opacity-100 mt-4"
+                            ? "max-h-44 opacity-100 mt-4"
                             : "max-h-0 opacity-0"
                         }`}
                       >
-                      <p
-                        className={`body-large pl-10 ${
-                          activeIndex === index
-                            ? "text-primary"
-                            : "text-muted-foreground group-hover:text-primary"
-                        }`}
-                      >
-                          {cap.text}
+                        <p
+                          className={`body-large pl-10 ${
+                            activeIndex === index
+                              ? "text-primary"
+                              : "text-muted-foreground group-hover:text-primary"
+                          }`}
+                        >
+                          {description}
                         </p>
+                        <Link
+                          to={`/services/${SERVICE_SLUGS[key]}`}
+                          className="inline-block pl-10 mt-3 text-sm font-medium text-primary hover:underline"
+                        >
+                          {t("services.viewProjects")} →
+                        </Link>
                       </div>
                     )}
                   </div>

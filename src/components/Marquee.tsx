@@ -2,14 +2,14 @@ import { useI18n } from "@/i18n/context";
 
 const Marquee = () => {
   const { t } = useI18n();
-  const items = t<string[]>("services.items");
+  const items = t<string[]>("marquee.items");
   return (
     <section className="py-12 bg-secondary overflow-hidden">
       <div className="section-container">
         <div className="text-center mb-6">
-          <span className="label-text text-primary mb-2 block">{t("services.label")}</span>
+          <span className="label-text text-primary mb-2 block">{t("marquee.label")}</span>
           <h2 className="font-display text-xl lg:text-2xl font-semibold text-secondary-foreground/80">
-            {t("services.title")}
+            {t("marquee.title")}
           </h2>
         </div>
       </div>

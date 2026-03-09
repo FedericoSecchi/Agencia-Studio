@@ -13,7 +13,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   const navItems = [
     { key: "nav.work", section: "trabajos" },
     { key: "nav.about", section: "nosotros" },
-    { key: "nav.capabilities", section: "servicios" },
+    { key: "nav.services", section: "services" },
     { key: "nav.process", section: "proceso" },
     { key: "nav.contact", section: "contacto" },
   ];

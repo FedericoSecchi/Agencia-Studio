@@ -10,12 +10,10 @@ const CollageShowcase = () => {
       <div className="section-container">
         <div className="text-center mb-12 lg:mb-16 xl:mb-20" data-animate="fade-up">
           <h2 className="headline-medium mb-4">
-            {t("work.collageTitle")}
-            <br />
-            {t("work.collageSubtitle")}
+            {t("gallery.headline")}
           </h2>
           <p className="body-large text-muted-foreground max-w-xl mx-auto">
-            {t("work.collageDescription")}
+            {t("gallery.subtext")}
           </p>
         </div>
 

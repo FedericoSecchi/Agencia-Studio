@@ -11,7 +11,13 @@ import { seoKeywords } from "../src/seo/seoKeywords";
 
 const SITE_URL = "https://somoskosmos.com";
 
+const SERVICE_SLUGS = ["branding", "websites", "content-motion", "systems-automation"];
+
 const urls: string[] = [SITE_URL + "/"];
+
+SERVICE_SLUGS.forEach((slug) => {
+  urls.push(`${SITE_URL}/services/${slug}`);
+});
 
 programmaticTopics.forEach((topic) => {
   urls.push(`${SITE_URL}/topic/${topic.slug}`);

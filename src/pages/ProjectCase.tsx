@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import BackButton from "@/components/BackButton";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -160,25 +161,7 @@ const ProjectCase = () => {
         <section className="pt-24 pb-8 lg:pt-32 lg:pb-12 bg-background">
         <div className="section-container">
           <div className="mb-4 lg:mb-6">
-            <Link
-              to="/#trabajos"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-4 lg:mb-6"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              {t("caseStudy.backToPortfolio")}
-            </Link>
+            <BackButton className="mb-4 lg:mb-6" />
           </div>
 
           <div className="mb-8 lg:mb-12 flex flex-col items-center text-center space-y-4">
@@ -604,7 +587,7 @@ const ProjectCase = () => {
       <nav className="seo-hidden" aria-label="Portfolio and services">
         <a href="/">Home</a>
         <a href="/#trabajos">Portfolio</a>
-        <a href="/#servicios">Services</a>
+        <a href="/#services">Services</a>
         <a href="/#contacto">Contact</a>
         {projectsData.map((p) => (
           <a key={p.id} href={`/project/${p.id}`}>{SEO_LINK_TEXT[p.id] ?? t(`projects.${p.id}.title`)}</a>

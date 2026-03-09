@@ -30,7 +30,7 @@ const Portfolio = () => {
               <div className="absolute inset-0 z-0">
                 <img
                   src={project.image}
-                  alt={t(`projects.${project.id}.title`)}
+                  alt={`${t(`projects.${project.id}.title`)} ${t(`projects.${project.id}.tag`)} — Kosmos Studio`}
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:opacity-40"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />

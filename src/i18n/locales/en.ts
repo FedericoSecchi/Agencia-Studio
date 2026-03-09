@@ -14,7 +14,7 @@ export const en = {
   },
   nav: {
     work: "Work",
-    capabilities: "Capabilities",
+    services: "Services",
     about: "About",
     process: "Process",
     contact: "Contact",
@@ -36,38 +36,39 @@ export const en = {
   },
   about: {
     label: "ABOUT",
-    mainLine:
-      "We design brand identities and websites that clarify positioning and help teams sell with confidence.",
-    note:
-      "A small studio focused on clear strategy, strong identity, and practical delivery.",
-    quote: "Design and development for brands that want to sell better.",
+    microcopy: "Design and digital systems for brands that want to grow with clarity.",
+    headlineLine1: "We design brands and websites",
+    headlineLine2: "that help companies look clear,",
+    headlineLine3: "trustworthy",
+    headlineLine4: "and ready to grow.",
+    subtext: "Built on clear strategy, solid identity and practical execution.",
   },
   process: {
     label: "PROCESS",
-    headline_line_1: "Talk is cheap.",
-    headline_line_2: "Clear work isn’t.",
+    headline_line_1: "Clear thinking.",
+    headline_line_2: "Structured work.",
     intro:
-      "We keep the process simple: clear briefs, honest feedback, and realistic timelines. No endless loops, no disappearing acts.",
-    list_label: "CLIENTS USUALLY APPRECIATE THAT:",
+      "Good design doesn't happen by accident. It comes from clear briefs, honest feedback and realistic timelines. Our process stays simple and focused. No endless loops. No disappearing acts.",
+    list_label: "Why clients enjoy working with us:",
     steps: [
       {
         title: "We design with intention, not decoration.",
-        description: "Every decision serves a clear goal, not a trend.",
+        description: "Every decision serves a purpose.",
       },
       {
-        title: "We use motion only when it adds value.",
-        description: "Interaction supports the message instead of distracting from it.",
+        title: "Motion is used only when it adds real value.",
+        description: "Interaction supports the message without distracting.",
       },
       {
-        title: "We limit feedback rounds.",
-        description: "Clear moments to review and move forward without friction.",
+        title: "Feedback stays focused and practical.",
+        description: "Clear moments to review and move forward.",
       },
       {
-        title: "We deliver systems that last.",
-        description: "Built to be clear, usable, and easy to maintain.",
+        title: "The result is a system, not just a design.",
+        description: "Built to last and easy to maintain.",
       },
     ],
-    cta: "Less drama, more shipping",
+    cta: "Less drama. More progress.",
   },
   ethos: {
     label: "ABOUT",
@@ -83,7 +84,7 @@ export const en = {
     ],
     cta: "Less drama, more shipping",
   },
-  services: {
+  marquee: {
     label: "SERVICES",
     title: "Capabilities at a glance",
     items: [
@@ -96,6 +97,10 @@ export const en = {
       "Digital",
       "Systems",
     ],
+  },
+  gallery: {
+    headline: "Behind the scenes.",
+    subtext: "Ideas, experiments and moments from the process behind our work.",
   },
   work: {
     label: "WORK",
@@ -111,32 +116,35 @@ export const en = {
     collageAltWebsiteDesign: "Website design",
     collageAltFeaturedBranding: "Security Alliance branding",
   },
-  capabilities: {
-    label: "CAPABILITIES",
-    title: "What we're",
-    titleHighlight: "really good at.",
-    items: [
-      {
-        title: "Branding",
-        text:
-          "Visual identities, logos, typography and color systems, with brand guidelines designed for real-world use.",
-      },
-      {
-        title: "Websites",
-        text:
-          "Modern websites with clear structure, smooth interactions and fast performance.",
-      },
-      {
-        title: "Content & Motion",
-        text:
-          "Content layouts, motion pieces, product visuals and campaign assets for digital channels.",
-      },
-      {
-        title: "Systems & Automations",
-        text:
-          "Design systems and lightweight automations that help teams manage their brand and content more efficiently.",
-      },
-    ],
+  services: {
+    backToServices: "Back to services",
+    viewProjects: "View projects",
+    label: "SERVICES",
+    title: "What we're really good at.",
+    branding: {
+      title: "Branding",
+      description:
+        "Visual identity design, logo systems, typography and color systems with brand guidelines built for real-world use.",
+      seo: "visual identity design, brand systems, logo design, brand guidelines",
+    },
+    websites: {
+      title: "Websites",
+      description:
+        "Modern websites with clear structure, strong UX, smooth interactions and fast performance.",
+      seo: "web design, web development, responsive websites, UX design",
+    },
+    content: {
+      title: "Content & Motion",
+      description:
+        "Content layouts, motion design, product visuals and digital campaign assets.",
+      seo: "motion design, social media visuals, product visuals, campaign design",
+    },
+    systems: {
+      title: "Systems & Automations",
+      description:
+        "Design systems and lightweight automations that help teams manage their brand and content workflows efficiently.",
+      seo: "design systems, brand systems, workflow automation, content systems",
+    },
   },
   clients: {
     label: "CLIENTS",
@@ -146,12 +154,10 @@ export const en = {
   },
   contact: {
     label: "CONTACT",
-    title: "Bored of",
-    titleEnd: "playing safe?",
-    description:
-      "Tell us what you're working on and we'll reply with a simple plan, timeline and budget.",
-    ctaWrite: "Write us",
-    ctaBrief: "Start your brief",
+    headline: "Have a project in mind?",
+    subtext: "Tell us what you're working on and we'll see how we can help.",
+    primaryButton: "Contact us",
+    secondaryButton: "Start a brief",
     email: "hello@somoskosmos.com",
   },
   footer: {
@@ -169,6 +175,7 @@ export const en = {
     },
   },
   caseStudy: {
+    back: "Back",
     backToPortfolio: "Back to Portfolio",
     nextProject: "Next Project",
     relatedProjects: "Related projects",

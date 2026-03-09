@@ -14,7 +14,7 @@ export const es = {
   },
   nav: {
     work: "Trabajo",
-    capabilities: "Servicios",
+    services: "Servicios",
     about: "Nosotros",
     process: "Proceso",
     contact: "Contacto",
@@ -37,39 +37,39 @@ export const es = {
   },
   about: {
     label: "NOSOTROS",
-    mainLine:
-      "Diseñamos identidades y sitios web que afinan el posicionamiento y ayudan a los equipos a vender con confianza.",
-    note:
-      "Un estudio pequeño centrado en estrategia clara, identidad sólida y ejecución práctica.",
-    quote:
-      "Diseño y desarrollo web para marcas que quieren vender mejor.",
+    microcopy: "Diseño y sistemas digitales para marcas que quieren crecer con claridad.",
+    headlineLine1: "Diseñamos marcas y sitios web",
+    headlineLine2: "que hacen que las empresas",
+    headlineLine3: "se vean claras, confiables",
+    headlineLine4: "y listas para crecer.",
+    subtext: "Trabajamos con estrategia clara, identidad sólida y ejecución práctica.",
   },
   process: {
     label: "PROCESO",
-    headline_line_1: "Hablar es fácil.",
-    headline_line_2: "El trabajo claro no.",
+    headline_line_1: "Pensamiento claro.",
+    headline_line_2: "Trabajo estructurado.",
     intro:
-      "Mantenemos el proceso simple: brief claro, feedback honesto y plazos realistas. Sin rondas infinitas, sin desapariciones.",
-    list_label: "LOS CLIENTES SUELEN VALORAR QUE:",
+      "El buen diseño no ocurre por casualidad. Nace de briefs claros, feedback honesto y tiempos realistas. Nuestro proceso es simple y enfocado. Sin vueltas infinitas. Sin desaparecer a mitad del proyecto.",
+    list_label: "Por eso los clientes disfrutan trabajar con nosotros:",
     steps: [
       {
-        title: "Diseñamos con intención, no solo decoración.",
-        description: "Cada decisión responde a un objetivo claro, no a una moda.",
+        title: "Diseñamos con intención, no para decorar.",
+        description: "Cada decisión responde a un propósito.",
       },
       {
-        title: "Usamos motion solo cuando suma.",
-        description: "La interacción acompaña el mensaje, nunca lo distrae.",
+        title: "Usamos motion solo cuando aporta valor.",
+        description: "La interacción apoya el mensaje sin distraer.",
       },
       {
-        title: "Limitamos el feedback.",
-        description: "Definimos momentos claros para revisar y avanzar sin vueltas.",
+        title: "El feedback se mantiene claro y enfocado.",
+        description: "Momentos definidos para revisar y avanzar.",
       },
       {
-        title: "Entregamos sistemas mantenibles.",
-        description: "Pensados para funcionar bien hoy y mañana.",
+        title: "El resultado es un sistema, no solo un diseño.",
+        description: "Pensado para durar y mantenerse con facilidad.",
       },
     ],
-    cta: "Menos drama, más entregas",
+    cta: "Menos drama. Más progreso.",
   },
   ethos: {
     label: "SOBRE",
@@ -85,7 +85,7 @@ export const es = {
     ],
     cta: "Menos drama, más entregas",
   },
-  services: {
+  marquee: {
     label: "SERVICIOS",
     title: "Capacidades de un vistazo",
     items: [
@@ -98,6 +98,10 @@ export const es = {
       "Digital",
       "Sistemas",
     ],
+  },
+  gallery: {
+    headline: "Dentro del estudio.",
+    subtext: "Ideas, pruebas y momentos del proceso detrás de nuestro trabajo.",
   },
   work: {
     label: "TRABAJO",
@@ -113,32 +117,35 @@ export const es = {
     collageAltWebsiteDesign: "Diseño web",
     collageAltFeaturedBranding: "Branding Security Alliance",
   },
-  capabilities: {
-    label: "CAPACIDADES",
-    title: "En lo que",
-    titleHighlight: "realmente destacamos.",
-    items: [
-      {
-        title: "Branding",
-        text:
-          "Identidades visuales, logotipos, tipografía y sistemas de color, con guías de marca pensadas para el uso real.",
-      },
-      {
-        title: "Sitios web",
-        text:
-          "Sitios web modernos con estructura clara, interacciones fluidas y alto rendimiento.",
-      },
-      {
-        title: "Contenido y motion",
-        text:
-          "Diseño de contenidos, piezas de motion, visuales de producto y materiales para campañas digitales.",
-      },
-      {
-        title: "Sistemas y automatizaciones",
-        text:
-          "Sistemas de diseño y automatizaciones ligeras que ayudan a los equipos a gestionar su marca y su contenido con eficiencia.",
-      },
-    ],
+  services: {
+    backToServices: "Volver a servicios",
+    viewProjects: "Ver proyectos",
+    label: "SERVICIOS",
+    title: "En lo que realmente somos buenos.",
+    branding: {
+      title: "Branding",
+      description:
+        "Diseño de identidad visual, logotipos, tipografía y sistemas de color con guías de marca pensadas para el uso real.",
+      seo: "diseño de identidad visual, sistemas de marca, diseño de logos, guías de marca",
+    },
+    websites: {
+      title: "Websites",
+      description:
+        "Sitios web modernos con estructura clara, buen UX, interacciones fluidas y alto rendimiento.",
+      seo: "diseño web, desarrollo web, sitios responsive, diseño UX",
+    },
+    content: {
+      title: "Contenido & Motion",
+      description:
+        "Diseño de contenidos, piezas de motion, visuales de producto y materiales para campañas digitales.",
+      seo: "diseño de motion, visuales para redes, visuales de producto, diseño de campañas",
+    },
+    systems: {
+      title: "Sistemas & Automatizaciones",
+      description:
+        "Sistemas de diseño y automatizaciones ligeras que ayudan a los equipos a gestionar su marca y su contenido.",
+      seo: "sistemas de diseño, sistemas de marca, automatización de flujos, sistemas de contenido",
+    },
   },
   clients: {
     label: "CLIENTES",
@@ -148,12 +155,10 @@ export const es = {
   },
   contact: {
     label: "CONTACTO",
-    title: "¿Cansado de",
-    titleEnd: "jugar a lo seguro?",
-    description:
-      "Contanos en qué estás trabajando y respondemos con un plan simple, tiempos y presupuesto.",
-    ctaWrite: "Escribinos",
-    ctaBrief: "Iniciá tu brief",
+    headline: "¿Tenés un proyecto en mente?",
+    subtext: "Contanos en qué estás trabajando y vemos cómo podemos ayudarte.",
+    primaryButton: "Escribinos",
+    secondaryButton: "Iniciar brief",
     email: "hello@somoskosmos.com",
   },
   footer: {
@@ -171,6 +176,7 @@ export const es = {
     },
   },
   caseStudy: {
+    back: "Volver",
     backToPortfolio: "Volver al portfolio",
     nextProject: "Siguiente proyecto",
     relatedProjects: "Proyectos relacionados",
