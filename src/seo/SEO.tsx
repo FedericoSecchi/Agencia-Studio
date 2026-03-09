@@ -25,10 +25,12 @@ const SEO = ({ title, description, image, url, type = "website" }: SEOProps) => 
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Kosmos Studio" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       {imageUrl && <meta property="og:image" content={imageUrl} />}
+      {imageUrl && <meta property="og:image:alt" content={title} />}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

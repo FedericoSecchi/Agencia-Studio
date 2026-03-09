@@ -4,10 +4,14 @@ interface SeoImageProps {
   topic?: string;
   className?: string;
   loading?: "lazy" | "eager";
+  /** Intrinsic width for CLS and SEO (e.g. 2560 for hero cover) */
+  width?: number;
+  /** Intrinsic height for CLS and SEO (e.g. 1400 for hero cover) */
+  height?: number;
 }
 
 /**
- * Image component with consistent SEO alt text for project/case study imagery.
+ * Image component with consistent SEO alt text, lazy loading and optional width/height for CLS.
  */
 export default function SeoImage({
   src,
@@ -15,6 +19,8 @@ export default function SeoImage({
   topic,
   className,
   loading = "lazy",
+  width,
+  height,
 }: SeoImageProps) {
   const alt = topic
     ? `${projectTitle} ${topic.replace(/-/g, " ")} visual identity design`
@@ -27,6 +33,8 @@ export default function SeoImage({
       loading={loading}
       decoding="async"
       className={className}
+      width={width}
+      height={height}
       style={className ? undefined : { width: "100%", height: "auto" }}
     />
   );

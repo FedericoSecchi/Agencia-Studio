@@ -33,7 +33,8 @@ export function generateProjectSchema(project: ProjectSchemaInput) {
 
   return {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
+    "@type": "Article",
+    "@id": `${SITE_URL}/project/${project.slug}#article`,
     name: project.title,
     headline: project.title,
     description: project.description,
