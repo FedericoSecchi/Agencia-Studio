@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Storytelling from "@/components/Storytelling";
 import Process from "@/components/Process";
-import Marquee from "@/components/Marquee";
 import CollageShowcase from "@/components/CollageShowcase";
 import Portfolio from "@/components/Portfolio";
 import Capabilities from "@/components/Capabilities";
@@ -36,13 +35,12 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Storytelling />
-        <Process />
-        <Marquee />
-        <CollageShowcase />
-        <Portfolio />
-        <Capabilities />
         <Clients />
+        <Capabilities />
+        <Portfolio />
+        <Process />
+        <Storytelling />
+        <CollageShowcase />
         <ContactCTA />
       </main>
       <Footer />

@@ -8,6 +8,7 @@ const Clients = () => {
 
   return (
     <section
+      id="clientes"
       className="pt-16 md:pt-24 lg:pt-32 bg-background overflow-hidden"
       style={{ paddingBottom: "clamp(2rem, 5vw, 3rem)" }}
     >
