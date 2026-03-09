@@ -282,7 +282,7 @@ export const es = {
       solution:
         "Diseñamos una identidad visual completa —logo, paleta, tipografías y sistema gráfico— pensada para escalar a todos sus puntos de contacto. Aplicamos la marca a sitio web, presentaciones comerciales, piezas de ventas y contenidos para social media, creando un universo visual unificado que refuerza su mensaje de PR + growth marketing para proyectos Web3.",
       result:
-        "Diseñamos una identidad visual completa —logo, paleta, tipografías y sistema gráfico— pensada para escalar a todos sus puntos de contacto. Aplicamos la marca a sitio web, presentaciones comerciales, piezas de ventas y contenidos para social media, creando un universo visual unificado que refuerza su mensaje de PR + growth marketing para proyectos Web3.",
+        "Una marca lista para escalar. Órbita Comms cuenta hoy con una identidad coherente en todos los touchpoints—desde el sitio web hasta las presentaciones y redes. Pueden presentarse con claridad y confianza, facilitando la atracción de proyectos Web3 y la comunicación de su valor desde el primer contacto.",
     },
     nude: {
       title: "Nude",

@@ -282,7 +282,7 @@ export const en = {
       solution:
         "We designed a complete visual identity —logo, palette, typefaces, and graphic system— built to scale across all touchpoints. We applied the brand to website, sales presentations, sales collateral, and social content, creating a unified visual universe that reinforces their PR + growth marketing message for Web3 projects.",
       result:
-        "We designed a complete visual identity —logo, palette, typefaces, and graphic system— built to scale across all touchpoints. We applied the brand to website, sales presentations, sales collateral, and social content, creating a unified visual universe that reinforces their PR + growth marketing message for Web3 projects.",
+        "A brand ready to scale. Órbita Comms now has a coherent identity across all touchpoints—from the website to pitches and social. They can present themselves with clarity and confidence, making it easier to attract Web3 projects and communicate their value from first contact.",
     },
     nude: {
       title: "Nude",
