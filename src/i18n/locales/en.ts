@@ -159,6 +159,7 @@ export const en = {
     primaryButton: "Contact us",
     secondaryButton: "Start a brief",
     email: "hello@somoskosmos.com",
+    mailtoSubject: "Project inquiry",
   },
   footer: {
     description: "Somos Kosmos — branding, websites and visual content.",

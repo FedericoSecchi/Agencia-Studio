@@ -4,9 +4,8 @@ import { useI18n } from "@/i18n/context";
 const ContactCTA = () => {
   const { t } = useI18n();
   const email = t("contact.email");
-  const handleWriteUs = () => {
-    window.location.href = `mailto:${email}?subject=New Project Inquiry`;
-  };
+  const subject = t("contact.mailtoSubject");
+  const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
 
   const handleStartBrief = () => {
     window.open("https://placeholder.google.form", "_blank");
@@ -29,8 +28,8 @@ const ContactCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 lg:mb-12">
-            <Button variant="neon" size="xl" onClick={handleWriteUs}>
-              {t("contact.primaryButton")}
+            <Button variant="neon" size="xl" asChild>
+              <a href={mailto}>{t("contact.primaryButton")}</a>
             </Button>
             <Button
               variant="heroOutline"
