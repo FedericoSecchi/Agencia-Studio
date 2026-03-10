@@ -57,7 +57,6 @@ const ProjectCase = () => {
 
   const currentIndex = projectsData.findIndex((p) => p.id === project.id);
   const nextProject = projectsData[(currentIndex + 1) % projectsData.length];
-  const relatedProjects = projectsData.filter((p) => p.id !== project.id);
   const isPremium = project.layout === "premium";
   const galleries = project.galleries ?? [];
   const isOrbitaNarrative = project.id === "orbita" && galleries.length >= 6;
@@ -508,50 +507,15 @@ const ProjectCase = () => {
         </section>
       )}
 
-      {/* Next Project Navigation (default layout only) */}
-      {!isPremium && (
-        <section className="py-12 lg:py-20 bg-background border-t">
-          <div className="section-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="body-regular text-muted-foreground mb-6">{t("caseStudy.nextProject")}</p>
-              <Link to={`/project/${nextProject.id}`}>
-                <h3 className="headline-medium mb-4 hover:text-primary transition-colors">
-                  {t(`projects.${nextProject.id}.title`)}
-                </h3>
-              </Link>
-              <Link to="/#trabajos">
-                <Button variant="outline" className="mt-8">
-                  {t("caseStudy.viewAll")}
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Related projects — internal linking for all case studies */}
-      <section className="py-12 lg:py-16 bg-muted/30 border-t" aria-labelledby="related-projects-heading">
-        <div className="section-container">
-          <h2 id="related-projects-heading" className="headline-medium mb-8">
-            {t("caseStudy.relatedProjects")}
-          </h2>
-          <ul className="flex flex-wrap gap-6 lg:gap-8">
-            {relatedProjects.map((p) => (
-              <li key={p.id}>
-                <Link
-                  to={`/project/${p.id}`}
-                  className="body-large text-foreground hover:text-primary transition-colors underline underline-offset-4"
-                >
-                  {t(`projects.${p.id}.title`)}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <Link to="/" className="inline-block mt-6 body-regular text-muted-foreground hover:text-primary transition-colors">
-            {t("caseStudy.viewAll")}
-          </Link>
-        </div>
-      </section>
+      {/* Next Project Navigation */}
+      <div className="mt-20 flex justify-center">
+        <Link
+          to={`/project/${nextProject.id}`}
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground hover:opacity-90 transition"
+        >
+          {t("caseStudy.nextProject")} →
+        </Link>
+      </div>
 
       {/* SEO: invisible semantic sections for crawlers — no layout change */}
       <section className="seo-hidden">
