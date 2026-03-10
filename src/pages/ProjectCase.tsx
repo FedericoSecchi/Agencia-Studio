@@ -508,7 +508,7 @@ const ProjectCase = () => {
       )}
 
       {/* Next Project Navigation */}
-      <div className="mt-20 flex justify-center">
+      <div className="mt-24 mb-32 flex justify-center lg:mt-28 lg:mb-36">
         <Link
           to={`/project/${nextProject.id}`}
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground hover:opacity-90 transition"
