@@ -135,7 +135,7 @@ const Capabilities = () => {
                 >
                   <video
                     id="branding-video"
-                    src="/videos/branding.mp4"
+                    src="/videos/branding.mov"
                     className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
                     autoPlay
                     muted
