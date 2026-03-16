@@ -107,7 +107,7 @@ export const projectsData: Project[] = [
     seoTitle: "Calmo — Branding & Web | Kosmos Studio",
     seoDescription: "Visual identity and website for Calmo, a project focused on wellbeing and calm experiences.",
     seoImage: "/branding/og-image.jpg",
-    externalUrl: "#", // Replace with live site URL when available
+    externalUrl: "https://calmo.fit",
   },
   {
     id: "ehtexperience",
@@ -116,7 +116,7 @@ export const projectsData: Project[] = [
     seoTitle: "EHTperience — Web Design | Kosmos Studio",
     seoDescription: "Website design and development for EHTperience, a platform focused on tech experiences and events.",
     seoImage: "/branding/og-image.jpg",
-    externalUrl: "#",
+    externalUrl: "https://ethperience.com",
   },
   {
     id: "deltarowling",
@@ -125,7 +125,7 @@ export const projectsData: Project[] = [
     seoTitle: "DeltaRowling — Branding & Web | Kosmos Studio",
     seoDescription: "Brand identity and digital presence for DeltaRowling, a project connected to sport and water experiences.",
     seoImage: "/branding/og-image.jpg",
-    externalUrl: "#",
+    externalUrl: "https://deltarowingadventure.com",
   },
   {
     id: "fede-garcia",
@@ -143,7 +143,7 @@ export const projectsData: Project[] = [
     seoTitle: "Mareboats — Web Design | Kosmos Studio",
     seoDescription: "Website for Mareboats, a company focused on boating and nautical experiences.",
     seoImage: "/branding/og-image.jpg",
-    externalUrl: "#",
+    externalUrl: "https://mareboats.com",
   },
   {
     id: "skyshot",
@@ -152,7 +152,7 @@ export const projectsData: Project[] = [
     seoTitle: "SkyShot — Aerial Media | Kosmos Studio",
     seoDescription: "Aerial drone media project focused on tourism, nature and brand storytelling.",
     seoImage: "/branding/og-image.jpg",
-    externalUrl: "#",
+    externalUrl: "https://skyshotlab.com",
   },
   {
     id: "pancito",
