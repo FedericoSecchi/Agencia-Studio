@@ -59,11 +59,22 @@ const Portfolio = () => {
                 {t(`projects.${project.id}.title`)}
               </h3>
 
-              {/* Green badge — 30px above bottom, no layout shift on hover */}
-              <div className="absolute left-4 bottom-[30px] z-10 flex flex-col items-start">
+              {/* Green badge and visit-website button */}
+              <div className="absolute left-0 right-0 bottom-[30px] z-10 flex flex-col items-center px-4">
                 <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider rounded-full">
                   {t(`projects.${project.id}.tag`)}
                 </span>
+                {project.externalUrl && project.externalUrl !== "#" && (
+                  <a
+                    href={project.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center justify-center px-5 py-2 mt-4 rounded-full bg-primary text-black font-medium text-sm hover:opacity-90 transition"
+                  >
+                    visitar web
+                  </a>
+                )}
               </div>
             </>
             );
