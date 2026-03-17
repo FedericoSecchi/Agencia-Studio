@@ -168,9 +168,7 @@ const ProjectCase = () => {
               {t(`projects.${project.id}.tag`)}
             </span>
             <h1 className="headline-large">
-              {isPremium
-                ? t(`projects.${project.id}.title`)
-                : `${t("caseStudy.h1Prefix")} ${t(`projects.${project.id}.title`)}`}
+              {t(`projects.${project.id}.title`)}
             </h1>
             <p className="body-large text-muted-foreground max-w-prose mx-auto">
               {t(`projects.${project.id}.miniDescription`)}

@@ -188,7 +188,6 @@ export const en = {
     nextProject: "Next Project",
     relatedProjects: "Related projects",
     viewAll: "View All Projects",
-    h1Prefix: "Case study:",
     task: "Task",
     idea: "Idea",
     solution: "Solution",
