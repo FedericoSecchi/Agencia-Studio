@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import ProjectCase from "./pages/ProjectCase";
 import ProjectTopic from "./pages/ProjectTopic";
 import ServiceLanding from "./pages/ServiceLanding";
+import TopicLanding from "./pages/TopicLanding";
 import Brief from "./pages/Brief";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +24,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services/:serviceSlug" element={<ServiceLanding />} />
+          <Route path="/topic/:topicSlug" element={<TopicLanding />} />
           <Route path="/project/:projectId/:topic" element={<ProjectTopic />} />
           <Route path="/project/:projectId" element={<ProjectCase />} />
           <Route path="/brief" element={<Brief />} />
