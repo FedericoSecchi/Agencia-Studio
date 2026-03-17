@@ -175,7 +175,7 @@ const ProjectCase = () => {
             <p className="body-large text-muted-foreground max-w-prose mx-auto">
               {t(`projects.${project.id}.miniDescription`)}
             </p>
-            {project.id === 'security-alliance' && project.externalUrl && project.externalUrl !== "#" && (
+            {project.externalUrl && project.externalUrl !== "#" && (
               <a
                 href={project.externalUrl}
                 target="_blank"
