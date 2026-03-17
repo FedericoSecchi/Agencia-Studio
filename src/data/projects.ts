@@ -49,6 +49,7 @@ export const projectsData: Project[] = [
     seoTitle: "Security Alliance Branding Case Study — Kosmos Studio",
     seoDescription: "Brand identity and modular design system created for a global crypto security alliance.",
     seoImage: securityAllianceImage,
+    externalUrl: "https://securityalliance.org",
   },
   {
     id: "the-red-guild",
