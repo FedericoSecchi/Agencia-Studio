@@ -56,7 +56,7 @@ const Portfolio = () => {
               </div>
 
               {/* Project title — above badge, revealed on hover */}
-              <h3 className="absolute left-4 bottom-14 z-10 font-display text-2xl lg:text-3xl font-bold text-background opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 className="absolute left-4 bottom-14 z-10 font-display text-2xl lg:text-3xl font-bold text-background opacity-0 group-hover:opacity-100 transition-opacity duration-300 notranslate">
                 {t(`projects.${project.id}.title`)}
               </h3>
 

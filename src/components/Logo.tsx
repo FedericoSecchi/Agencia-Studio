@@ -14,6 +14,7 @@ export default function Logo({
     <img
       src={src}
       alt="Kosmos Studio"
+      className="notranslate"
       loading="eager"
       style={{ height: size, width: "auto", display: "block" }}
     />

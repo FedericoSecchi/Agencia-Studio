@@ -168,7 +168,7 @@ const ProjectCase = () => {
             <span className="label-text text-primary block">
               {t(`projects.${project.id}.tag`)}
             </span>
-            <h1 className="headline-large">
+            <h1 className="headline-large notranslate">
               {t(`projects.${project.id}.title`)}
             </h1>
             <p className="body-large text-muted-foreground max-w-prose mx-auto">

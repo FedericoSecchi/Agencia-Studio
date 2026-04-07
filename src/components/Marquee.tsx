@@ -18,7 +18,7 @@ const Marquee = () => {
           {[...items, ...items, ...items, ...items].map((item, i) => (
             <span
               key={i}
-              className="font-display text-4xl lg:text-5xl font-bold text-secondary-foreground/20 flex items-center gap-12"
+              className="font-display text-4xl lg:text-5xl font-bold text-secondary-foreground/20 flex items-center gap-12 notranslate"
             >
               {item}
               <span className="text-primary text-2xl">✦</span>
