@@ -61,6 +61,7 @@ const ProjectCase = () => {
   const galleries = project.galleries ?? [];
   const isOrbitaNarrative = project.id === "orbita" && galleries.length >= 6;
   const isNudeCase = project.id === "nude";
+  const isCalmoCase = project.id === "calmo";
 
   const isTopicPage = Boolean(topic && projectTopics.includes(topic));
   const projectTitle = t<string>(`projects.${project.id}.title`);
@@ -227,16 +228,30 @@ const ProjectCase = () => {
               </div>
             )}
             {isPremium && galleries[0] && !isOrbitaNarrative && (
-              <figure className="full-bleed mt-8 lg:mt-12">
-                <div className="w-full overflow-hidden">
-                  <img
-                    src={galleries[0]}
-                    alt={`${projectTitle} — image 1`}
-                    className="w-full h-auto object-cover block"
-                    loading="lazy"
-                  />
-                </div>
-              </figure>
+              <>
+                <figure className="full-bleed mt-8 lg:mt-12">
+                  <div className="w-full overflow-hidden">
+                    <img
+                      src={isCalmoCase && galleries[4] ? galleries[4] : galleries[0]}
+                      alt={`${projectTitle} — image 1`}
+                      className="w-full h-auto object-cover block"
+                      loading="lazy"
+                    />
+                  </div>
+                </figure>
+                {isCalmoCase && galleries[4] && (
+                  <figure className="full-bleed">
+                    <div className="w-full overflow-hidden">
+                      <img
+                        src={galleries[0]}
+                        alt={`${projectTitle} — image 2`}
+                        className="w-full h-auto object-cover block"
+                        loading="lazy"
+                      />
+                    </div>
+                  </figure>
+                )}
+              </>
             )}
             {isOrbitaNarrative && galleries[0] && galleries[1] && galleries[2] && (
               <figure className="full-bleed mt-8 lg:mt-12">

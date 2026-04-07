@@ -20,6 +20,12 @@ import orbitaGallery6 from "@/assets/projects/orbita/orbita-06.png";
 import nudeImage from "@/assets/projects/nude/hero.png";
 import nudeGallery1 from "@/assets/projects/nude/grid-01.png";
 import nudeGallery2 from "@/assets/projects/nude/grid-02.png";
+import calmoImage from "@/assets/projects/calmo/hero.png";
+import calmoGallery1 from "@/assets/projects/calmo/gallery-1.png";
+import calmoGallery2 from "@/assets/projects/calmo/gallery-2.png";
+import calmoGallery4 from "@/assets/projects/calmo/gallery-4.png";
+import calmoGallery5 from "@/assets/projects/calmo/gallery-5.png";
+import calmoGallery6 from "@/assets/projects/calmo/gallery-6.png";
 
 export type ProjectLayout = "premium" | "default";
 
@@ -105,11 +111,13 @@ export const projectsData: Project[] = [
   // External portfolio projects (externalUrl links to live site)
   {
     id: "calmo",
-    image: "/branding/og-image.jpg",
+    image: calmoImage,
     size: "medium",
+    layout: "premium",
+    galleries: [calmoGallery1, calmoGallery6, calmoGallery4, calmoGallery2, calmoGallery5],
     seoTitle: "Calmo — Branding & Web | Kosmos Studio",
     seoDescription: "Visual identity and website for Calmo, a project focused on wellbeing and calm experiences.",
-    seoImage: "/branding/og-image.jpg",
+    seoImage: calmoImage,
     externalUrl: "http://calmo.fit/",
   },
   {
